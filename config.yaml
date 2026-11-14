@@ -1,18 +1,50 @@
+# Đường dẫn tương đối với thư mục gốc project.
+# Demo hiện tại đọc manifest.json, chưa đọc config.yaml.
+group: 1
+seed: 42
 data_dir: .
 manifest: manifest.json
+
 assignments:
+  # Phần chính: hoàn thiện corpus v1 trước khi xử lý phần mở rộng.
   - file: "chinh/Kinh Thi - Ta Quang Phát 1 (tr1-346).pdf"
+    part: chinh
     source: ocr
   - file: "chinh/Vi Chánh (tr1-330).pdf"
+    part: chinh
     source: text
+  - file: "chinh/Dao Duc Kinh Han Van.pdf"
+    part: chinh
+    source: text
+  - file: "chinh/Tang Quang Hien.pdf"
+    part: chinh
+    source: text
+
+  # Phần mở rộng: xử lý ở tuần 5; loại file và page_offset nằm trong manifest.
+  - file: "mo_rong/Long Thư Tịnh Độ Văn 龍舒淨土文 (txt Hán Việt).pdf"
+    part: mo_rong
+    source: text
+  - file: "mo_rong/LongThuTinhDo (txt Việt).pdf"
+    part: mo_rong
+    source: ocr
+  - file: "mo_rong/龍舒淨土文.pdf"
+    part: mo_rong
+    source: ocr
+    purpose: ocr_evaluation
+
+# Cấu hình dự kiến cho các bước sẽ triển khai; chưa phải kết quả thực nghiệm.
 ocr:
-  engines: [paddleocr, qwen2.5-vl, got-ocr2] # ít nhất 3
-  vote: char_majority # hòa thì theo công cụ có CER thấp nhất
+  engines: [paddleocr, qwen2.5-vl, got-ocr2]
+  vote: char_majority
+  tie_break: lowest_cer
   dpi: 300
-  punctuate:
-  model: raynardj/classical-chinese-punctuation-guwen-biaodian # hoặc ethanyt/guwen-punc | llm
-  align:
-    method: gale_church # gale_church | bertalign | vecalign
-    embedding: BAAI/bge-m3
-    use_reading_anchors: true
-    out_dir: out/
+
+punctuate:
+  model: raynardj/classical-chinese-punctuation-guwen-biaodian
+
+align:
+  method: gale_church
+  embedding: BAAI/bge-m3
+  use_reading_anchors: true
+
+out_dir: out/
