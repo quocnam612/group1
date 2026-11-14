@@ -1,0 +1,89 @@
+{
+  "group": 1,
+  "files": [
+    {
+      "file": "chinh/Kinh Thi - Ta Quang Phát 1 (tr1-346).pdf",
+      "book": "Kinh Thi (Quyển I)",
+      "part": "chinh",
+      "type": "scan",
+      "source_file": "Kinh Thi - Ta Quang Phát 1.pdf",
+      "source_pages": [
+        1,
+        346
+      ],
+      "page_offset": 0
+    },
+    {
+      "file": "chinh/Vi Chánh (tr1-330).pdf",
+      "book": "Vi Chánh",
+      "part": "chinh",
+      "type": "text_vertical",
+      "source_file": "Vi Chánh.pdf",
+      "source_pages": [
+        1,
+        330
+      ],
+      "page_offset": 0
+    },
+    {
+      "file": "chinh/Dao Duc Kinh Han Van.pdf",
+      "book": "Đạo Đức Kinh",
+      "part": "chinh",
+      "type": "text_vertical",
+      "source_file": "Dao Duc Kinh Han Van.pdf",
+      "source_pages": [
+        1,
+        231
+      ],
+      "page_offset": 0
+    },
+    {
+      "file": "chinh/Tang Quang Hien.pdf",
+      "book": "Tăng Quảng Hiền Văn",
+      "part": "chinh",
+      "type": "text_vertical",
+      "source_file": "Tang Quang Hien.pdf",
+      "source_pages": [
+        1,
+        122
+      ],
+      "page_offset": 0
+    },
+    {
+      "file": "mo_rong/Long Thư Tịnh Độ Văn 龍舒淨土文 (txt Hán Việt).pdf",
+      "book": "Long Thư Tịnh Độ Văn – Hán + phiên âm",
+      "part": "mo_rong",
+      "type": "text_horizontal",
+      "source_file": "2/Long Thư Tịnh Độ Văn 龍舒淨土文 (txt Hán Việt).pdf",
+      "source_pages": [
+        1,
+        226
+      ],
+      "page_offset": 0
+    },
+    {
+      "file": "mo_rong/LongThuTinhDo (txt Việt).pdf",
+      "book": "Long Thư Tịnh Độ Văn – bản dịch Việt",
+      "part": "mo_rong",
+      "type": "text_broken",
+      "source_file": "2/LongThuTinhDo (txt Việt).pdf",
+      "source_pages": [
+        1,
+        155
+      ],
+      "page_offset": 0
+    },
+    {
+      "file": "mo_rong/龍舒淨土文.pdf",
+      "book": "Long Thư Tịnh Độ Văn – bản khắc gỗ (đối chiếu OCR)",
+      "part": "mo_rong",
+      "type": "scan",
+      "source_file": "2/龍舒淨土文.pdf",
+      "source_pages": [
+        1,
+        148
+      ],
+      "page_offset": 0
+    }
+  ]
+}

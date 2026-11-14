@@ -1,6 +1,6 @@
 # group1
 
-Template báo cáo môn Xử lý ngôn ngữ tự nhiên (NLP).
+Báo cáo tiến độ môn Xử lý ngôn ngữ tự nhiên (NLP), tổ chức nội dung theo tuần.
 
 ## Build báo cáo
 
@@ -24,12 +24,11 @@ bằng recipe **Build NLP report**. Cấu hình dùng chung `.latexmkrc`.
 
 - `latex/report.tex`: tên đề tài, nhóm, giảng viên và ngày nộp.
 - `latex/content/title.tex`, `member.tex`: bố cục bìa và bảng thành viên.
-- `latex/content/I-GioiThieu.tex` đến `V-KetLuan.tex`: khung nội dung NLP;
-  thay các đoạn gợi ý màu xám bằng nội dung thực tế.
-- `latex/content/phuluc.tex`: phụ lục.
-- `latex/ref/ref.bib`: thêm nguồn tham khảo; khi bắt đầu dùng `\cite{...}`,
-  thay phần placeholder trong `latex/ref/ref.tex` bằng các lệnh BibTeX đã
-  ghi chú ở đó (bỏ cả tiêu đề thủ công vì BibTeX tự tạo tiêu đề).
+- `latex/content/week1.tex`: baseline và kết quả kiểm tra mẫu của 4 sách.
+- `latex/content/week2.tex`: kế hoạch OCR và bảng CER chờ cập nhật số liệu.
+- Thêm file nội dung cho tuần tiếp theo rồi khai báo `\input` trong
+  `latex/report.tex`. Các file khung nội dung, phụ lục và tham khảo cũ vẫn
+  được giữ để dùng khi cần, hiện chưa đưa vào bản báo cáo tiến độ.
 
 Logo, căn lề, giãn dòng, header/footer và định dạng mã nguồn được giữ trong
 `latex/img/` và `latex/hcmus-report-template.sty`.
