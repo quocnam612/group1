@@ -1,8 +1,16 @@
+/tutorials
+/chinh
+/mo_rong
+/.vscode
+/latex
+.latexmkrc
+report.synctex.gz
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
 *$py.class
-
+atex
 # C extensions
 *.so
 

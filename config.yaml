@@ -1,0 +1,18 @@
+data_dir: .
+manifest: manifest.json
+assignments:
+  - file: "chinh/Kinh Thi - Ta Quang Phát 1 (tr1-346).pdf"
+    source: ocr
+  - file: "chinh/Vi Chánh (tr1-330).pdf"
+    source: text
+ocr:
+  engines: [paddleocr, qwen2.5-vl, got-ocr2] # ít nhất 3
+  vote: char_majority # hòa thì theo công cụ có CER thấp nhất
+  dpi: 300
+  punctuate:
+  model: raynardj/classical-chinese-punctuation-guwen-biaodian # hoặc ethanyt/guwen-punc | llm
+  align:
+    method: gale_church # gale_church | bertalign | vecalign
+    embedding: BAAI/bge-m3
+    use_reading_anchors: true
+    out_dir: out/
