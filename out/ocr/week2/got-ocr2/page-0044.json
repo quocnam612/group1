@@ -1,0 +1,27 @@
+{
+  "image": "/mnt/F/4-MY PROJECTS/Github/group1/out/ocr/week2/images/page-0044.png",
+  "image_sha256": "59ab6b0a50cffdff5efc2c03943a0ee4602084b0161d9171240f213896ab4ccf",
+  "engine": "got-ocr2",
+  "settings": {
+    "command": "run",
+    "engine": "got-ocr2",
+    "device": "cuda:0",
+    "lang": null,
+    "model": "stepfun-ai/GOT-OCR-2.0-hf",
+    "revision": "d3017ef2c2c1395888c8d635c5e0508bcb0ac78d",
+    "seed": 42,
+    "max_new_tokens": 4096,
+    "max_pixels": 401408,
+    "quantization": "none",
+    "allow_cpu": false
+  },
+  "text": "Khu6ng Hành n6i r ng:  Ph6i hqp thanh vg ch6ng là m6i \ndàu cùa viec ph6n sinh cüa dân chúng, là ngu6n cõi cûa van \nphúc.  Nghi  lê  cûa  hôn  nhân  dûc chînh  dáng  thì  vê  sau \nphâm vât thoâ thuân vâ thii6n mênh môi høn toàn.\nManh tù dâ khào luân Kinh Thi, láy thien Quan thu làm \ndàu,  y n6i rǎng trên hôn hêt là buc cha mê dân, dûc hanh \ncûa bà Hau phi phu nhân nêu chăng ngang bǎng tròi dât, thi \nkh6ng lây gì  mà thō phung thân linh dê diêu hoà su thích \nnghi cûa van vát. Tù dòi trúбc trò lài, viec húng phê cûa ba \ndòi Hâ, Thu6ng, Chu chua có bao giδ kh6ng do ǒ dây vây..\nBÀI THÚ 2\nCHUŌNG I\n葛 罩\nCát dàm. (Chu nam 2)\n葛 之 賈 台\n1. Cát chì dàm hê,\n施 于 中 谷\n2. Dí vú trung cбc.\n維 葉 萋\n3. Duy diêp thê thê,\n黄 烏 于 飛\n4. Hoàng diêu vu phi,\n集 于 灌 木\n5. Tâp vu quán mбc,\n其 聲 啼 啥\n6. Ký thanh gíê gìê (giai giai)\nDìch nghīa\n1. Cây sân dã dài,\n2. Bò lan vào trong hang,\n3. Lá nhiêu um tùm.\n4. Chim hoàng ly bay děn.\n45\n",
+  "seconds": 12.706,
+  "model": "stepfun-ai/GOT-OCR-2.0-hf",
+  "revision": "d3017ef2c2c1395888c8d635c5e0508bcb0ac78d",
+  "device": "cuda:0",
+  "generated_tokens": 531,
+  "possibly_truncated": false,
+  "quantization": "none",
+  "prompt": null
+}

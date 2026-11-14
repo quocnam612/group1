@@ -1,0 +1,27 @@
+{
+  "image": "/mnt/F/4-MY PROJECTS/Github/group1/out/ocr/week2/images/page-0045.png",
+  "image_sha256": "b6e78774adf13398f2de583c92253360a39096387e986a695ff21a7630288c5e",
+  "engine": "got-ocr2",
+  "settings": {
+    "command": "run",
+    "engine": "got-ocr2",
+    "device": "cuda:0",
+    "lang": null,
+    "model": "stepfun-ai/GOT-OCR-2.0-hf",
+    "revision": "d3017ef2c2c1395888c8d635c5e0508bcb0ac78d",
+    "seed": 42,
+    "max_new_tokens": 4096,
+    "max_pixels": 401408,
+    "quantization": "none",
+    "allow_cpu": false
+  },
+  "text": "5.  T u taptotrenbui cay ay.\n6.  Tieng këu nghe vǎng vǎng x a x a.\nDich tho\nSān dài dām duó t sang hè,\nMoc bò vào tān trong khe hóc nāy.\nTôt tuói nánhánh lá rám dày.\nHoàng ly tháp thoáng dǎ bay liēng vòng,\nDóu chung bui sán thung dung,\nVéo von ca hót kháp vìng vǎng nghe.\nChú gāi cūa Chu Hy\nChuong nāy thuqc phú 葛 cát, tēn mōt loài cāy, cày sǎn,\nmoc bò ra, có thé láy chì dět vài mìn,vài thó, 韓 dàm, dài ra,\nkou di, dài, 中谷 trung cóc, tǔc côc trung, trong hang trong hóc\n萋萋 thê thê,  dáng  nhiéu  um  tùm  黃鳥 hoàng  diěu,  chim\nhoàng  ly.  潘木 quán  móc,  bui  cày,  唋嘻 giai giai( doc gīe  gīe\ncho hɔp vàn), tiēng hót hoà nghe vāng vāng x a x a.\nPhù  là  phô trán sù viêc mà nói thāng ra. Nhán Hau phi\nThái  Tú  dā  dět  thành  vài  mìn  vài  thō  mà  phú,  tǔc  là  phô\ntràn sù viêc áy ra.\nThuât  ràng  vào  thài  dàu  mùa  hą,  là  cāy  sán  vǔa  um\ntùm, thi chi có chim hoàng ly kêu ǒ trên\nCHUONG II\n葛 之 覃 兮\n施 于 中 谷\n継 葉 莫 莫\n46\n",
+  "seconds": 12.603,
+  "model": "stepfun-ai/GOT-OCR-2.0-hf",
+  "revision": "d3017ef2c2c1395888c8d635c5e0508bcb0ac78d",
+  "device": "cuda:0",
+  "generated_tokens": 531,
+  "possibly_truncated": false,
+  "quantization": "none",
+  "prompt": null
+}

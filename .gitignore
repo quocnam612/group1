@@ -1,8 +1,63 @@
-/tutorials
+# Dữ liệu gốc được cấp riêng; chỉ report.pdf là PDF đầu ra cần nộp.
+/tutorials/
+/chinh/
+/mo_rong/
+*.pdf
+!/report.pdf
+
+# Ảnh OCR và crop không commit; giữ đầu ra TXT/JSON/JSONL/TSV.
+/out/**/images*/
+/out/**/*.png
+/out/**/*.jpg
+/out/**/*.jpeg
+/out/**/*.tif
+/out/**/*.tiff
+/out/**/*.webp
+/out/**/*.bmp
+/gold/**/*.png
+/gold/**/*.jpg
+/gold/**/*.jpeg
+/gold/**/*.tif
+/gold/**/*.tiff
+/gold/**/*.webp
+/gold/**/*.bmp
+
+# Môi trường, cache/model tải về và file tạm.
 /.venv-ocr/
-/out/ocr/images/
-/chinh
-/mo_rong
+/.venv-*/
+/.cache/
+*.safetensors
+*.pdiparams
+*.pdmodel
+*.onnx
+*.pt
+*.pth
+*.ckpt
+*.gguf
+pytorch_model*.bin
+*.tmp
+*.part
+
+# Thông tin đăng nhập/khóa riêng; file mẫu chỉ chứa placeholder được giữ.
+.env.*
+!.env.example
+!.env.sample
+/.aws/
+/.ssh/
+/secrets/
+/credentials/
+credentials.json
+credentials-*.json
+client_secret*.json
+service-account*.json
+service_account*.json
+token.json
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Thiết lập cá nhân và file phụ báo cáo.
 /.vscode
 /latex
 .latexmkrc

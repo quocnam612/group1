@@ -1,0 +1,27 @@
+{
+  "image": "/mnt/F/4-MY PROJECTS/Github/group1/out/ocr/week2/images/page-0040.png",
+  "image_sha256": "60d036dc70f22b24678dd9765f3952fbf75462d196e197b24a3b595ed29895f5",
+  "engine": "got-ocr2",
+  "settings": {
+    "command": "run",
+    "engine": "got-ocr2",
+    "device": "cuda:0",
+    "lang": null,
+    "model": "stepfun-ai/GOT-OCR-2.0-hf",
+    "revision": "d3017ef2c2c1395888c8d635c5e0508bcb0ac78d",
+    "seed": 42,
+    "max_new_tokens": 4096,
+    "max_pixels": 401408,
+    "quantization": "none",
+    "allow_cpu": false
+  },
+  "text": "cua n6n vu6ng hoá. Giáng Kinh Thi nhu thé dáng gqi là\nnguòi khéo n6i vāy.\nCHUONG II\n参 差 荟 荣\n左 右 流 之\n窈 窦 淑 女\n寤 寐 淑 女\n寤 寮 淑 淑 女\n求 之 不 得\n摩 睡 思 服\n悠 戟 悠 哉\n鞭 轉 反 侧\nDìch nghīa\n5. Rau hạnh công dài công ngán không đểu nhau,\n6. Phãi chuán theo dòng núc sang bên tâ bên h额度 m\nh地球\n7. Nguòi thuc nǚ u nàn ăy\n8. Khi thúc khi ngǔ děu lo cău cho dúc�nàng.\n9. Něu cău mà không dúc,\n10. Thì khi thúc khi ngǔ děu tuǒng nhó.\n11. Tuǒng nhó xa xōi thay! Tuǒng nhó xa xōi thay!\n12. Vua cút lân qua trò lại mãi năm không yên giác.\nDìch thơ\nSo le rau hạnh lô th。\nHái theo dòng núc ven bǎ dôi bên.\n41",
+  "seconds": 8.507,
+  "model": "stepfun-ai/GOT-OCR-2.0-hf",
+  "revision": "d3017ef2c2c1395888c8d635c5e0508bcb0ac78d",
+  "device": "cuda:0",
+  "generated_tokens": 341,
+  "possibly_truncated": false,
+  "quantization": "none",
+  "prompt": null
+}

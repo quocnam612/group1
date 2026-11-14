@@ -1,0 +1,27 @@
+{
+  "image": "/mnt/F/4-MY PROJECTS/Github/group1/out/ocr/week2/images/page-0046.png",
+  "image_sha256": "9f32d07f2165775651b55c26e1ec59d50c558957dfc265fb025243f287e75e37",
+  "engine": "got-ocr2",
+  "settings": {
+    "command": "run",
+    "engine": "got-ocr2",
+    "device": "cuda:0",
+    "lang": null,
+    "model": "stepfun-ai/GOT-OCR-2.0-hf",
+    "revision": "d3017ef2c2c1395888c8d635c5e0508bcb0ac78d",
+    "seed": 42,
+    "max_new_tokens": 4096,
+    "max_pixels": 401408,
+    "quantization": "none",
+    "allow_cpu": false
+  },
+  "text": "是 敦 是 護 10. Thj ngãi thj hoach.\n縫 舠 為 裕 11. Vi si vi khích,\n服 之 無 爲\n12. Phuc chi vô dìch\nDjôh nghjia\n7. Cây sân dã dài.\n8. Bò lan vâo trong hang.\n9. Lá nhiëu rùôm rà,\n10. Mói cât vê rôi dem náu.\n11. Dêt vài mìn vâi thô,\n12. Mâc vâi ây không chân.\nDjôh tòh\nQua hè dây sân dã dài,\nMoc bò vào tân hang nây tôt tuòi.\nRùòm râ n'hänh lá kháp ndi.\nCât vê xong xà, ta thòi nâú chung,\nVâi thô vâi mìn dêt xong,\nCât may ta mâc châng lòng chán chê.\nChú gâi oita Chu Hy\nChúong nây thuôc thê phú 莫莫 mich mich. dâng rùòn\nrà chen râm, Xì ngâi, chât cât, 護 hoach, nâu 粽 si, vài mìn,\n給 khích, vâi thô, dìch chán ghét.\nChúong nây nói vâo thòi thình ha, giūa mùa hè, cây sân\ndã gài, nàng môi lo cât láy chì dê dêt vâi, rôi nâc vâi ây\nkhōng chán, vi mình dã bô cóng lao nhçc môi biêt râng thành\nvâi khōng phâi dê dàng, cho nên lòng hâng thûng mên, tuy\n47",
+  "seconds": 12.088,
+  "model": "stepfun-ai/GOT-OCR-2.0-hf",
+  "revision": "d3017ef2c2c1395888c8d635c5e0508bcb0ac78d",
+  "device": "cuda:0",
+  "generated_tokens": 500,
+  "possibly_truncated": false,
+  "quantization": "none",
+  "prompt": null
+}

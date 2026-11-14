@@ -1,0 +1,27 @@
+{
+  "image": "/mnt/F/4-MY PROJECTS/Github/group1/out/ocr/week2/images/page-0039.png",
+  "image_sha256": "edace7dc076e9f9b7218fa19256c276dc07845c5513211d1365442384eeab415",
+  "engine": "got-ocr2",
+  "settings": {
+    "command": "run",
+    "engine": "got-ocr2",
+    "device": "cuda:0",
+    "lang": null,
+    "model": "stepfun-ai/GOT-OCR-2.0-hf",
+    "revision": "d3017ef2c2c1395888c8d635c5e0508bcb0ac78d",
+    "seed": 42,
+    "max_new_tokens": 4096,
+    "max_pixels": 401408,
+    "quantization": "none",
+    "allow_cpu": false
+  },
+  "text": "lón. Hai con thu'^ng lQi chung mà khóng là  loi, cho nên sách \ncüa Mao cóng nói râng: Dôi chim thu cúu tinh ý chí thêt \nkhan vó dâm dà, nhúng lúc nào cũng yü gig câch biêt. \nSách Lêt nū truyên cho là ngu'^i ta chu[a tùng thâý chim \nthu cúu sõng dú câp hay sõng lé loi, là vi tính nó nhú thê. řir \nhà, tên thóng dung cüa nhūng dòng núóc chây ô phuóng bâc. \n澆l châu, cón dât ô giūa sõng có thê ô dúoc ¥ εμè üiêu, là ý \nu nhàn, u tich yên lâng và nhàn nhã,  thuc, hiên lành  \nnū, con gâi chu[a gâ chông, nói nàng Thái Tú, vø vua Vân \nvúng, lúc còn ô nhà vói cha mê 君子 quân tú, chì vua Vân \nvúng  hào, dêp, lành  cû, dōi lúa. Sách cüa Mao cóng \nnói  chí là rât, tinh ý rât thêt thà dãm dà. \n ng  lâ truôc nói môt vât gi dê sau dãn dên lòi ca \nvinh. \nVua Vân vúong nhà Chu sinh có thanh dûc, lai dûçc bâc \nthánh nū ho Tú dê kêt hôn. Nhūng ngu'^i trong cung, lúc \nnàng Thái Tú mói dên, thâý nàng có dûc hạnh u tich nhàn \nnhã và trinh chuyên, bên làm bài thõ này râng: Kia dōi chim \nthú cúu nghe hôt quan quan, dang tıng hoà vói nhau ô trên \ncôn bên sõng. Ngu'^i thuc nū yêu diêu nây hâ khóng phâi lâ \nban lúa tôt cüa bâc quân tù Vân vúng hay sao? Có ý nói \nnàng Thái Tú và vua Vân vúng cùng hoà vui mà cung kính \nlân nhau, cùng nhú tinh chí thêt dãm dà mà lúc nào cūng \ngiû gìn câch biêt cüa dōi chim thu cúu vây. \nVê sau hê nói  húng  thi ý vân cūng phông theo chúng \nnây. \nÔng Khuông Hành nhà Hán nói râng: Yêü diêu thuc nū, \nQuán tù hào cûu, là nói nàng Thái Tú rât muç trinh thuc \nkhông thay tiêt thâo. Nhūng rung câm vê tinh duc không hê \nlân vào nghí dung, nhūng ý vui riêng không hê lô ra cû chì, \ncó dûc nhú thê rōi mói có thê phōi høp vói bâc chí tôn và \nlàm chù tê tông miêu. Vi dô lá dâü môi cüa Cúong thùông và",
+  "seconds": 21.914,
+  "model": "stepfun-ai/GOT-OCR-2.0-hf",
+  "revision": "d3017ef2c2c1395888c8d635c5e0508bcb0ac78d",
+  "device": "cuda:0",
+  "generated_tokens": 946,
+  "possibly_truncated": false,
+  "quantization": "none",
+  "prompt": null
+}

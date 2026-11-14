@@ -87,10 +87,10 @@ schema cuối cùng; cần bổ sung các trường theo mục 8 của hướng 
 
 ### Các bước tiếp theo
 
-1. **Chờ cài xong:** theo dõi service/log bên dưới, sau đó chạy `doctor`;
+1. **Kiểm tra môi trường:** kích hoạt `.venv-ocr`, sau đó chạy `doctor`;
    kiểm tra đủ thư viện và `CUDA available: True` trước khi chạy hai VLM.
-2. **Trong lúc chờ:** chọn thêm ít nhất 3 trang Kinh Thi ở phần khác để đủ
-   10 trang đại diện; chép bản tham chiếu đúng theo ảnh, tách Hán và Việt,
+2. **Mẫu đã chọn:** trang PDF 38–48 của Kinh Thi, gồm 11 trang;
+   chép bản tham chiếu đúng theo ảnh, tách Hán và Việt,
    giữ riêng phiên âm, dịch nghĩa, dịch thơ và chú giải.
 3. **Thử từng công cụ trên một ảnh:** thêm `--limit 1` vào các lệnh OCR bên
    dưới, kiểm tra file TXT/JSON rồi mới chạy đủ mẫu. Chạy các công cụ lần lượt.
@@ -119,36 +119,23 @@ môi trường baseline. `requirements-ocr.txt` cố định các thư viện ch
 dùng `bash scripts/setup_ocr.sh cpu`; Qwen 7B CPU cần rất nhiều RAM và không được
 tự chạy mặc định. `doctor` kiểm tra thư viện/CUDA, không xác nhận độ chính xác OCR.
 
-Nếu đang dùng tiến trình nền `group1-ocr-setup` sau lần VS Code bị OOM,
-không chạy thêm installer song song. Tiến trình này giới hạn RAM 2,5 GB,
-CPU một nhân và chỉ tải/cài từng gói. Theo dõi bằng:
-
-```sh
-systemctl --user status group1-ocr-setup.service --no-pager
-tail -f out/ocr/setup.log
-```
-
-`active (running)` nghĩa là vẫn đang cài; `active (exited)` cùng mã thoát 0
-nghĩa là script đã xong. Khi đó mới kích hoạt môi trường và chạy `doctor`.
-Nếu service báo `failed`, xem cuối log trước khi chạy lại; không mở thêm lượt cài.
-
 ### Ảnh đầu vào
 
-Render 7 trang Quan thư đã khảo sát ở 300 DPI:
+Mẫu OCR hiện chọn trang PDF **38–48**, gồm **11 trang**, render ở 300 DPI:
 
 ```sh
-python src/ocr.py render --pdf "chinh/Kinh Thi - Ta Quang Phát 1 (tr1-346).pdf" --pages 38-44
+python src/ocr.py render --pdf "chinh/Kinh Thi - Ta Quang Phát 1 (tr1-346).pdf" --pages 38-48 --dpi 300 --output out/ocr/week2/images
 ```
 
-Ảnh nằm trong `out/ocr/images/`; các JSON cạnh ảnh ghi PDF nguồn, SHA-256,
-trang PDF và DPI. Khi chọn thêm 3 trang, chạy lại `render --pages ...`; các
-trang đã render cùng cấu hình được giữ lại. `pages.json` tổng hợp ảnh hiện có.
+Ảnh nằm trong `out/ocr/week2/images/`; các JSON cạnh ảnh ghi PDF nguồn,
+SHA-256, trang PDF và DPI. Thư mục riêng này giữ đúng phạm vi đã chọn;
+`pages.json` liệt kê 11 trang. Các trang đã render cùng cấu hình được giữ lại.
 
 Để tách vùng Hán/Việt cho đánh giá, có thể cắt theo tọa độ tương đối 0–1.
 Ví dụ sau cắt khối Hán ở trang 38; cần xem lại ảnh crop trước khi dùng làm mẫu:
 
 ```sh
-python src/ocr.py crop --input out/ocr/images/page-0038.png --box 0.10 0.23 0.34 0.405 --output out/ocr/images/crops/page-0038-han.png
+python src/ocr.py crop --input out/ocr/week2/images/page-0038.png --box 0.10 0.23 0.34 0.405 --output out/ocr/week2/images/crops/page-0038-han.png
 ```
 
 Dùng **cùng ảnh/crop và bản tham chiếu** cho cả ba công cụ. Không sửa văn bản
@@ -160,8 +147,8 @@ OCR bằng tay trước khi đo CER. Trang 44 có cả đầu bài thứ hai; gi
 #### PaddleOCR — hai cấu hình ngôn ngữ của cùng một công cụ
 
 ```sh
-python src/ocr.py run --engine paddleocr --lang chinese_cht --device cpu --input out/ocr/images --output out/ocr/paddleocr/han
-python src/ocr.py run --engine paddleocr --lang vi --device cpu --input out/ocr/images --output out/ocr/paddleocr/viet
+python src/ocr.py run --engine paddleocr --lang chinese_cht --device cpu --input out/ocr/week2/images --output out/ocr/week2/paddleocr/han
+python src/ocr.py run --engine paddleocr --lang vi --device cpu --input out/ocr/week2/images --output out/ocr/week2/paddleocr/viet
 ```
 
 `chinese_cht` cho chữ Hán phồn thể, `vi` cho tiếng Việt. Khi đo CER theo vùng,
@@ -171,13 +158,13 @@ hai công cụ độc lập; script giữ đầu ra riêng, không tự ghép ha
 #### GOT-OCR2
 
 ```sh
-python src/ocr.py run --engine got-ocr2 --device cuda:0 --input out/ocr/images --output out/ocr/got-ocr2
+python src/ocr.py run --engine got-ocr2 --device cuda:0 --input out/ocr/week2/images --output out/ocr/week2/got-ocr2
 ```
 
 #### Qwen2.5-VL 7B — 4-bit cho GPU 8 GB
 
 ```sh
-python src/ocr.py run --engine qwen2.5-vl --device cuda:0 --quantization 4bit --input out/ocr/images --output out/ocr/qwen2.5-vl
+python src/ocr.py run --engine qwen2.5-vl --device cuda:0 --quantization 4bit --input out/ocr/week2/images --output out/ocr/week2/qwen2.5-vl
 ```
 
 Thêm `--limit 1` để thử một ảnh trước. Mặc định tối đa 4.096 token đầu ra.
@@ -186,6 +173,20 @@ hoặc tăng `--max-new-tokens`. Qwen mặc định `--max-pixels 401408`; tăng
 giải làm tăng VRAM, vì vậy crop các khối chữ nhỏ thường phù hợp hơn cho GPU 8 GB.
 
 ### Đầu ra, model và chạy tiếp
+
+```text
+out/
+  corpus.jsonl                 # đầu ra corpus cuối cùng
+  source_errors.tsv            # lỗi trong sách nguồn
+  ocr/
+    environment.txt            # phiên bản thư viện đã cài
+    week2/
+      images/                  # ảnh 38–48, crop và metadata; không commit
+      paddleocr/han/            # kết quả TXT/JSON
+      paddleocr/viet/
+      got-ocr2/                # tạo khi chạy công cụ tương ứng
+      qwen2.5-vl/
+```
 
 - Mỗi ảnh có `.txt` và `.json`, gồm SHA-256 ảnh, công cụ, cấu hình, thời gian.
   Paddle giữ thêm kết quả gốc (vùng chữ/độ tin cậy); VLM ghi model và commit
@@ -253,3 +254,8 @@ NFC cho tiếng Việt và phiên âm. Giữ riêng dịch nghĩa (`dich_sat`), 
 (`dich_tho`), chú giải; gắn cờ cặp nghi ngờ. Không sửa PDF gốc hoặc commit
 PDF/ảnh OCR. Ghi seed, phiên bản thư viện và revision mô hình khi triển khai;
 chỉ dùng mô hình có sẵn để suy luận, không huấn luyện/fine-tune.
+
+Theo mục 7 của hướng dẫn, Git giữ mã nguồn và đầu ra: TXT/JSON OCR,
+corpus, gold, file đánh giá, patches và `report.pdf`. `.gitignore` loại PDF
+nguồn, ảnh OCR/crop, môi trường, cache, trọng số model, log và các file khóa/
+thông tin đăng nhập thông dụng. Không ignore toàn bộ `out/` hoặc `gold/`.

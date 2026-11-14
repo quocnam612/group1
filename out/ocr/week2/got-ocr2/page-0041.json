@@ -1,0 +1,27 @@
+{
+  "image": "/mnt/F/4-MY PROJECTS/Github/group1/out/ocr/week2/images/page-0041.png",
+  "image_sha256": "c3690ecb14d14600d4098e4edfe816c8f832783a5ce8ac4871ba274cc20fd35c",
+  "engine": "got-ocr2",
+  "settings": {
+    "command": "run",
+    "engine": "got-ocr2",
+    "device": "cuda:0",
+    "lang": null,
+    "model": "stepfun-ai/GOT-OCR-2.0-hf",
+    "revision": "d3017ef2c2c1395888c8d635c5e0508bcb0ac78d",
+    "seed": 42,
+    "max_new_tokens": 4096,
+    "max_pixels": 401408,
+    "quantization": "none",
+    "allow_cpu": false
+  },
+  "text": "U nhàn thuc nī̂ chǐnh chuyén.\nNhó khì thǔc ngǔ triên miên chǎng rài.\nNěu cǎu mà chǎng dùqc nguòi.\nKhi mô khi tǐnh bōi hōi n'hó thuìong.\nXa xōi tróng n'hó dēm truìng.\nChiec thàn tràn troc trên giuǒng nào yěn.\nChú gǔi cǔa Chu Ȟ y\nChuóng nāy thuqc thě húng 參差 sām si, dáng dài ngǎn \nkhōng dōng děu nhau 荟 hạnh, rau tiêp dù, rē moc ǎ dáy \nnúóc, lá màu dô tía hinh tròn, bě kính hôn môt tāc, nǎi trên \nmât núc. 或左或右 hōcǐ tǎ hòác hìtu, vō dình không thuìng, \nkhi běn trái khi běn mǎt, 流\nluu, thuän theo dòng núóc mà \nhái láy, 或寤或寐 hōcǐ ngô hơĉ m y, không lúc nào là không, \nkhi thúc khi ngǔ děu nhó děn nàng, 服 bǎc, nhó, 悠 du, dài, \nxa xói 輿 triên, lăn nǔa vòng, 轉 chuyén, làn trɔn vòng, 瓦\nphán, làn lai, 側 trác, lăn nghiêng. Děu là nói năm không \nyên giăc.\nChuōng náy nói vào lúc chuīa cău dúqc nàng Thái Tṳ: \nRau hanh cóng ngân cóng dài không děu kia, phài thuân \ntheo dòng núóc sang bên tǎ sang běn hūu mà hái. Nguòi thuc \nnū yěu diêu áy, khi thúc khi ngǔ vua không quên lo cău cho \ndúqc nàng, vì nàng áy vói dúc hanh áy trên dōi không thuròng \ncó vày. Něu cău nàng mà không dúqc thì không có ai phōi – \nhɔp vói vua dě thành viêc nói  trí hoàn mɤ. Cho nên vua lo \nnghī sāu xa không xiêt děn thě áy.\nCHUŌNG III\n参差荇朵\n左右朵之\n13. Sâm si hanh thái,\n14. Tá hīu thě chi.\n42\n",
+  "seconds": 16.313,
+  "model": "stepfun-ai/GOT-OCR-2.0-hf",
+  "revision": "d3017ef2c2c1395888c8d635c5e0508bcb0ac78d",
+  "device": "cuda:0",
+  "generated_tokens": 692,
+  "possibly_truncated": false,
+  "quantization": "none",
+  "prompt": null
+}

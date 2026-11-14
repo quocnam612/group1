@@ -1,0 +1,27 @@
+{
+  "image": "/mnt/F/4-MY PROJECTS/Github/group1/out/ocr/week2/images/page-0038.png",
+  "image_sha256": "33840ee580a24e8b1a43e7a010b679095ce258122c1d05574950e2708d96bd66",
+  "engine": "got-ocr2",
+  "settings": {
+    "command": "run",
+    "engine": "got-ocr2",
+    "device": "cuda:0",
+    "lang": null,
+    "model": "stepfun-ai/GOT-OCR-2.0-hf",
+    "revision": "d3017ef2c2c1395888c8d635c5e0508bcb0ac78d",
+    "seed": 42,
+    "max_new_tokens": 4096,
+    "max_pixels": 401408,
+    "quantization": "none",
+    "allow_cpu": false
+  },
+  "text": "BAI THÚ NHÃT\nCHUONG I\n閑  雎\n  Quan thú. (Chu nam)\n  1. Quan quan thú cuˇu.\n  在 河 之 州\n  2. Taí hà chi chāu.\n  窈 窕 淑 女\n  3. Yěu diéu thuc nˇu,\n  君 子 好 速\n  4. Quán tˇr hǎo cáu.\nDìch nghīa\n1. Dōi chim thú cuˇu hót ho̤ nghe quan quan.\n2. Ó trên côn bên sông.\n3. Nguˇoì thùc nˇu u nhàn,\n4. Phǎi là lúa tǒt cǔa bùc quán tˇi\nDìch thơ\nQuan quan kia tiêng thù cuˇu,\nBên côn hót ho̤ a cùng nhau vang dáy.\nU nhàn thuc nˇu thê này,\nXúng cùng quán tˇi sánh váy lúa duyên.\nChú giái oṭa Chu Hy.\nChúng này thuóc thê húng. 關關 quan quan, tiêng chim \ntróng chim mái úng ho̤a nhau, 雖鳴  thú cuˇu loài chim núc,\nlai có môt tên nǔa là vúóng thú, hinh trāng gioletng nhú chim \nphù y, nay trong khoáng Truǒng giang và sông Hoài thì có \nchim  ây. Chim này sǒng có dōi nhát dình mà không hê lăn \n39",
+  "seconds": 11.962,
+  "model": "stepfun-ai/GOT-OCR-2.0-hf",
+  "revision": "d3017ef2c2c1395888c8d635c5e0508bcb0ac78d",
+  "device": "cuda:0",
+  "generated_tokens": 443,
+  "possibly_truncated": false,
+  "quantization": "none",
+  "prompt": null
+}
