@@ -1,0 +1,36 @@
+{
+  "image": "/mnt/F/4-MY PROJECTS/Github/group1/out/ocr/week2/images/page-0042.png",
+  "image_sha256": "1cf100ea7b50aad85b446892fe7c1ff722c5f6a97c9feb4e9107bbafc97508d7",
+  "engine": "qwen2.5-vl",
+  "settings": {
+    "command": "run",
+    "engine": "qwen2.5-vl",
+    "device": "cuda:0",
+    "lang": null,
+    "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+    "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+    "seed": 42,
+    "max_new_tokens": 4096,
+    "max_pixels": 401408,
+    "quantization": "4bit",
+    "allow_cpu": false,
+    "cpu_offload": true
+  },
+  "text": "窈窕淑女\n琴瑟友之\n參差荇菜\n左右芼之\n窈窕淑女\n鍾鼓樂之\n\n15. Yểu điệu thục nữ,\n16. Cẩm sát hữu chi,\n17. Sâm si hạnh thái,\n18. Tả hữu mạo chi.\n19. Yểu điệu thục nữ,\n20. Chung cổ lạc chi\n\nDịch nghĩa\n13. Rau hạnh so le không đều nhau,\n14. Phải thuận theo dòng nước sang bên tả bên hữu chọn\nhái lấy.\n15. Người thục nữ u nhân ấy,\n16. Phải đánh đàn cẩm đàn sắt mà thân ái nàng.\n17. Rau hạnh cộng dài công ngắn không đều nhau,\n18. Phải nấu chín mà dâng lên ở hai bên.\n19. Người thục nữ u nhân ấy,\n20. Phải khua chuông đánh trống để nàng mừng vui.\n\nDịch thơ\nVăn dài rau hạnh bèn sông.\nKiếm tìm mà hái theo dòng đôi bên.\nĐược người thục nữ chính chuyên.\nMến nàng, cẩm sát đánh lên vang đầy.\nBèn sông rau hạnh vắn dài.\nĐêm về nấu chín mà bày hai bên.\nĐược người thục nữ chính chuyên.\nĐể nàng vui thích, vang rền trống chuông.\n\n43",
+  "seconds": 62.121,
+  "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+  "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+  "device": "cuda:0",
+  "generated_tokens": 313,
+  "possibly_truncated": false,
+  "quantization": "4bit",
+  "device_map": {
+    "model.visual": "cuda:0",
+    "model.language_model.embed_tokens": "cpu",
+    "model.language_model.layers": "cuda:0",
+    "model.language_model.norm": "cuda:0",
+    "model.language_model.rotary_emb": "cuda:0",
+    "lm_head": "cpu"
+  },
+  "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+}

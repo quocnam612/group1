@@ -1,0 +1,36 @@
+{
+  "image": "/mnt/F/4-MY PROJECTS/Github/group1/out/ocr/week2/images/page-0043.png",
+  "image_sha256": "a60cb92e59118ebba9ea4f8c23172ec5dd2225be336792a55ac929ce131c1d3a",
+  "engine": "qwen2.5-vl",
+  "settings": {
+    "command": "run",
+    "engine": "qwen2.5-vl",
+    "device": "cuda:0",
+    "lang": null,
+    "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+    "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+    "seed": 42,
+    "max_new_tokens": 4096,
+    "max_pixels": 401408,
+    "quantization": "4bit",
+    "allow_cpu": false,
+    "cpu_offload": true
+  },
+  "text": "Chú giải của Chu Hy\n\nChương này thuộc hùng采 thể(thái), chọn mà hái, lấy芼\nmạo, nấu chín mà dâng lên,瑟cầm, cây đàn 5 dây hoặc 7\ndây,瑟sát, đàn 25 dây, đều là loại đàn dây to, loại nhạc khí\nnhỏ 友vĩ(hữu), ý thân ái 鍾chung, cái chuông, loại nhạc khí\nbằng đồng 鼓cổ, cái trống, loại nhạc khí to bằng da 樂lạc, ý\nrất thuận hoà vui vẻ.\n\nChương này nói vào lúc tìm được nàng; rau hạnh công\nngắn dài không đều kia, phải chọn hái rồi nấu luộc mà dâng\nlên. Người thực nữ yếu điệu ấy đã cầu được rồi, phải thân ái\nđể làm cho nàng vui, vì rằng người ấy với đức hạnh ấy trên\nđời không thường có vậy. Hôm nay mà cầu được nàng, thì đã\nđược người để phối hợp với vua thành việc nội trị. Cho nên tỏ\ný vui mừng tôn kính không xiết như thế vậy.\n\nThiên Quan thư có 3 chương, 1 chương 4 câu, 2 chương 8\ncâu.\n\nKhổng tử nói rằng: \"Thiên Quan thư vui mà không dám,\nbuồn mà không thương tâm\". Tôi cho rằng: Lời ấy đối với thơ\nQuan thư này đúng với sự đoan chính của tính tình và sự\ndiều hoà của thanh khí. Vì rằng đức hạnh như chim thư cưu,\ntình chí thiết đậm đà mà vẫn giữ gìn cách biệt, thì sự đoan\nchính về tính tình của bà Hậu phi Thái Tự hẳn đã có thể\nnhận thấy được một phần rồi. Đến việc thức ngũ lân qua trở\nlại, đánh đắn cảm đán sát, khua chuông đánh trống, niềm\nvui buồn đã tột bực và đều không quá khuôn khổ phép tắc,\nthì sự đoan chính về tính tình của người làm thơ ấy lại có thể\nnhận thấy được cả toàn thể rồi, vậy. Riêng sự diều hoà về\nthanh khí thì không thể nghe được. Tuy là đáng hận, nhưng\nhọc giả hãy thưởng thức nghĩa lý ở trong lời thơ ấy để bồi\ndưỡng tâm tính, thì cũng có thể nắm được căn bản của việc\nhọc Kinh Thi vậy.\n\n44",
+  "seconds": 109.748,
+  "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+  "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+  "device": "cuda:0",
+  "generated_tokens": 556,
+  "possibly_truncated": false,
+  "quantization": "4bit",
+  "device_map": {
+    "model.visual": "cuda:0",
+    "model.language_model.embed_tokens": "cpu",
+    "model.language_model.layers": "cuda:0",
+    "model.language_model.norm": "cuda:0",
+    "model.language_model.rotary_emb": "cuda:0",
+    "lm_head": "cpu"
+  },
+  "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+}

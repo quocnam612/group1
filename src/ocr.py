@@ -152,6 +152,9 @@ def paddle_runner(args):
 
 
 def vlm_runner(args):
+    cpu_offload = getattr(args, "cpu_offload", False)
+    if cpu_offload and (args.engine != "qwen2.5-vl" or args.quantization != "4bit"):
+        raise ValueError("--cpu-offload requires --engine qwen2.5-vl --quantization 4bit")
     Path(os.environ["CUDA_CACHE_PATH"]).mkdir(parents=True, exist_ok=True)
     import torch
     from PIL import Image
@@ -183,8 +186,24 @@ def vlm_runner(args):
             raise ValueError("The 4-bit Qwen setup requires CUDA. For CPU use --quantization none --allow-cpu.")
         load_options["quantization_config"] = BitsAndBytesConfig(
             load_in_4bit=True, bnb_4bit_quant_type="nf4", bnb_4bit_use_double_quant=True,
-            bnb_4bit_compute_dtype=torch.float16)
+            bnb_4bit_compute_dtype=torch.float16,
+            llm_int8_enable_fp32_cpu_offload=cpu_offload)
+        if cpu_offload:
+            # These two unquantized matrices use ~2 GiB in FP16. Keep their
+            # weights in RAM; Accelerate transfers each to CUDA only for its forward.
+            load_options["device_map"] = {
+                "model.visual": device,
+                "model.language_model.embed_tokens": "cpu",
+                "model.language_model.layers": device,
+                "model.language_model.norm": device,
+                "model.language_model.rotary_emb": device,
+                "lm_head": "cpu",
+            }
+    if args.engine == "qwen2.5-vl":
+        load_options["attn_implementation"] = "sdpa"
+    print(f"Loading {model_id} ({args.quantization}; CPU offload: {cpu_offload})", flush=True)
     model = model_class.from_pretrained(model_id, **load_options).eval()
+    print("Model loaded; starting OCR.", flush=True)
 
     def recognize(path):
         with Image.open(path) as opened:
@@ -197,6 +216,9 @@ def vlm_runner(args):
         else:
             inputs = processor(picture, return_tensors="pt").to(device)
         options = {"do_sample": False, "max_new_tokens": args.max_new_tokens}
+        if args.engine == "qwen2.5-vl":
+            # Only the last token's logits are needed for greedy generation.
+            options["logits_to_keep"] = 1
         if args.engine == "got-ocr2":
             options.update(tokenizer=processor.tokenizer, stop_strings="<|im_end|>")
         with torch.inference_mode():
@@ -207,6 +229,7 @@ def vlm_runner(args):
                       "generated_tokens": generated.shape[1],
                       "possibly_truncated": generated.shape[1] >= args.max_new_tokens,
                       "quantization": args.quantization if args.engine == "qwen2.5-vl" else "none",
+                      "device_map": getattr(model, "hf_device_map", {"": device}),
                       "prompt": PROMPT if args.engine == "qwen2.5-vl" else None}
     return recognize
 
@@ -289,6 +312,8 @@ def main():
     runner.add_argument("--max-new-tokens", type=int, default=4096)
     runner.add_argument("--max-pixels", type=int, default=512 * 28 * 28, help="Qwen visual pixel budget; default sized for 8 GB GPU")
     runner.add_argument("--quantization", choices=("none", "4bit"), default="4bit", help="Qwen quantization; GOT is not quantized")
+    runner.add_argument("--cpu-offload", action="store_true", default=argparse.SUPPRESS,
+                        help="Keep Qwen embedding/output weights in RAM and transfer on demand (4-bit CUDA only; slower)")
     runner.add_argument("--allow-cpu", action="store_true", help="Explicitly allow Qwen 7B on CPU (large RAM required)")
     runner.add_argument("--limit", type=int, help="Recognize only first N images for a smoke check")
     runner.add_argument("--overwrite", action="store_true")

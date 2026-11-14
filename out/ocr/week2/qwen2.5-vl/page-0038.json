@@ -1,0 +1,36 @@
+{
+  "image": "/mnt/F/4-MY PROJECTS/Github/group1/out/ocr/week2/images/page-0038.png",
+  "image_sha256": "33840ee580a24e8b1a43e7a010b679095ce258122c1d05574950e2708d96bd66",
+  "engine": "qwen2.5-vl",
+  "settings": {
+    "command": "run",
+    "engine": "qwen2.5-vl",
+    "device": "cuda:0",
+    "lang": null,
+    "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+    "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+    "seed": 42,
+    "max_new_tokens": 4096,
+    "max_pixels": 401408,
+    "quantization": "4bit",
+    "allow_cpu": false,
+    "cpu_offload": true
+  },
+  "text": "BÀI THỨ NHẤT\n\nCHƯƠNG I\n\n關雎\n關關雎鳩\n在河之州\n窈窕淑女\n君子好逑\n\nQuan thư. (Chu nam)\n1. Quan quan thư cưu.\n2. Tại hà chi châu.\n3. Yếu điệu thục nữ,\n4. Quân tử hảo cầu.\n\nDịch nghĩa\n1. Đôi chim thư cưu hát hoạ nghe quan quan.\n2. Ở trên cồn bên sông.\n3. Người thục nữ u nhàn,\n4. Phải là lửa tốt của bực quân tử\n\nDịch thơ\nQuan quan kia tiếng thư cưu,\nBên cồn hát hoạ cùng nhau vang dậy.\nU nhân thục nữ thế này,\nXứng cùng quân tử sánh vây lửa duyên.\n\nChú giải của Chu Hy\nChương này thuộc thể hùng. 閩關 quan quan, tiếng chim trống chim mái ứng hoạ nhau, 雀鳩 thư cưu loài chim nước, lại có một tên nữa là vương thư, hình trạng giống như chim phù y, nay trong khoảng Trường giang và sông Hoài thì có chim ấy. Chim này sống có đôi nhất định mà không hề lẫn\n\n39",
+  "seconds": 57.221,
+  "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+  "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+  "device": "cuda:0",
+  "generated_tokens": 284,
+  "possibly_truncated": false,
+  "quantization": "4bit",
+  "device_map": {
+    "model.visual": "cuda:0",
+    "model.language_model.embed_tokens": "cpu",
+    "model.language_model.layers": "cuda:0",
+    "model.language_model.norm": "cuda:0",
+    "model.language_model.rotary_emb": "cuda:0",
+    "lm_head": "cpu"
+  },
+  "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+}

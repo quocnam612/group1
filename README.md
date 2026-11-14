@@ -105,7 +105,8 @@ và **GOT-OCR-2.0-hf**. Baseline cũ trong `tutorials/` được giữ riêng.
 
 Máy hiện có RTX 4060 Laptop 8 GB. Dùng Python 3.11 trong `.venv-ocr`, PyTorch
 CUDA 12.8 cho hai VLM; PaddleOCR dùng CPU. Qwen mặc định lượng tử hóa NF4 4-bit
-và giới hạn số pixel để giảm VRAM. Không chạy Qwen và GOT đồng thời trên GPU này.
+và giới hạn số pixel để giảm VRAM. Lệnh bên dưới thêm CPU offload để chừa VRAM
+trên GPU 8 GB đang dùng cho màn hình. Không chạy Qwen và GOT đồng thời trên GPU này.
 
 ```sh
 bash scripts/setup_ocr.sh cu128
@@ -164,8 +165,13 @@ python src/ocr.py run --engine got-ocr2 --device cuda:0 --input out/ocr/week2/im
 #### Qwen2.5-VL 7B — 4-bit cho GPU 8 GB
 
 ```sh
-python src/ocr.py run --engine qwen2.5-vl --device cuda:0 --quantization 4bit --input out/ocr/week2/images --output out/ocr/week2/qwen2.5-vl
+python src/ocr.py run --engine qwen2.5-vl --device cuda:0 --quantization 4bit --cpu-offload --input out/ocr/week2/images --output out/ocr/week2/qwen2.5-vl
 ```
+
+`--cpu-offload` giữ trọng số embedding và lớp đầu ra trong RAM, chuyển lên GPU
+khi cần; chậm hơn nhưng giảm VRAM thường trực. Tùy chọn này chỉ dùng với Qwen
+4-bit CUDA. Cấu hình chỉ nạp GPU đã gặp lỗi hết VRAM trên máy hiện tại.
+Chạy lại dùng model đã cache, không cần xóa cache hoặc tải lại trọng số.
 
 Thêm `--limit 1` để thử một ảnh trước. Mặc định tối đa 4.096 token đầu ra.
 JSON gắn `possibly_truncated` nếu chạm giới hạn; khi đó cần xem lại, cắt vùng
