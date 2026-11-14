@@ -79,8 +79,20 @@ Baseline dùng nguyên mã demo được cấp trong tài liệu CV18:
 - `build_corpus.py`, `viewer.py`: gắn cờ, thống kê và hiển thị kết quả.
 
 Nhóm đã chạy baseline, kiểm tra mẫu và ghi nhận sai lệch; chưa tuyên bố tự
-triển khai lại thuật toán demo. `src/` hiện chưa có pipeline riêng. Đầu ra demo
-chưa đủ schema cuối cùng; cần bổ sung các trường theo mục 8 của hướng dẫn.
+triển khai lại thuật toán demo. `src/ocr.py` bổ sung công cụ render, cắt vùng
+và chạy OCR độc lập; chưa có pipeline corpus hoàn chỉnh. Đầu ra demo chưa đủ
+schema cuối cùng; cần bổ sung các trường theo mục 8 của hướng dẫn.
+
+## Cài đặt và chạy OCR tuần 2
+
+Xem [hướng dẫn OCR](docs/ocr.md) cho PaddleOCR, Qwen2.5-VL và GOT-OCR2.
+Môi trường riêng `.venv-ocr`, đầu ra trong `out/ocr/`:
+
+```sh
+bash scripts/setup_ocr.sh cu128
+source .venv-ocr/bin/activate
+python src/ocr.py doctor
+```
 
 ## Kết quả và tiến độ
 

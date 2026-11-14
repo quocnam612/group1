@@ -1,4 +1,6 @@
 /tutorials
+/.venv-ocr/
+/out/ocr/images/
 /chinh
 /mo_rong
 /.vscode
