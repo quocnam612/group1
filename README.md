@@ -85,130 +85,288 @@ schema cuối cùng; cần bổ sung các trường theo mục 8 của hướng 
 
 ## Cài đặt và chạy OCR tuần 2
 
-### Các bước tiếp theo
+Để chạy lại và so với bản tham chiếu, dùng **`--format reference`** như các lệnh
+bên dưới. Mỗi model xuất một JSON cho mỗi trang ở `out/ocr/week2/pages/<model>/`.
+File chỉ chứa các mảng nội dung giống `gold/ocr/week2/`, không chứa số trang,
+bbox hay cấu hình. Văn bản lấy trực tiếp từ OCR của model, giữ nguyên lỗi;
+metadata và dữ liệu chạy tiếp lưu riêng tại `out/ocr/week2/runs/<model>.json`.
 
-1. **Kiểm tra môi trường:** kích hoạt `.venv-ocr`, sau đó chạy `doctor`;
-   kiểm tra đủ thư viện và `CUDA available: True` trước khi chạy hai VLM.
-2. **Mẫu đã chọn:** trang PDF 38–48 của Kinh Thi, gồm 11 trang;
-   chép bản tham chiếu đúng theo ảnh, tách Hán và Việt,
-   giữ riêng phiên âm, dịch nghĩa, dịch thơ và chú giải.
-3. **Thử từng công cụ trên một ảnh:** thêm `--limit 1` vào các lệnh OCR bên
-   dưới, kiểm tra file TXT/JSON rồi mới chạy đủ mẫu. Chạy các công cụ lần lượt.
-4. **Đánh giá tuần 2:** dùng cùng ảnh/crop và bản tham chiếu cho cả ba công cụ,
-   sau đó thực hiện voting và đo CER riêng Hán/Việt. Voting và CER chưa được
-   triển khai trong `src/ocr.py`.
+Chế độ `archive` cũ lưu **một JSON cho mỗi trang** tại `out/ocr/week2/pages/`.
+Để dò nội dung của chế độ này, mở **[viewer.html](out/ocr/week2/viewer.html) bằng trình duyệt**:
+ảnh và văn bản đặt cạnh nhau, chọn trang/tầng, tìm không dấu và bấm khung ảnh
+để đối chiếu. Có thể chuyển giữa bản đã đối chiếu và OCR thô của từng công cụ.
 
-Chạy các lệnh tại root project. Bộ công cụ gồm **PaddleOCR 3.3.2**, **Qwen2.5-VL-7B-Instruct**
-và **GOT-OCR-2.0-hf**. Baseline cũ trong `tutorials/` được giữ riêng.
+Trong JSON, phần **`content` ở đầu file** là các mảng dòng để đọc nhanh,
+không cần dò qua bbox và metadata. Mở [trang 38](out/ocr/week2/pages/page-0038.json),
+[trang 40](out/ocr/week2/pages/page-0040.json) hoặc
+[trang 44](out/ocr/week2/pages/page-0044.json).
+Tiêu đề, thơ Hán, phiên âm, dịch và chú giải nằm trong cùng file, có nhãn riêng.
+
+### Cấu trúc JSON chế độ archive
+
+- `content`: các dòng văn bản theo từng tầng, đặt đầu file; `content_status` cho biết trạng thái.
+- `source`: PDF, số trang, DPI, ảnh nguồn và SHA-256.
+- `layers`: `tieu_de`, `han`, `phien_am`, `dich_sat`, `dich_tho`, `chu_thich`,
+  `so_trang`, `can_kiem_tra`. Mỗi tầng có `text`, `status`, `regions`.
+- `layers.<tầng>.regions[].ocr`: kết quả thô riêng của từng công cụ, gồm văn bản,
+  cấu hình, phiên bản/revision, thời gian, bbox, điểm nhận diện và cờ cảnh báo.
+- `fullpage_ocr`: các kết quả OCR toàn trang khi có; không trộn vào thơ Hán.
+- `layout`: tọa độ dòng, khối bố cục và các cặp Hán–phiên âm đề xuất.
+
+`content`/`text` là bản xem: ưu tiên bản sửa đã đối chiếu ảnh, rồi PaddleOCR đúng
+ngôn ngữ, Qwen/GOT; **đây không phải lựa chọn theo CER**.
+Các phiên bản OCR khác vẫn được giữ nguyên trong `ocr` để so sánh.
+`text_source` cho biết `source_patch`, công cụ hoặc `layout_hint`.
+
+Các trạng thái cần phân biệt:
+
+| `status` | Ý nghĩa |
+| --- | --- |
+| `ocr_unreviewed` | Có OCR riêng trên crop, chưa kiểm tay/đo CER. |
+| `source_checked` | Nội dung đã đối chiếu ảnh, có bản sửa riêng trong `patches/*.tsv`. |
+| `mixed_sources` | Có cả nội dung đã đối chiếu và phần chưa kiểm tay. |
+| `hint_only` | Mới có gợi ý từ bố cục/OCR cũ, chưa có OCR riêng trên crop. |
+| `mixed_ocr_and_hints` | Tầng gồm cả vùng đã OCR riêng và vùng mới có gợi ý. |
+| `not_present` | Không có vùng thuộc tầng này trên trang. |
+
+Tiêu đề Hán nằm trong `layers.tieu_de.regions` với `layer: "tieu_de_han"`.
+Không tính tiêu đề thành dòng thơ. Chữ Hán xen trong chú giải được giữ trong
+`chu_thich`. Dịch nghĩa và dịch thơ không trộn với nhau.
+
+Lượt chạy trước đã gom 11 trang PDF **38–48**, gồm 133 vùng và 32 cặp Hán–phiên âm đề xuất,
+với 123 kết quả OCR crop: PaddleOCR trên 9 vùng thơ Hán và 3 tiêu đề Hán;
+Qwen trên một vùng Hán, 31 tiêu đề Latin và đủ **79 vùng tiếng Việt** gồm
+9 vùng phiên âm, 27 vùng dịch nghĩa, 17 vùng dịch thơ, 26 vùng chú giải.
+Đã đối chiếu 34 crop tiêu đề với ảnh và toàn bộ 11 vùng tiếng Việt trang 40;
+bản sửa nằm trong `patches/ocr_titles.tsv` và `patches/ocr_vietnamese_page40.tsv`.
+Các vùng tiếng Việt ngoài trang 40 chưa kiểm tay đầy đủ.
+Các tầng còn `hint_only`
+chưa được coi là đã chạy đủ ba công cụ. Bản tham chiếu chưa kiểm đủ; chưa có voting hoặc CER.
+Các file toàn trang không còn trên ổ đĩa tại thời điểm chuyển đổi; bố cục và
+mọi kết quả crop hiện có được giữ nguyên, không dựng lại kết quả đã mất.
+Các JSON archive này hiện đã được dọn khỏi `pages/`; viewer còn là bản của
+lượt chạy trước. Lượt chạy mới dùng format tham chiếu ở ba thư mục model.
+
+### Bản tham chiếu OCR
+
+Sửa bản tham chiếu chép tay tại `gold/ocr/week2/page-0038.json` đến
+`page-0048.json`, đối chiếu với ảnh cùng tên trong `out/ocr/week2/images/`.
+Mỗi file chỉ có các mảng dòng `tieu_de`, `han`, `phien_am`, `dich_sat`,
+`dich_tho`, `chu_thich`, `can_kiem_tra` ở cấp ngoài cùng. Số trang lấy từ tên
+file; metadata bố cục và cấu hình chạy được giữ ở kết quả OCR trong `out/`.
+`can_kiem_tra` chứa các dòng chưa phân loại để kiểm lại. Các bản tham chiếu
+này mới là bản nháp từ OCR, cần kiểm toàn bộ trước khi dùng để tính CER.
+Khi chấm, so bản tham chiếu đã kiểm với OCR thô của từng công cụ.
 
 ### Môi trường
 
-Máy hiện có RTX 4060 Laptop 8 GB. Dùng Python 3.11 trong `.venv-ocr`, PyTorch
-CUDA 12.8 cho hai VLM; PaddleOCR dùng CPU. Qwen mặc định lượng tử hóa NF4 4-bit
-và giới hạn số pixel để giảm VRAM. Lệnh bên dưới thêm CPU offload để chừa VRAM
-trên GPU 8 GB đang dùng cho màn hình. Không chạy Qwen và GOT đồng thời trên GPU này.
+Ba công cụ: **PaddleOCR 3.3.2**, **Qwen2.5-VL-7B-Instruct**, **GOT-OCR-2.0-hf**.
+Máy hiện có RTX 4060 Laptop 8 GB; môi trường đã cài tại `.venv-ocr`.
 
 ```sh
-bash scripts/setup_ocr.sh cu128
 source .venv-ocr/bin/activate
 python src/ocr.py doctor
 ```
 
-Script cần `uv` đã được cài; nó giữ Python và cache trong `.cache/`, không đổi
-môi trường baseline. `requirements-ocr.txt` cố định các thư viện chính;
-`out/ocr/environment.txt` ghi toàn bộ phiên bản sau khi cài. Trên máy chỉ có CPU,
-dùng `bash scripts/setup_ocr.sh cpu`; Qwen 7B CPU cần rất nhiều RAM và không được
-tự chạy mặc định. `doctor` kiểm tra thư viện/CUDA, không xác nhận độ chính xác OCR.
+Trên máy mới, chạy `bash scripts/setup_ocr.sh cu128` trước. Script dùng Python
+3.11, PyTorch CUDA 12.8 và cache `.cache/`; không đổi môi trường baseline.
+`requirements-ocr.txt` cố định thư viện; `out/ocr/environment.txt` lưu phiên bản
+đã cài. PaddleOCR chạy CPU. Qwen dùng NF4 4-bit và CPU offload; không chạy
+Qwen và GOT đồng thời trên GPU 8 GB. Máy chỉ có CPU dùng setup `cpu`, nhưng
+Qwen 7B cần nhiều RAM và chỉ chạy CPU khi thêm `--allow-cpu`.
 
-### Ảnh đầu vào
+### Chuẩn bị ảnh và bố cục
 
-Mẫu OCR hiện chọn trang PDF **38–48**, gồm **11 trang**, render ở 300 DPI:
-
-```sh
-python src/ocr.py render --pdf "chinh/Kinh Thi - Ta Quang Phát 1 (tr1-346).pdf" --pages 38-48 --dpi 300 --output out/ocr/week2/images
-```
-
-Ảnh nằm trong `out/ocr/week2/images/`; các JSON cạnh ảnh ghi PDF nguồn,
-SHA-256, trang PDF và DPI. Thư mục riêng này giữ đúng phạm vi đã chọn;
-`pages.json` liệt kê 11 trang. Các trang đã render cùng cấu hình được giữ lại.
-
-Để tách vùng Hán/Việt cho đánh giá, có thể cắt theo tọa độ tương đối 0–1.
-Ví dụ sau cắt khối Hán ở trang 38; cần xem lại ảnh crop trước khi dùng làm mẫu:
+Các ảnh 38–48 và bố cục hiện đã có; lệnh giống cấu hình sẽ dùng lại kết quả.
 
 ```sh
-python src/ocr.py crop --input out/ocr/week2/images/page-0038.png --box 0.10 0.23 0.34 0.405 --output out/ocr/week2/images/crops/page-0038-han.png
+python src/ocr.py render --pdf "chinh/Kinh Thi - Ta Quang Phát 1 (tr1-346).pdf" --pages 38-48 --dpi 300
+python src/layout.py
 ```
 
-Dùng **cùng ảnh/crop và bản tham chiếu** cho cả ba công cụ. Không sửa văn bản
-OCR bằng tay trước khi đo CER. Trang 44 có cả đầu bài thứ hai; giữ phạm vi
-đánh giá thống nhất với bản chép tay.
-
-### Chạy ba công cụ
-
-#### PaddleOCR — hai cấu hình ngôn ngữ của cùng một công cụ
+`src/layout.py` đọc/ghi cùng thư mục `pages/`; ảnh crop nằm tại `layout/images/`.
+Layout/OCR tự cập nhật [viewer.html](out/ocr/week2/viewer.html). Có thể dựng lại
+bản xem mà không chạy model:
 
 ```sh
-python src/ocr.py run --engine paddleocr --lang chinese_cht --device cpu --input out/ocr/week2/images --output out/ocr/week2/paddleocr/han
-python src/ocr.py run --engine paddleocr --lang vi --device cpu --input out/ocr/week2/images --output out/ocr/week2/paddleocr/viet
+python src/review.py
 ```
 
-`chinese_cht` cho chữ Hán phồn thể, `vi` cho tiếng Việt. Khi đo CER theo vùng,
-thay `--input` bằng thư mục crop phù hợp. Hai cấu hình này không được tính là
-hai công cụ độc lập; script giữ đầu ra riêng, không tự ghép hai bản nhận dạng.
-
-#### GOT-OCR2
+Khi bắt đầu từ trang mới, chạy PaddleOCR toàn trang để lấy tọa độ dòng trước
+khi chạy layout:
 
 ```sh
-python src/ocr.py run --engine got-ocr2 --device cuda:0 --input out/ocr/week2/images --output out/ocr/week2/got-ocr2
+python src/ocr.py run --engine paddleocr --lang chinese_cht --device cpu --input out/ocr/week2/images
+python src/layout.py --overwrite
 ```
 
-#### Qwen2.5-VL 7B — 4-bit cho GPU 8 GB
+Kết quả toàn trang được lưu trong `fullpage_ocr` của từng JSON. Các trang hiện
+có vẫn dùng được tọa độ dòng đã lưu khi kết quả toàn trang cũ không còn.
+Model bố cục [PP-DocLayout_plus-L](https://www.paddleocr.ai/main/en/version3.x/module_usage/layout_detection.html)
+chỉ nhận loại khối, không tự phân biệt Hán/Việt. Script bổ sung luật theo tọa độ,
+chữ OCR gợi ý và các tiêu đề. Quy tắc hiện dành cho bố cục ngang Kinh Thi.
+Trang 44 có vùng tiêu đề khôi phục từ vị trí tiêu đề Việt, được gắn cờ cần kiểm tra.
+
+### OCR từng vùng bằng ba công cụ
+
+Chạy từ root project, trong môi trường `.venv-ocr`. Ảnh/crop 38–48 đã có;
+không cần render hoặc chạy layout lại. `layout/regions.json` giữ cùng danh sách,
+thứ tự và SHA-256 của **123 crop** cho cả ba công cụ, bỏ các vùng số trang.
+Lệnh chỉ đọc ảnh crop và manifest bố cục, không đọc nội dung tham chiếu hoặc
+bản sửa tay. PaddleOCR tự dùng `chinese_cht` cho Hán/tiêu đề Hán và `vi` cho
+các vùng còn lại; tiêu đề Hán/Việt được gom vào `tieu_de` theo thứ tự đã lưu.
 
 ```sh
-python src/ocr.py run --engine qwen2.5-vl --device cuda:0 --quantization 4bit --cpu-offload --input out/ocr/week2/images --output out/ocr/week2/qwen2.5-vl
+source .venv-ocr/bin/activate
+
+python src/ocr.py run --format reference --engine paddleocr --device cpu --pages 38-48
+
+python src/ocr.py run --format reference --engine got-ocr2 --device cuda:0 --pages 38-48 --max-new-tokens 2048
+
+python src/ocr.py run --format reference --engine qwen2.5-vl --device cuda:0 --quantization 4bit --cpu-offload --pages 38-48 --max-new-tokens 2048
 ```
 
-`--cpu-offload` giữ trọng số embedding và lớp đầu ra trong RAM, chuyển lên GPU
-khi cần; chậm hơn nhưng giảm VRAM thường trực. Tùy chọn này chỉ dùng với Qwen
-4-bit CUDA. Cấu hình chỉ nạp GPU đã gặp lỗi hết VRAM trên máy hiện tại.
-Chạy lại dùng model đã cache, không cần xóa cache hoặc tải lại trọng số.
+Chạy lần lượt. Kết quả ở `pages/paddleocr/page-XXXX.json`,
+`pages/got-ocr2/page-XXXX.json`, `pages/qwen2.5-vl/page-XXXX.json`.
+Mỗi trang được ghi khi OCR xong toàn bộ crop của trang đó; metadata được lưu
+sau từng crop để tiếp tục khi bị ngắt. Chạy lại cùng lệnh sẽ tiếp tục từ cache;
+thêm `--overwrite` để OCR lại từ đầu. Chế độ này xử lý toàn trang; dùng
+`--pages 40` để thử một trang. Nếu có cảnh báo giới hạn token, tăng
+`--max-new-tokens` và thêm `--overwrite`.
 
-Thêm `--limit 1` để thử một ảnh trước. Mặc định tối đa 4.096 token đầu ra.
-JSON gắn `possibly_truncated` nếu chạm giới hạn; khi đó cần xem lại, cắt vùng
-hoặc tăng `--max-new-tokens`. Qwen mặc định `--max-pixels 401408`; tăng độ phân
-giải làm tăng VRAM, vì vậy crop các khối chữ nhỏ thường phù hợp hơn cho GPU 8 GB.
+### Thử cấu hình cải thiện trên trang 38
 
-### Đầu ra, model và chạy tiếp
+Đã đối chiếu ảnh và sửa bản tham chiếu trang 38; thay đổi được ghi trong
+`patches/ocr_reference_page38.tsv`. Các trang tham chiếu khác vẫn là bản nháp.
+Kết quả đối chiếu và thử cấu hình nằm ở `out/ocr/week2/comparison.md`.
+
+`--profile scan` tách dòng ngang, phóng 2×, thêm viền trắng và tăng tương phản
+để đọc scan. Qwen dùng prompt theo chữ Hán/Việt, `repetition_penalty=1.0` thay
+cho mặc định checkpoint `1.05` để tránh bỏ chữ lặp; vẫn dùng NF4 và CPU offload.
+Paddle dùng nhận diện trực tiếp từng dòng Việt thay cho chạy detector lần nữa.
+GOT chỉ tách dòng Hán; vùng Việt dùng ảnh crop nguyên bản vì các phép thử tách
+dòng Việt/chia patch cho kết quả kém hơn. Vùng `can_kiem_tra` là nhiễu chưa
+phân loại, được bỏ khỏi lượt chạy profile và khỏi CER. Cấu hình này không đọc
+bản tham chiếu, không sửa đầu ra theo từ điển hoặc theo câu thơ thuộc lòng.
+
+Chạy lần lượt, chỉ trang 38; các trang khác được giữ nguyên:
+
+```sh
+python src/ocr.py run --format reference --profile scan --engine paddleocr --device cpu --pages 38 --overwrite
+python src/ocr.py run --format reference --profile scan --engine got-ocr2 --device cuda:0 --pages 38 --max-new-tokens 512 --overwrite
+python src/ocr.py run --format reference --profile scan --engine qwen2.5-vl --device cuda:0 --quantization 4bit --cpu-offload --pages 38 --max-new-tokens 512 --max-pixels 802816 --overwrite
+
+python src/ocr_compare.py --pages 38
+```
+
+Các JSON vẫn có cùng format tham chiếu. Metadata ghi dấu cấu hình từng kết quả
+để việc thử một trang không xóa cache các trang còn lại. Khi bị ngắt, bỏ
+`--overwrite` khỏi đúng lệnh đang chạy để tiếp tục. Kết quả thử trên một trang
+chưa đủ kết luận cấu hình tốt cho cả sách; Paddle Latin vẫn thiếu 90 ký tự Việt,
+không thể khắc phục giới hạn bảng ký tự chỉ bằng tiền xử lý.
+
+### Lệnh cho chế độ archive
+
+Các lệnh dưới đây **đều ghi vào cùng `pages/page-XXXX.json`**, không tạo TXT hay
+thư mục đầu ra riêng cho từng tầng/công cụ. Chạy lần lượt; thêm `--limit 1`
+để thử một crop. Những kết quả đã có cùng ảnh/cấu hình được bỏ qua.
+
+```sh
+python src/ocr.py run --engine paddleocr --lang chinese_cht --device cpu --paddle-mode han-lines --input out/ocr/week2/layout/images/han
+python src/ocr.py run --engine got-ocr2 --device cuda:0 --input out/ocr/week2/layout/images/han
+python src/ocr.py run --engine qwen2.5-vl --device cuda:0 --quantization 4bit --cpu-offload --max-new-tokens 512 --input out/ocr/week2/layout/images/han
+```
+
+PaddleOCR dùng [TextRecognition](https://www.paddleocr.ai/main/en/version3.x/module_usage/text_recognition.html)
+trực tiếp trên từng dòng ngang để tránh detector bỏ sót chữ. Đã nhận diện
+42 dòng/168 chữ trên 9 crop; trang 40 hiện có 8 dòng/32 chữ. Đây là số lượng
+OCR, không khẳng định từng chữ đều đúng. Dòng có điểm thấp được giữ và gắn cờ.
+
+OCR tiêu đề Hán cũng ghi vào JSON của trang:
+
+```sh
+python src/ocr.py run --engine paddleocr --lang chinese_cht --device cpu --paddle-mode han-lines --input out/ocr/week2/layout/images/tieu_de_han
+```
+
+Tiêu đề Latin đã được OCR lại bằng Qwen và đối chiếu ảnh để sửa dấu thanh,
+chữ số La Mã và khoảng trắng. Mọi sửa tay chỉ áp dụng cho bản xem, có SHA-256
+crop trong `patches/ocr_titles.tsv`. Lệnh OCR tương ứng (dùng lại kết quả nếu có):
+
+```sh
+python src/ocr.py run --engine qwen2.5-vl --device cuda:0 --quantization 4bit --cpu-offload --max-new-tokens 128 --input out/ocr/week2/layout/images/tieu_de
+python src/ocr.py run --engine qwen2.5-vl --device cuda:0 --quantization 4bit --cpu-offload --max-new-tokens 128 --input out/ocr/week2/layout/images/tieu_de_viet
+```
+
+Để áp dụng lại các bản sửa đã đối chiếu:
+
+```sh
+python src/pages.py --patches patches/ocr_titles.tsv
+python src/review.py
+```
+
+**Đo CER bằng `regions[].ocr[<công cụ>].text` thô**, không dùng `content` hoặc
+`text` đã sửa. Việc kiểm tra tiêu đề chưa thay thế bản tham chiếu đủ các trang.
+
+Với phiên âm/dịch, đổi `images/han` thành `images/phien_am`, `images/dich_sat`
+hoặc `images/dich_tho`. Model PaddleOCR Latin đang cache thiếu các chữ Việt như
+`ạ`, `ậ`, `ự`, `ữ`, nên dù chọn `--lang vi` vẫn có thể rơi cả chữ/dấu; đây không
+phải lỗi font hiển thị. Đã xác nhận bằng bảng ký tự trong `inference.yml` và
+thử trên ảnh. Tham khảo [báo cáo lỗi PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR/issues/16339).
+Kết quả PaddleOCR vẫn có thể dùng để so sánh, nhưng không được tự thêm ký tự
+vào dictionary mà không có model tương ứng. CLI ghi cảnh báo và metadata về
+độ phủ bảng ký tự; bản xem ưu tiên OCR khác có khả năng biểu diễn đầy đủ tiếng Việt.
+
+Chạy lại cả bốn tầng tiếng Việt bằng Qwen (vẫn giữ chữ Hán xen trong chú giải):
+
+```sh
+python src/ocr.py run --engine qwen2.5-vl --device cuda:0 --quantization 4bit --cpu-offload --max-new-tokens 2048 --layers phien_am dich_sat dich_tho chu_thich
+```
+
+Thêm `--pages 40` để chỉ xử lý trang 40; bộ lọc trang/tầng không làm thay đổi
+fingerprint nhận diện. Dùng cùng crop và bản tham chiếu khi so ba công cụ.
+Nếu vẫn chạy PaddleOCR Việt để đo CER, dùng `--lang vi` và bỏ `--paddle-mode han-lines`.
+Hai cấu hình PaddleOCR vẫn chỉ tính là một công cụ.
+
+Qwen crop Hán dùng giới hạn 512 token; các tầng Việt dùng 2048 token.
+Nếu `possibly_truncated` được gắn, kiểm tra crop hoặc tăng giới hạn và dùng
+`--overwrite` để thay đúng kết quả của công cụ/vùng đó. Các công cụ khác vẫn
+được giữ trong cùng trang. Không tự sửa đầu ra OCR để làm đẹp số liệu.
+Khi thay kết quả, bản khác nội dung/cấu hình được giữ tại `ocr_history` trong
+cùng JSON. Bản đối chiếu trang 40 được ghi riêng ở `patches/ocr_vietnamese_page40.tsv`;
+OCR thô không bị sửa theo bản này.
+
+### Thư mục đầu ra và việc còn lại
 
 ```text
 out/
-  corpus.jsonl                 # đầu ra corpus cuối cùng
-  source_errors.tsv            # lỗi trong sách nguồn
+  README.md
+  corpus.jsonl
+  source_errors.tsv
   ocr/
-    environment.txt            # phiên bản thư viện đã cài
+    environment.txt
     week2/
-      images/                  # ảnh 38–48, crop và metadata; không commit
-      paddleocr/han/            # kết quả TXT/JSON
-      paddleocr/viet/
-      got-ocr2/                # tạo khi chạy công cụ tương ứng
-      qwen2.5-vl/
+      pages/
+        paddleocr/    # JSON gọn, cùng format bản tham chiếu
+        got-ocr2/
+        qwen2.5-vl/
+      runs/           # một JSON/model: cấu hình và cache OCR thô để chạy tiếp
+      viewer.html     # bản xem của lượt archive trước
+      images/         # ảnh trang + metadata nguồn; không commit
+      layout/
+        regions.json  # thứ tự và hash crop dùng chung cho ba model
+        images/       # crop/preview; không commit
 ```
 
-- Mỗi ảnh có `.txt` và `.json`, gồm SHA-256 ảnh, công cụ, cấu hình, thời gian.
-  Paddle giữ thêm kết quả gốc (vùng chữ/độ tin cậy); VLM ghi model và commit
-  thực tế đã dùng. Hai model mặc định được cố định commit trong `src/ocr.py`.
-  Qwen chỉ được yêu cầu chép nguyên văn, không dịch/sửa lỗi.
-- Lần chạy đầu tải model từ nhà cung cấp vào `.cache/ocr/`. Qwen 7B tải trọng
-  số lớn dù nạp 4-bit; cần mạng và đủ dung lượng đĩa. Commit đã ghi có thể
-  truyền lại bằng `--revision <SHA>` cho lần tái lập.
-- Lần chạy tiếp bỏ qua kết quả đã có cùng ảnh và tham số. Khi đổi tham số,
-  dùng thư mục đầu ra mới hoặc `--overwrite`. Các file ảnh/crop không đưa lên Git.
-- Các lệnh ở đây nhận tham số CLI, **chưa đọc `config.yaml`**. Chúng xuất OCR
-  thô, chưa thực hiện tách tầng, voting hoặc tính CER.
-- Nếu `doctor` báo CUDA không khả dụng trong sandbox nhưng `nvidia-smi` ngoài
-  sandbox nhận GPU, chạy lệnh OCR trong terminal thường của máy.
+JSON theo trang là dữ liệu trung gian; `out/corpus.jsonl` cuối kỳ vẫn phải theo
+schema chung của đề. Bản tham chiếu còn ở dạng nháp; voting, CER và căn chỉnh
+bản dịch chưa được triển khai. Dùng cùng ảnh/crop và phạm vi cho ba công cụ và bản tham chiếu;
+trang 44 có cả phần đầu bài Cát đàm nên cần thống nhất phạm vi.
 
-API tham khảo: [PaddleOCR](https://www.paddleocr.ai/main/en/version3.x/pipeline_usage/OCR.html),
+Hai VLM cố định revision trong `src/ocr.py`; model tải vào `.cache/ocr/` và
+được dùng lại. CLI hiện chưa đọc `config.yaml`. Nếu CUDA không khả dụng trong
+sandbox, chạy OCR ở terminal thường nhận GPU.
+
+Tài liệu công cụ: [PaddleOCR](https://www.paddleocr.ai/main/en/version3.x/pipeline_usage/OCR.html),
 [Qwen2.5-VL](https://huggingface.co/docs/transformers/v4.57.1/model_doc/qwen2_5_vl),
 [GOT-OCR2](https://huggingface.co/docs/transformers/v4.57.1/model_doc/got_ocr2),
 [bitsandbytes](https://huggingface.co/docs/transformers/v4.57.1/quantization/bitsandbytes).
@@ -229,8 +387,9 @@ Số liệu lấy từ `tutorials/han_viet_corpus_demo/out/report.md`.
   `tutorials/reports/week1_page_review.md` và `report.pdf`.
   Trang 7 Đạo Đức Kinh chỉ đối chiếu một phần; trang 44 Kinh Thi chỉ lấy
   phần thuộc bài Quan thư.
-- **Tuần 2:** chuẩn bị 10 trang tham chiếu; chạy ít nhất 3 công cụ OCR và voting;
-  đo CER riêng Hán/Việt. Chưa có số liệu OCR/CER.
+- **Tuần 2:** đã chạy ba công cụ OCR trên 11 trang PDF 38–48 và thử tách bố cục.
+  Còn thiếu bản tham chiếu được kiểm tra, căn chỉnh hoàn chỉnh, voting và
+  bảng CER riêng Hán/Việt; các cặp từ layout hiện mới là đề xuất.
 - **Tuần 3–5:** hoàn thiện corpus chính, bộ gold, đánh giá và cải tiến căn chỉnh,
   rồi xử lý phần mở rộng. `out/corpus.jsonl`, `gold/gold.jsonl`,
   `eval/eval.py`, `out/source_errors.tsv` hiện còn là file khung.

@@ -11,6 +11,7 @@ from pathlib import Path
 import subprocess
 import sys
 import time
+import unicodedata
 
 ROOT = Path(__file__).resolve().parents[1]
 os.environ.setdefault("HF_HOME", str(ROOT / ".cache/ocr/huggingface"))
@@ -40,6 +41,16 @@ def save_json(path, value):
     temp = path.with_suffix(path.suffix + ".tmp")
     temp.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     temp.replace(path)
+
+
+def missing_vietnamese_characters(alphabet):
+    vowels = "aeiouyăâêôơưAEIOUYĂÂÊÔƠƯ"
+    tones = ("", "\u0300", "\u0301", "\u0309", "\u0303", "\u0323")
+    required = {unicodedata.normalize("NFC", vowel+tone) for vowel in vowels for tone in tones} | set("đĐ")
+    alphabet = set(alphabet)
+    composed = {unicodedata.normalize("NFC", token) for token in alphabet}
+    return sorted(char for char in required if char not in composed and
+                  not all(part in alphabet for part in unicodedata.normalize("NFD", char)))
 
 
 def page_numbers(value):
@@ -129,12 +140,28 @@ def crop(args):
 
 
 def paddle_runner(args):
-    from paddleocr import PaddleOCR
     if args.device not in ("auto", "cpu"):
         raise ValueError("This setup uses CPU PaddlePaddle. Use --device cpu for PaddleOCR.")
+    if getattr(args, "paddle_mode", "page") == "han-lines":
+        return paddle_han_line_runner(args)
+    if getattr(args, "paddle_mode", "page") == "viet-lines":
+        return paddle_viet_line_runner(args)
+    from paddleocr import PaddleOCR
     model = PaddleOCR(lang=args.lang, ocr_version="PP-OCRv5", device="cpu",
                       use_doc_orientation_classify=False, use_doc_unwarping=False,
                       use_textline_orientation=False)
+    charset = {}
+    if args.lang == "vi":
+        import yaml
+        config = ROOT / ".cache/ocr/paddlex/official_models/latin_PP-OCRv5_mobile_rec/inference.yml"
+        if config.exists():
+            alphabet = yaml.safe_load(config.read_text(encoding="utf-8"))["PostProcess"]["character_dict"]
+            missing = missing_vietnamese_characters(alphabet)
+            charset = {"vietnamese_charset_complete": not missing, "missing_vietnamese_characters": missing,
+                       "charset_config_sha256": hashlib.sha256(config.read_bytes()).hexdigest()}
+            if missing:
+                print(f"Warning: cached PaddleOCR Latin model cannot encode {len(missing)} Vietnamese characters "
+                      "(e.g. ạ, ậ, ự). Keep it for comparison; use Qwen for Vietnamese display.", file=sys.stderr)
 
     def recognize(path):
         results = []
@@ -147,7 +174,79 @@ def paddle_runner(args):
                 data = json.loads(data)
             results.append(data)
             texts.extend(data.get("res", data).get("rec_texts", []))
-        return "\n".join(texts), {"raw": results, "ocr_version": "PP-OCRv5"}
+        return "\n".join(texts), {"raw": results, "ocr_version": "PP-OCRv5", **charset}
+    return recognize
+
+
+def paddle_viet_line_runner(args):
+    """Recognize the entire isolated line, without a second text detector."""
+    from PIL import Image
+    import numpy as np
+    import yaml
+    from paddleocr import TextRecognition
+    name = "latin_PP-OCRv5_mobile_rec"
+    model = TextRecognition(model_name=name, device="cpu", cpu_threads=2, enable_mkldnn=False)
+    config = ROOT / ".cache/ocr/paddlex/official_models" / name / "inference.yml"
+    alphabet = yaml.safe_load(config.read_text(encoding="utf-8"))["PostProcess"]["character_dict"]
+    missing = missing_vietnamese_characters(alphabet)
+    if missing:
+        print(f"Warning: Paddle Latin still cannot encode {len(missing)} Vietnamese letters; "
+              "preprocessing cannot recover characters absent from the trained model.", file=sys.stderr)
+    def recognize(path):
+        with Image.open(path) as image:
+            array = np.asarray(image.convert("RGB"))[:, :, ::-1].copy()
+        results = []
+        texts = []
+        for result in model.predict([array], batch_size=1):
+            data = result.json
+            data = data() if callable(data) else data
+            data = json.loads(data) if isinstance(data, str) else data
+            data = data.get("res", data)
+            results.append(data)
+            texts.append(data["rec_text"])
+        return "\n".join(texts), {"raw": results, "recognition_model": name, "paddle_mode": "viet-lines",
+                                   "vietnamese_charset_complete": not missing,
+                                   "missing_vietnamese_characters": missing,
+                                   "charset_config_sha256": hashlib.sha256(config.read_bytes()).hexdigest()}
+    return recognize
+
+
+def paddle_han_line_runner(args):
+    from PIL import Image
+    import numpy as np
+    from paddleocr import TextRecognition
+    from han_lines import LINE_SETTINGS, split_han_lines
+    model_name = "PP-OCRv5_server_rec"
+    model = TextRecognition(model_name=model_name, device="cpu", cpu_threads=2, enable_mkldnn=False)
+    cache = ROOT / ".cache/ocr/paddlex/official_models" / model_name
+    artifacts = {p.name: hashlib.sha256(p.read_bytes()).hexdigest()
+                 for p in sorted(cache.glob("inference.*")) if p.is_file()}
+
+    def recognize(path):
+        with Image.open(path) as opened:
+            image = opened.convert("RGB")
+        boxes = split_han_lines(image)
+        arrays = [np.asarray(image.crop(box))[:, :, ::-1].copy() for box in boxes]
+        lines = []
+        for box, result in zip(boxes, model.predict(arrays, batch_size=8), strict=True):
+            data = result.json
+            if callable(data):
+                data = data()
+            if isinstance(data, str):
+                data = json.loads(data)
+            data = data.get("res", data)
+            flags = []
+            if not data["rec_text"]:
+                flags.append("empty_recognition")
+            if data["rec_score"] < .8:
+                flags.append("low_ocr_confidence")
+            lines.append({"bbox": box, "text": data["rec_text"], "score": data["rec_score"],
+                          "flags": flags, "raw": data})
+        return "\n".join(line["text"] for line in lines), {
+            "ocr_version": "PP-OCRv5", "recognition_model": model_name,
+            "model_artifacts_sha256": artifacts, "paddle_mode": "han-lines",
+            "line_segmentation": LINE_SETTINGS, "line_count": len(lines), "lines": lines,
+            "recognition_settings": {"device": "cpu", "cpu_threads": 2, "enable_mkldnn": False, "batch_size": 8}}
     return recognize
 
 
@@ -208,14 +307,21 @@ def vlm_runner(args):
     def recognize(path):
         with Image.open(path) as opened:
             picture = opened.convert("RGB")
+        scan = getattr(args, "profile", None) == "scan"
+        transcription_prompt = PROMPT
+        if scan:
+            from ocr_preprocess import qwen_scan_prompt
+            transcription_prompt = qwen_scan_prompt(Path(path).parent.name)
         if args.engine == "qwen2.5-vl":
             messages = [{"role": "user", "content": [
-                {"type": "image", "image": picture}, {"type": "text", "text": PROMPT}]}]
+                {"type": "image", "image": picture}, {"type": "text", "text": transcription_prompt}]}]
             prompt = processor.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
             inputs = processor(text=[prompt], images=[picture], return_tensors="pt").to(device)
         else:
             inputs = processor(picture, return_tensors="pt").to(device)
         options = {"do_sample": False, "max_new_tokens": args.max_new_tokens}
+        if scan:
+            options.update(repetition_penalty=1.0, no_repeat_ngram_size=0, num_beams=1)
         if args.engine == "qwen2.5-vl":
             # Only the last token's logits are needed for greedy generation.
             options["logits_to_keep"] = 1
@@ -230,23 +336,48 @@ def vlm_runner(args):
                       "possibly_truncated": generated.shape[1] >= args.max_new_tokens,
                       "quantization": args.quantization if args.engine == "qwen2.5-vl" else "none",
                       "device_map": getattr(model, "hf_device_map", {"": device}),
-                      "prompt": PROMPT if args.engine == "qwen2.5-vl" else None}
+                      "prompt": transcription_prompt if args.engine == "qwen2.5-vl" else None,
+                      **({"generation_options": {k: v for k, v in options.items() if k != "tokenizer"}}
+                         if scan else {})}
     return recognize
 
 
 def run(args):
+    if getattr(args, "profile", None) and getattr(args, "format", None) != "reference":
+        raise ValueError("--profile scan requires --format reference")
+    if getattr(args, "format", None) == "reference":
+        from ocr_reference import run as run_reference
+        return run_reference(args)
+    from pages import get_ocr, image_identity, ocr_key, page_path, put_ocr, read_page, regions
+    if getattr(args, "pages", None) and not getattr(args, "layers", None):
+        raise ValueError("--pages requires --layers when running OCR")
+    if getattr(args, "paddle_mode", "page") == "han-lines":
+        if args.engine != "paddleocr" or args.lang != "chinese_cht":
+            raise ValueError("--paddle-mode han-lines requires PaddleOCR chinese_cht on Han-only horizontal crops")
+        from han_lines import LINE_SETTINGS
+        args.line_segmentation = LINE_SETTINGS.copy()
     if args.engine != "qwen2.5-vl":
         args.quantization = "none"
     if args.engine in MODELS:
         args.lang = None
         args.model = args.model or MODELS[args.engine]
         args.revision = args.revision or MODEL_REVISIONS.get(args.model)
-    if args.input.is_file():
+    if getattr(args, "layers", None):
+        images = []
+        for page_file in sorted(args.output.glob("page-*.json")):
+            page = read_page(page_file)
+            if getattr(args, "pages", None) and page["page"] not in args.pages:
+                continue
+            for region in regions(page):
+                if region["layer"] in args.layers:
+                    images.append(Path(page["layout_assets"]) / region["crop"])
+    elif args.input.is_file():
         images = [args.input]
     else:
         images = sorted(p for p in args.input.iterdir() if p.suffix.lower() in (".png", ".jpg", ".jpeg"))
     if not images:
-        raise ValueError(f"No images in {args.input}")
+        raise ValueError("No matching region crops for --layers/--pages" if getattr(args, "layers", None)
+                         else f"No images in {args.input}")
     if args.limit:
         images = images[:args.limit]
     if len({image.stem for image in images}) != len(images):
@@ -254,19 +385,24 @@ def run(args):
     if any(args.output.resolve() == image.parent.resolve() for image in images):
         raise ValueError("Use a separate output directory to preserve render/crop metadata")
     args.output.mkdir(parents=True, exist_ok=True)
-    settings = {key: value for key, value in vars(args).items() if key not in ("func", "input", "output", "overwrite", "limit")}
+    settings = {key: value for key, value in vars(args).items() if key not in ("func", "input", "output", "overwrite", "limit", "layers", "pages", "format", "layout")}
+    key = ocr_key({"engine": args.engine, "settings": settings})
     pending = []
     for image in images:
-        target = args.output / (image.stem + ".json")
+        target = page_path(args.output, image)
+        if image_identity(image)[1] is not None and not target.exists():
+            raise ValueError(f"No page JSON for crop {image}; run layout first")
         digest = hashlib.sha256(image.read_bytes()).hexdigest()
-        if target.exists() and not args.overwrite:
-            saved = json.loads(target.read_text())
+        saved = get_ocr(args.output, image, key)
+        if saved and not args.overwrite:
             if saved.get("image_sha256") != digest or saved.get("settings") != settings:
                 raise ValueError(f"Settings/image changed for {target}; use another --output or --overwrite")
-            print(f"Already recognized: {target}", flush=True)
+            print(f"Already recognized: {target} ({image.name}, {key})", flush=True)
         else:
             pending.append((image, target, digest))
     if not pending:
+        from review import build_review
+        build_review(args.output)
         return
     recognize = paddle_runner(args) if args.engine == "paddleocr" else vlm_runner(args)
     for image, target, digest in pending:
@@ -274,12 +410,12 @@ def run(args):
         text, details = recognize(image)
         record = {"image": str(image.resolve()), "image_sha256": digest, "engine": args.engine,
                   "settings": settings, "text": text, "seconds": round(time.perf_counter() - started, 3), **details}
-        txt = target.with_suffix(".txt")
-        txt.write_text(text + "\n", encoding="utf-8")
-        save_json(target, record)
-        print(f"OCR: {image.name} -> {txt}", flush=True)
+        put_ocr(args.output, image, record, overwrite=args.overwrite)
+        print(f"OCR: {image.name} -> {target} ({key})", flush=True)
         if details.get("possibly_truncated"):
             print("Token limit reached; review/crop this page or increase --max-new-tokens.", file=sys.stderr)
+    from review import build_review
+    build_review(args.output)
 
 
 def main():
@@ -302,10 +438,22 @@ def main():
     cropper.set_defaults(func=crop)
     runner = commands.add_parser("run", help="Run one OCR engine on the same input images/crops")
     runner.add_argument("--engine", choices=("paddleocr", *MODELS), required=True)
+    runner.add_argument("--format", choices=("archive", "reference"), default=argparse.SUPPRESS,
+                        help="reference writes raw OCR as text-only page JSONs in output/<engine>/")
+    runner.add_argument("--profile", choices=("scan",), default=argparse.SUPPRESS,
+                        help="Reference format: split horizontal lines, upscale and preserve scan details")
+    runner.add_argument("--layout", type=Path, default=argparse.SUPPRESS,
+                        help="Crop manifest for reference format; default: out/ocr/week2/layout/regions.json")
     runner.add_argument("--input", type=Path, default=Path("out/ocr/week2/images"))
-    runner.add_argument("--output", type=Path, required=True)
+    runner.add_argument("--layers", nargs="+", choices=("han", "phien_am", "dich_sat", "dich_tho", "chu_thich", "tieu_de", "tieu_de_han", "tieu_de_viet"),
+                        default=argparse.SUPPRESS, help="Select registered region crops from the page JSON files")
+    runner.add_argument("--pages", type=page_numbers, default=argparse.SUPPRESS, help="PDF page filter with --layers or --format reference")
+    runner.add_argument("--output", type=Path, default=Path("out/ocr/week2/pages"),
+                        help="Shared per-page JSON folder; all OCR engines/layers merge here")
     runner.add_argument("--device", default="auto", choices=("auto", "cpu", "cuda:0"))
     runner.add_argument("--lang", choices=("chinese_cht", "vi"), default="chinese_cht", help="PaddleOCR recognition language")
+    runner.add_argument("--paddle-mode", choices=("page", "han-lines"), default=argparse.SUPPRESS,
+                        help="han-lines recognizes horizontal Han rows directly, bypassing page text detection")
     runner.add_argument("--model", help="Override Hugging Face model ID")
     runner.add_argument("--revision", help="Override pinned model commit; actual commit is saved in each JSON")
     runner.add_argument("--seed", type=int, default=42)

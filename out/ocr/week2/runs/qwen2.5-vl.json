@@ -1,0 +1,2480 @@
+{
+  "settings": {
+    "command": "run",
+    "engine": "qwen2.5-vl",
+    "device": "cuda:0",
+    "lang": null,
+    "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+    "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+    "seed": 42,
+    "max_new_tokens": 2048,
+    "max_pixels": 401408,
+    "quantization": "4bit",
+    "allow_cpu": false,
+    "cpu_offload": true,
+    "paddle_language_policy": null
+  },
+  "records": {
+    "page-0038.json:r001": {
+      "image_sha256": "20b7a2d4d951bbd9a90d923201d405bbd93b14fb56cb169d44751e124cdea3af",
+      "text": "BÀI THỨ NHẤT",
+      "seconds": 42.555,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 9,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0038.json:r002": {
+      "image_sha256": "d5749ced844de7e47a53afacc84ef80963832eb33d2806d6e6f33dcc721c26b8",
+      "text": "CHƯƠNG I",
+      "seconds": 1.659,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 6,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0038.json:r003": {
+      "image_sha256": "02b5120d5e1a78a66bcaf50a27afeb14ea23d2a79e4a9c0256868e3168c081b4",
+      "text": "關雎",
+      "seconds": 1.064,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 3,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0038.json:r004": {
+      "image_sha256": "dadf5b3f0d52de2f51b65e3b07a3c09a87443be9ad3faa6210e503adb9aad2f3",
+      "text": "Quan thu. (Chu nam)",
+      "seconds": 2.429,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 10,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0038.json:r005": {
+      "image_sha256": "76208875894639bbc7d38758ba417e29684c2dffc073070ac007b728be061033",
+      "text": "關雎鳩在河之洲窈淑女君子好逑",
+      "seconds": 3.418,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 15,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0038.json:r006": {
+      "image_sha256": "c899c8a9beec82e2ae6d2087a11647280657d7c51dfb837166723c11095e712f",
+      "text": "1. Quan quan thư cưu.\n2. Tại hà chi châu.\n3. Yếu điệu thực nữ,\n4. Quân tử hảo cầu.",
+      "seconds": 7.128,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 34,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0038.json:r007": {
+      "image_sha256": "5c0b4cafb9ae7d571d389b4acbd89106e45ef14fbdbcb889f909a38011a0c5cc",
+      "text": "Dịch nghĩa",
+      "seconds": 1.272,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 4,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0038.json:r008": {
+      "image_sha256": "897dc5022b7f8ee18d06536f1c98b08b708b6304eb83a4cd7376c6c0d5ec39c0",
+      "text": "1. Đôi chim thư cưu hót hoạ nghe quan quan.\n2. Ở trên cồn bên sông.\n3. Người thục nữ u nhàn,\n4. Phải là lứa tốt của bực quân tử",
+      "seconds": 11.145,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 54,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0038.json:r009": {
+      "image_sha256": "9071abec9b57fa3d8ebddf4938c533fdea830a4ad849040b32a602547e24154b",
+      "text": "Dịch thơ",
+      "seconds": 1.255,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 4,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0038.json:r010": {
+      "image_sha256": "0c18cda9674a2eea2232b10f59402538e24f9f253398812845356f77904b1d6b",
+      "text": "Quan quan kia tieu thu cuu,\nBen con hot hoa cung nhau vang day.\nU nhan thuc nu the nay,\nXung cung quan tu sanh vay lua duyên.",
+      "seconds": 10.55,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 51,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0038.json:r011": {
+      "image_sha256": "ba5ba6d143393e2de3bace89ef7a5c803a7ec1d38a0409b4d1399eea7622804e",
+      "text": "r",
+      "seconds": 0.873,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 2,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0038.json:r012": {
+      "image_sha256": "2a8d94ee9421ce3db2a7e8cd3e220fd21735d6ef02096635a5ca067958711a6b",
+      "text": "Chú giái của Chu Hy.",
+      "seconds": 2.253,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 9,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0038.json:r013": {
+      "image_sha256": "1063c1b8b376804e01be90bac577851711cedc9da96beef8e75540028af9f6fc",
+      "text": "Chương này thuộc thể hứng. 閩閩 quan quan, tiếng chim trống chim mái ứng hoạ nhau, 雁鳩 thư cưu loài chim nước, lại có một tên nữa là vương thư, hình trạng giống như chim phù y, nay trong khoảng Trường giang và sông Hoài thì có chim ấy. Chim này sống có đôi nhất định mà không hề lân",
+      "seconds": 18.231,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 89,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0039.json:r001": {
+      "image_sha256": "df87b80353bc6b3ec3af26b363e2782b1b9b6c9d1b88165062b9589dc3d757c2",
+      "text": "lộn. Hai con thường lôi chung mà không là lời, cho nên sách của Mao công nói rằng: Đôi chim thư cưu tình ý chí thiết khăn vó đậm đà, nhưng lúc nào cũng giữ gìn cách biệt.",
+      "seconds": 10.851,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 53,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0039.json:r002": {
+      "image_sha256": "1f6685921353bd8137d5eb321b91e6eebcbafee567ed31c4055a6ac9cf4f4b28",
+      "text": "Sách Liệt nữ truyện cho là người ta chưa từng thấy chim thư cưu sống dư cặp hay sống lẻ loi, là vì tính nó như thế. 河 hà, tên thông dụng của những dòng nước chảy ở phương bắc. 洲 châu, cồn đất ở giữa sông có thể ở được 窃窕 yểu điệu, là ý u nhàn, u tịch yên lặng và nhàn nhã. 淑 thục, hiền lành 女 nữ, con gái chưa gả chồng, nói nàng Thái Tự, vợ vua Văn vương, lúc còn ở nhà với cha mẹ 君子 quan tử, chỉ vua Văn vương 好 hảo, đẹp, lành 逑 cầu, đôi lứa. Sách của Mao công 聘 chí là rất, tình ý rất thiết tha đậm đà.",
+      "seconds": 36.998,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 185,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0039.json:r003": {
+      "image_sha256": "26b50d2bd406940e60ff965a7a0852795a942d71c59211d81d21cb4a6eebbdf8",
+      "text": "興 Hứng là trước nói một vật gì để sau dẫn đến lời ca vịnh.",
+      "seconds": 4.24,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 19,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0039.json:r004": {
+      "image_sha256": "2bc18fdc93e660eda58af525a460aa1026f622c3385c73d301007c6c4a7ec8d0",
+      "text": "Vua Văn vương nhà Chu sinh có thánh đức, lại được bậc thánh nữ họ Tự để kết hôn. Những người trong cung, lúc nàng Thái Tự mới đến, thấy nàng có đức hạnh u tịch nhã và trinh chuyên, bèn làm bài thơ này rằng: Kia đôi chim thư cưu nghe hót quan quan, đang ứng hoạ với nhau ở trên cồn bên sông. Người thực nữ yểu điệu nầy há không phải là bạn lứa tốt của bậc quân tử Văn vương hay sao? Có ý nói nàng Thái Tự và vua Văn vương cùng hòa vui mà cung kính lẫn nhau, cũng như tình chí thiết đậm đà mà lúc nào cũng giữ gìn cách biệt của đôi chim thư cưu vậy.",
+      "seconds": 34.206,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 169,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0039.json:r005": {
+      "image_sha256": "79ef1244381c8639a82c3ac91ef6b0803098a00ae7f1cd049c5a5326249e1c75",
+      "text": "Về sau hễ nói hương thì ý vẫn cũng phỏng theo chương này.",
+      "seconds": 4.451,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 20,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0039.json:r006": {
+      "image_sha256": "7ec9d7b4a3ba74db65a3fd72c65dfb1caa10d35fda8eec074ef40e9cce964e6b",
+      "text": "Ông Khuông Hành nhà Hán nói rằng: Yếu điệu thực nữ,\nQuân tử hảo câu, là nói nàng Thái Tự rất mực trinh thục\nkhông thay tiết tháo. Những rung cảm về tình dục không hề\nlấn vào nghi dung, những ý vui riêng không hề lộ ra cử chỉ,\ncó được như thế rồi mới có thể phối hợp với bậc chí tôn và\nlàm chủ tế tông miếu. Vì đó là đầu mối của Cương thường và",
+      "seconds": 22.896,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 112,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0040.json:r001": {
+      "image_sha256": "75c1b6afcfb3a2a468f692186612d4b9522a4a47e379c0f8a14039e27b77d4b5",
+      "text": "của nền vương hoá. Giảng Kinh Thi như thế đáng gọi là người khéo nói vậy.",
+      "seconds": 5.243,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 24,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0040.json:r002": {
+      "image_sha256": "3da0945eee5ec81a566bc1938980cb40fb7366a31b24bdf8df7071c7fd250303",
+      "text": "CHƯƠNG II",
+      "seconds": 1.671,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 6,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0040.json:r003": {
+      "image_sha256": "5137032993afae542abd163a0b5e339961982712045bb5b6b44ee32707ac965d",
+      "text": "菜之女之得服哉側\n荇流淑求不思悠反\n參差左窈寐之寐哉轉\n寤求寤輾",
+      "seconds": 7.197,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 34,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0040.json:r004": {
+      "image_sha256": "54903590071f89f2ee48c5f20fb8ffe9f46e71f0e111a49f8d2acbd745485b4d",
+      "text": "5. Sâm si hạnh thái,\n6. Tả hữu lưu chi,\n7. Yểu điệu thực nữ,\n8. Ngộ mỹ cầu chi.\n9. Cầu chi bất đắc,\n10. Ngộ mỹ tư bậc.\n11. Du tai! Du tai!\n12. Triển chuyển phản trắc.",
+      "seconds": 14.806,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 71,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0040.json:r005": {
+      "image_sha256": "62bda860e8093873b6e3463db01e526956f5486f3433733a2ca1757ecc77a1f9",
+      "text": "Dịch nghĩa",
+      "seconds": 1.29,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 4,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0040.json:r006": {
+      "image_sha256": "f63975bef3dfee12d96c88956489b2b8780ace5f6ebceca96801dab6dd780f93",
+      "text": "5. Rau hạnh cộng dài cộng ngắn không đều nhau,",
+      "seconds": 3.458,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 15,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0040.json:r007": {
+      "image_sha256": "84f6cd54ac47c13b50515f8dbc664a5b2ac11f5bccabbc0556bbcedb407495e3",
+      "text": "6. Phải thuận theo dòng nước sang bên tả bên hữu mà hái.",
+      "seconds": 4.266,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 19,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0040.json:r008": {
+      "image_sha256": "c972c0040f4cb11d2edb51ba16589af3184a1f66ef9834fefdd77aea46a76fc1",
+      "text": "7. Người thục nữ u nhàn ấy",
+      "seconds": 2.685,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 11,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0040.json:r009": {
+      "image_sha256": "7c1bfea4294133df6f41fae7f2a0a5f8cebb2adf004566db1aa65d9720323ef1",
+      "text": "8. Khi thức khi ngủ đều lo cầu cho được nàng.",
+      "seconds": 3.484,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 15,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0040.json:r010": {
+      "image_sha256": "5f73451a6ebf2e4eb7630cd6a9aaa3604006e70e689078cf45c9a9f5498ac714",
+      "text": "9. Nếu câu mà không được,",
+      "seconds": 2.275,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 9,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0040.json:r011": {
+      "image_sha256": "b4b5c9c1196f5a38988d36f406a96476d23ff35f35ec7a799a8583ce3698d127",
+      "text": "10. Thi khi thức khi ngủ đều tưởng nhớ.",
+      "seconds": 3.071,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 13,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0040.json:r012": {
+      "image_sha256": "1ffb0217a8e686146ab0b6075e154d9985a070a8c95c402790ad313c0a1a61d7",
+      "text": "11. Tưởng nhớ xa xôi thay! Tưởng nhớ xa xôi thay!",
+      "seconds": 4.873,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 22,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0040.json:r013": {
+      "image_sha256": "5551be9840034219494efb8750d2535264d25dffaa730744de1913651da048ed",
+      "text": "12. Vua cứ lăn qua trở lại mãi nằm không yên giấc.",
+      "seconds": 4.042,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 18,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0040.json:r014": {
+      "image_sha256": "ca7d7350a7780126720e71298cd80995545f34362e69045e8d3971ba07656728",
+      "text": "Dịch thơ",
+      "seconds": 1.271,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 4,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0040.json:r015": {
+      "image_sha256": "94e1596b37dcd40d3ff5a02d01a313cc77d9b91cda17008e7827f40f48a0127e",
+      "text": "So le rau hạnh lơ thơ.\nHái theo dòng nước ven bờ đôi bên.",
+      "seconds": 4.841,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 22,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0041.json:r001": {
+      "image_sha256": "096c7fe78878b2f1cebf099118bd8799bdd2c8e8bb1904fe4c9d2d025fb49923",
+      "text": "U nhàn thực nữ chính chuyên.",
+      "seconds": 2.292,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 9,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0041.json:r002": {
+      "image_sha256": "c67898aeacba08b40e79324eb1bc6527f84e6acc1d2d69a5aacfdc8d5233341b",
+      "text": "Nhá khi thức ngủ triền miên chẳng rời.",
+      "seconds": 3.061,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 13,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0041.json:r003": {
+      "image_sha256": "2d496beed01d0c8636733a5b224c1b46d6274295af42d513c6838fa8a766ecc1",
+      "text": "Nếu câu mà chẳng được người.",
+      "seconds": 2.274,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 9,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0041.json:r004": {
+      "image_sha256": "a65fdd76e29eb272689d6947286ba069e311312f2b1406b259a2f6f6a8679eed",
+      "text": "Khi mơ khi tỉnh bồi hồi nhớ thương.",
+      "seconds": 2.89,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 12,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0041.json:r005": {
+      "image_sha256": "a240d93ba6593e065c4b14c9d11114171a434cdcb2c76c21ee6a1402f8134974",
+      "text": "Xa xôi trông nhớ đêm trường.",
+      "seconds": 2.469,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 10,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0041.json:r006": {
+      "image_sha256": "615d04bef25e6f442364a3a8640d11ece8609ca86c815ff71c8c406ba1fa9be8",
+      "text": "Chiếc thân trằn trọc trên giường nào yên.",
+      "seconds": 3.252,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 14,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0041.json:r007": {
+      "image_sha256": "ab0e8b6aeab95cece558e38674a0aa1e3b1e1c269d910b4e04ebf0002f34b22e",
+      "text": "Chú giải của Chu Hy",
+      "seconds": 1.944,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 7,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0041.json:r008": {
+      "image_sha256": "df4faba4b9881e3983938ccbe882215af4c6f5fce48f4d635ab9110483ced628",
+      "text": "Chương này thuộc thể hứng 參差 sâm si, dáng dài ngắn không đồng đều nhau 荷 hạnh, rau tiếp dư, rễ mọc ở đáy nước, lá màu đỏ tía hình tròn, bề kính hơn một tắc, nổi trên mặt nước. 或左或右 hoặc tả hoặc hữu, vô định không thường, khi bên trái khi bên mặt, 流 lưu, thuận theo dòng nước mà hái lấy, 或寤或寐 hoặc ngọ hoặc mỵ, không lúc nào là không, khi thức khi ngủ đều nhớ đến nàng, 服 bậc, nhớ, 悠 du, dài, xa xôi 辗 triền, lăn nửa vòng, 轉 chuyển, lăn trọn vòng, 反 phản, lăn lại, 倒 trắc, lăn nghiêng. Đều là nói nằm không yên giấc.",
+      "seconds": 37.736,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 187,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0041.json:r009": {
+      "image_sha256": "6a0d371726d2b9a08c939fdf1cc4879039481197ac5af45025d872d1f8d4d8a6",
+      "text": "Chương này nói vào lúc chưa cầu được nàng Thái Tự:\nRau hạnh cộng ngắn cộng dài không đều kia, phải thuận theo dòng nước sang bên tả sang bên hữu mà hái.\nNgười thực nữ yếu điệu ấy, khi thức khi ngủ vua không quên lo cầu cho được nàng, vì nàng ấy với đức hạnh ấy trên đời không thường có vậy.\nNếu cầu nàng mà không được thì không có ai phối hợp với vua để thành việc nội trị hoàn mỹ.\nCho nên vua lo nghĩ sâu xa không xiết đến thế ấy.",
+      "seconds": 24.337,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 119,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0041.json:r010": {
+      "image_sha256": "9340926aefa61f048bfef60968b1843fc6ab7312756787d3ea76dd951b6631e2",
+      "text": "CHƯƠNG III",
+      "seconds": 1.673,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 6,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0041.json:r011": {
+      "image_sha256": "73b4d78c89bb1b791c358f34c0bc3176d4598980fbaf02db8b41413b54d9eb65",
+      "text": "參差荇菜\n左右采之",
+      "seconds": 2.268,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 9,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0041.json:r012": {
+      "image_sha256": "fbab96c24be4cc6b0e0985fd70773432b53a09ff0dc6545036ce54f1b8aea928",
+      "text": "13. Sâm si hạnh thái,\n14. Tả hữu thể chi.",
+      "seconds": 4.231,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 19,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0042.json:r001": {
+      "image_sha256": "6de0f972a8d6def88138e3813b1c7e3d5276bdfdbfdfdd07172e7a54ca0a772e",
+      "text": "窈窕淑女之琴瑟友之\n參差荇菜之左右芼之\n窈窕淑女之鐘鼓樂之",
+      "seconds": 6.214,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 29,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0042.json:r002": {
+      "image_sha256": "81f6024a1a8a184f8f2300370faecba3c14ac421b9cd4a82c28b5f25ee3e16e1",
+      "text": "15. Yểu điệu thực nữ,\n16. Cầm sắt hữu chi,\n17. Sâm si hạnh thái,\n18. Tả hữu mạo chi.\n19. Yểu điệu thực nữ,\n20. Chung cổ lạc chi",
+      "seconds": 11.653,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 56,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0042.json:r003": {
+      "image_sha256": "4b13051fe200adcb8901dd1498c20f1542375e88c0065e908e674916249bff69",
+      "text": "Dịch nghĩa",
+      "seconds": 1.278,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 4,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0042.json:r004": {
+      "image_sha256": "d5ff889525160a2fd31e7c0fb882cfe5e35a26ace9a39eeec4b7089e2fb5d025",
+      "text": "13. Rau hạnh so le không đều nhau,",
+      "seconds": 3.256,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 14,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0042.json:r005": {
+      "image_sha256": "b122d1554ddf4d98ed40ce82ee56a4a255208aef41ef9c504e63a9e00bc54e83",
+      "text": "14. Phải thuận theo dòng nước sang bên tả bên hữu chọn hái lấy.",
+      "seconds": 4.664,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 21,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0042.json:r006": {
+      "image_sha256": "d6c6ccc8b754dd5566f5e802e23a24cfcdfe174c3273a905f6a822da11f1bd2e",
+      "text": "15. Người thục nữ u nhàn ấy,",
+      "seconds": 3.063,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 13,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0042.json:r007": {
+      "image_sha256": "4546864c5ffe9defca83f826334891714ff00c3e24f2d9a617eefd24e9fe89c9",
+      "text": "16. Phải đánh đấm cầm đạn sắt mà thân ái nàng.",
+      "seconds": 4.257,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 19,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0042.json:r008": {
+      "image_sha256": "10636055b6e683ea4be19da1b5058da104bbdb6ffa83a8e1cb8eccb45e537cfe",
+      "text": "17. Rau hạnh cộng dài cộng ngắn không đều nhau,",
+      "seconds": 3.666,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 16,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0042.json:r009": {
+      "image_sha256": "17378e72438697d3ee5d4dd316ed7004b4593965fb1debe3fb914f0ce6d88f66",
+      "text": "18. Phải nấu chín mà dâng lên ở hai bên.",
+      "seconds": 4.056,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 18,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0042.json:r010": {
+      "image_sha256": "02ac4f1e61f4e7a5e58ba1cafec52cf44851083c3b378225889d58ab84f02a4b",
+      "text": "19. Người thục nữ u nhàn ấy,",
+      "seconds": 3.055,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 13,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0042.json:r011": {
+      "image_sha256": "4fa401b53b5844aab3cf9d94b6621e05c1d95226a5a622bed5a4c79dd004b576",
+      "text": "20. Phải khua chuông đánh trống để nàng mừng vui.",
+      "seconds": 4.216,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 19,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0042.json:r012": {
+      "image_sha256": "2ba021c38b7413e7f84910de66d6c0ef8567e1a2cb287203a0d158f6a3b4c7d4",
+      "text": "Dịch thơ",
+      "seconds": 1.278,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 4,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0042.json:r013": {
+      "image_sha256": "8872098b3411631e608df2c6710b34f9704ac459f4b25b9b00d068ad97a2ee51",
+      "text": "Văn dài rau hạnh bên sông.\nKiếm tìm mà hái theo dòng đôi bên.\nĐược người thục nữ chính chuyên.\nMén nàng, cầm sắt đánh lên vang dầy.\nBên sông rau hạnh văn dài,\nĐêm về nấu chín mà bày hai bên.\nĐược người thục nữ chính chuyên.\nĐể nàng vui thích, vang rèn trống chuông.",
+      "seconds": 18.327,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 89,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0043.json:r001": {
+      "image_sha256": "62b1cee226038ee3ff0238e21ffb379ffc263db692133d90aeda4dc2b183df77",
+      "text": "Chú giải của Chu Hy",
+      "seconds": 1.889,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 7,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0043.json:r002": {
+      "image_sha256": "6f325c101ef1da80849e45407b237ee2e706c579c2bcefd032dbaf53afcbc088",
+      "text": "Chương này thuộc hứng 采 thể (thái), chọn mà hái, lấy芼 mạo, nấu chín mà dâng lên, 琴 cầm, cây đàn 5 dây hoặc 7 dây, 瑟 sắt, đàn 25 dây, đều là loại đàn dây tơ, loại nhạc khí nhỏ 友 vi (hữu), ý thân ái 鍾 chung, cái chuông, loại nhạc khí bằng đồng 鼓 cổ, cái trống, loại nhạc khí to bằng da 樂 lạc, ý rất thuận hòa vui vẻ.",
+      "seconds": 25.21,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 124,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0043.json:r003": {
+      "image_sha256": "44cdbd80a885b11d23ca45c2784aa0431568bc72f68af9638dd69f762a54348f",
+      "text": "Chương này nói vào lúc tìm được nàng rau hạnh cộng ngắn dài không đều kia, phải chọn hái rồi nấu luộc mà dâng lên. Người thực nữ yêu điệu ấy đã cầu được rồi, phải thân ái để làm cho nàng vui, vì rằng người ấy với đức hạnh ấy trên đời không thường có vậy. Hôm nay mà cầu được nàng, thì đã được người để phối hợp với vua thành việc nội trị. Cho nên tỏ ý vui mừng tôn kính không xiết như thế vậy.",
+      "seconds": 22.867,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 112,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0043.json:r004": {
+      "image_sha256": "208add34a4c689c81397c38caf9e5d6cc3b1ac7b70acb17cf51379032f98dce0",
+      "text": "Thiên Quan thư có 3 chương, 1 chương 4 câu, 2 chương 8 câu.",
+      "seconds": 5.63,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 26,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0043.json:r005": {
+      "image_sha256": "d6bf05f29c464e4d844d9facf2212fc549c22fef08bd56922201235d037047af",
+      "text": "Khổng tử nói rằng: \"Thiên Quan thư vui mà không dâm, buồn mà không thương tâm\". Tôi cho rằng: Lời ấy đối với thơ Quan thư này đúng với sự đoan chính của tính tình và sự điêu hoà của thanh khí. Vì rằng đức hạnh như chim thư cưu, tình chí thiết đậm đà mà vẫn giữ gìn cách biệt, thì sự đoan chính về tính tình của bà Hậu phi Thái Tự hản đã có thể nhận thấy được một phần rồi. Đến việc thức ngũ lân qua trở lại, đánh đàn cầm đàn sắt, khua chuông đánh trống, niềm vui buồn đã tột bực và đều không quá khuôn khổ phép tắc, thì sự đoan chính về tính tình của người làm thơ ấy lại có thể nhận thấy được cả toàn thể rồi vậy. Riêng sự điêu hoà về thanh khí thì không thể nghe được. Tuy là đáng hận, nhưng học giả hãy thưởng thức nghĩa lý ở trong lời thơ ấy để bồi dưỡng tâm tính, thì cũng có thể nắm được căn bản của việc học Kinh Thi vậy.",
+      "seconds": 48.722,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 243,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0044.json:r001": {
+      "image_sha256": "b1c5228ffcdc377f6bbb67174260dfb04a50b09b969d484f50a8108d6281e809",
+      "text": "Khuông Hành nói rằng: Phối hợp thành vợ chồng là mối đầu của việc phồn sinh của dân chúng, là nguồn cội của vạn phúc. Nghi lễ của hôn nhân được chính đáng thì về sau phẩm vật thoả thuận và thiên mệnh mới hoàn toàn.",
+      "seconds": 12.47,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 60,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0044.json:r002": {
+      "image_sha256": "143d5bc1c3aa1a02775a3b15fb05d5faf8376a88924d08bfa3b53638265cf912",
+      "text": "Mạnh tử đã khảo luận Kinh Thi, lấy thiên Quan thư làm đầu, ý nói rằng trên hơn hết là bực cha mẹ dân, đức hạnh của bà Hậu phi phu nhân nếu chẳng ngang bằng trời đất, thì không lấy gì mà thờ phụng thần linh để điều hòa sự thích nghi của vạn vật. Từ đời trước trở lại, việc hưng phế của ba đời Hạ, Thương, Chu chưa có bao giờ không do ở đấy vậy.",
+      "seconds": 20.945,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 102,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0044.json:r003": {
+      "image_sha256": "cd43e278acedc6b5f51ea2bb8e2ca17e4fba117d355248d210d1b36b54f8af06",
+      "text": "BÀI THỨ 2",
+      "seconds": 2.066,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 8,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0044.json:r004": {
+      "image_sha256": "6f86925c04ed3c88f38c176d9caf0454e7afecfacf760ca36d87a14fb3abc0b6",
+      "text": "CHƯƠNG I",
+      "seconds": 1.684,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 6,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0044.json:r010": {
+      "image_sha256": "9c7e4059d08f50a8a79dff553b8701fe5c8b2e77c720ecfd7e7d483da384a222",
+      "text": "Cát đàm.(Chu nam 2)",
+      "seconds": 3.032,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 13,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0044.json:r011": {
+      "image_sha256": "44c4d65beb8d99a762f1249637f6f458812f20b9bbf22601123445c002f47de6",
+      "text": "葛覃",
+      "seconds": 1.075,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 3,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0044.json:r006": {
+      "image_sha256": "64158ebc96c0ced9c56c22399fd30fad924702b8a1c6be1b7e34294cb15c9fdd",
+      "text": "兮谷萋飛木喈\n覃中萋于灌喈\n之于葉鳥于聲\n葛施維黃集其",
+      "seconds": 6.005,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 28,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0044.json:r012": {
+      "image_sha256": "e4fbe3a16a892d6b7910edef3e69cb806d9aa0c766beb99bc4411b9ef534b670",
+      "text": "1. Cát chi đàm hề,\n2. Dị vu trung cốc.\n3. Duy diệp thê thê,\n4. Hoàng điểu vu phi,\n5. Tập vu quán mộc,\n6. Kỳ thanh giê giê (giai giai)",
+      "seconds": 13.273,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 63,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0044.json:r007": {
+      "image_sha256": "7267a4738262544ed6a70bc0bcf24fe3c20d89f55b11a065028be68d16afc1f8",
+      "text": "Dịch nghĩa",
+      "seconds": 1.268,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 4,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0044.json:r008": {
+      "image_sha256": "9b0c94b1abc1751ae527e2bbc200a0850fa6c69d3831e01002046b6591b25a9c",
+      "text": "1. Cây săn đã dài,\n2. Bò lan vào trong hang,\n3. Lá nhiều um tùm.\n4. Chim hoàng ly bay đến.",
+      "seconds": 7.611,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 36,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0045.json:r001": {
+      "image_sha256": "881259dae2327d67ef2390674bc9df43ce67290fc29d9148023a6696c417c741",
+      "text": "5. Tụ tập ở trên bụi cây ấy.",
+      "seconds": 2.844,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 12,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0045.json:r002": {
+      "image_sha256": "a80f39f971eb420c64643c5107309ffe6c33e0d3f272d2220a4c2df024a2e50f",
+      "text": "6. Tiếng kêu nghe văng vẳng xa xa.",
+      "seconds": 3.851,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 17,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0045.json:r003": {
+      "image_sha256": "f007e00d94c4431b3e41fb717a3ca6666eea82f7441d022c895d6e991bcc84c6",
+      "text": "Dịch thơ",
+      "seconds": 1.275,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 4,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0045.json:r004": {
+      "image_sha256": "cb45143ed7cca46e7aa00ba783bc7763bb803003c7ba9dc07b213a39712cac9b",
+      "text": "Sắn dài đậm đuôi sang hè,",
+      "seconds": 2.468,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 10,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0045.json:r005": {
+      "image_sha256": "7c3fe8eb0b39ea48c97bc2227bec9120c71578b403b585c4af531069dbd5acbb",
+      "text": "Mọc bò vào tận trong khe hốc này.",
+      "seconds": 3.244,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 14,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0045.json:r006": {
+      "image_sha256": "5c672e1b83905ba9c8621af1bcbbfd5def9abc6f6cacca2c7fb8cf15f62d1305",
+      "text": "Tốt tươi nhánh lá rậm đầy.",
+      "seconds": 2.676,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 11,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0045.json:r007": {
+      "image_sha256": "e6ed79b1bb38338427b7bd9c5736e4fb3a867db56fd8e8c0579ba4f4c3d45a3e",
+      "text": "Hoàng ly thấp thoáng đà bay liệng vòng",
+      "seconds": 3.049,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 13,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0045.json:r008": {
+      "image_sha256": "06e4a4f6096569feaea63dc78cb67df5fa47d3ea173431992bade7e110efda4f",
+      "text": "Đâu chung bụi săn thung dung,",
+      "seconds": 2.859,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 12,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0045.json:r009": {
+      "image_sha256": "830c0936eb9df28912fd2e222a43a0e358bbeb12a35bd3ab5e4f645720a4afc7",
+      "text": "Véo von ca hát khắp vùng vắng nghe.",
+      "seconds": 3.062,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 13,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0045.json:r010": {
+      "image_sha256": "15fe1b4260c0e1893eaf48043c2c44c6584b529a13262bb5214ef30658f9650c",
+      "text": "Chú giải của Chu Hy",
+      "seconds": 1.881,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 7,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0045.json:r011": {
+      "image_sha256": "9fa7be6334182878b9d1da10216a838d310aac1e48474282be1aa6542159742c",
+      "text": "Chương này thuộc phú葛cát, tên một loài cây, cây săn, mọc bò ra, có thể lấy chỉ dệt vải mịn, vải thô, 単đam, dài ra, 施dì, dời, 中谷trung cốc, tức cốc trung, trong hang trong hốc萋萋thê thê, dáng nhiều um tùm黃鳥hoàng điểu, chim hoàng ly. 灌木quán mộc, bụi cây, 喳喳giai giai(dọc giê giê cho hợp vận), tiếng hót hoạ nghe văng vẳng xa xa.",
+      "seconds": 29.191,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 144,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0045.json:r012": {
+      "image_sha256": "705086f5de6622ae3c5f169738f7f05ffbdf29536a77c629223d507fd279340c",
+      "text": "Phủ là phô tràn sự việc mà nói thẳng ra. Nhân Hậu phi Thái Tự đã dệt thành vải mịn vải thô mà phủ, tức là phô tràn sự việc ấy ra.",
+      "seconds": 10.25,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 49,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0045.json:r013": {
+      "image_sha256": "6ba9696be6924fabfa7cabab2cfde17f17de1a6abcce64a646e51c38acade9de",
+      "text": "Thuật rằng vào thời đầu mùa hạ, lá cây săn vừa um tùm, thì chỉ có chim hoàng ly kêu ở trên",
+      "seconds": 6.227,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 29,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0045.json:r014": {
+      "image_sha256": "5e68d7e5f1be10eb8b2107cd97536771909c6720e1afbaeec1b625d02bea5566",
+      "text": "CHƯƠNG II",
+      "seconds": 1.672,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 6,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0045.json:r015": {
+      "image_sha256": "ee3db808aeb3aaf71749791083ae9f8a2fde810593f50f9a8426f77ad9700064",
+      "text": "葛之覃兮\n施于中谷\n維葉莫莫",
+      "seconds": 3.443,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 15,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0045.json:r016": {
+      "image_sha256": "8f015b41cf298ff6d5e5248462acb783a25c4f351beabdfbd0780d1e227a15bb",
+      "text": "7. Cát chi đàm hề,\n8. Dị vu trung cốc.\n9. Duy diệp mịch mịch,",
+      "seconds": 6.792,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 32,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0046.json:r001": {
+      "image_sha256": "4bb759ed6e2b103dc21b607a7b0639d791ebbefd97f95e9d61aea342ecadfb49",
+      "text": "是刈是護\n維締為綏\n服之無斁",
+      "seconds": 4.033,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 18,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0046.json:r002": {
+      "image_sha256": "5b8f5bfc712d47a9c30ab1f026e42303c7a85d80fe6672bd65a1edbcc4a3f87e",
+      "text": "10. Thị ngại thị hoạch.\n11. Vi si vi khích,\n12. Phục chi vô dịch",
+      "seconds": 5.599,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 26,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0046.json:r003": {
+      "image_sha256": "7ec7e68645088b97a6cc3e0816acce5245922f2098237630b80ca9b4cec64ca7",
+      "text": "Dịch nghĩa",
+      "seconds": 1.271,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 4,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0046.json:r004": {
+      "image_sha256": "d420af0946dcf15da6933abc52ec84771e6ed5a54a852349182e581e67b9c904",
+      "text": "7. Cây săn đã dài.\n8. Bò lan vào trong hang.\n9. Lá nhiều rườm rà,\n10. Mới cắt về rồi đem nấu.\n11. Dệt vải mịn vải thô,\n12. Mặc vải ấy không chân.",
+      "seconds": 13.519,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 66,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0046.json:r005": {
+      "image_sha256": "3303f6f983b0f509e2a9e1a55469d5d79bfa68a210730ff2e53b2408881b85b0",
+      "text": "Dịch thơ",
+      "seconds": 1.271,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 4,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0046.json:r006": {
+      "image_sha256": "aa8d80db79f8d3e1e0810f456812ef7ab900e7c9eb31c7e90536b2e3d121bbcb",
+      "text": "Qua hè dây sẵn đã dài,\nMọc bò vào tận hang nầy tốt tươi.\nRườm rà nhánh lá khắp nơi.\nCắt về xong xả, ta thời nấu chung,\nVải thô vải mịn dệt xong,\nCắt may ta mặc chẳng lòng chân chê.",
+      "seconds": 14.651,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 71,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0046.json:r007": {
+      "image_sha256": "33fdd27dfb22a0a116f2265694ff1233e7dadaa6c809fca4f1389831b19cf94a",
+      "text": "Chú giải của Chu Hy",
+      "seconds": 1.884,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 7,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0046.json:r008": {
+      "image_sha256": "a3e503c140de699e6b3476648ee5c5bcc0a7b26465fc39a58381350fff09acca",
+      "text": "Chương này thuộc thể phú 莫莫 mích mích, dáng rườm rà chen rậm, 戛 ngải, chặt cắt, 護 hoạch, nấu 綿 si, vải mịn,\n給 khích, vải thô, dịch chán ghét.",
+      "seconds": 14.036,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 68,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0046.json:r009": {
+      "image_sha256": "661b1219b876f78a05bfa080c6c29f3879eab148dc0f26a56ed5d1dd36ca9f73",
+      "text": "Chương này nói vào thời thịnh hạ, giữa mùa hè, cây sắn đã già, nàng mới lo cắt lấy chỉ để dệt vải, rồi mặc vải ấy không chán, vì mình đã bỏ công lao nhọc mới biết rằng thành vải không phải dễ dàng, cho nên lòng hằng thương mến, tuy",
+      "seconds": 14.908,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 72,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0047.json:r001": {
+      "image_sha256": "44b73f341a75982dad39f080c0ee18fe92063457e6779d6acfaf0cbb38d81664",
+      "text": "mặc vải ấy dơ rách đến mấy cũng không nhẫn tâm chán ghép mà vứt bỏ.",
+      "seconds": 5.63,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 26,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0047.json:r002": {
+      "image_sha256": "de12ab3e99f907451834dcfa675da51227db4037bb0945b2f39e7d95c6835f6d",
+      "text": "CHƯƠNG III",
+      "seconds": 1.667,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 6,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0047.json:r003": {
+      "image_sha256": "a722e69cad2420caff87a33b51cd21641c0e8e016ee3726fe9d7d45f663eed4c",
+      "text": "氏歸私衣否母師言我我害父告告污漬寧言言薄薄害歸",
+      "seconds": 5.451,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 25,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0047.json:r004": {
+      "image_sha256": "038213e63f21e9a47d916ceff8062179bc57e0c2b54001cd2e7e4487b291d7cc",
+      "text": "13. Ngôn cáo sư thị,\n14. Ngôn cáo ngôn quy.\n15. Bạc ô ngã tư,\n16. Bạc hoãn ngã y.\n17. Hạt hoãn hạt phủ?\n18. Quy ninh phụ mẫu.",
+      "seconds": 12.531,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 60,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0047.json:r005": {
+      "image_sha256": "d3889de598407a09e63ee0fb9d32cafbcfcbb62fd1959d09e699afc479c9d5e0",
+      "text": "Dịch nghĩa",
+      "seconds": 1.29,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 4,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0047.json:r006": {
+      "image_sha256": "c0127b7a4b98a356204998aa840aea6fc717b979b918c6f94117d3815429216f",
+      "text": "13. Nàng nói với bà thầy,",
+      "seconds": 2.677,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 11,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0047.json:r007": {
+      "image_sha256": "de85a14191f2c26fece9a1afb4af999081607c398de75324c022c5e1742c73e0",
+      "text": "14. Dặn thưa lại với chồng ý nàng muốn trở về thăm cha mẹ.",
+      "seconds": 4.634,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 21,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0047.json:r008": {
+      "image_sha256": "e44781c1b0c974deb66c560873e26259e5f8531d114b6de476bc349c38e80f6d",
+      "text": "15. Nàng dặn bà thầy hãy vò áo thường.",
+      "seconds": 3.863,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 17,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0047.json:r009": {
+      "image_sha256": "a0896faae97c2144bc0e963cc76454ede95d67ec4b4635bd25fcb392c2678cf0",
+      "text": "16. Hãy giặt áo lê.",
+      "seconds": 2.649,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 11,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0047.json:r010": {
+      "image_sha256": "c392e486c7f282b5ee1727d19aa6dfb7ef6933d2150349af020eea49af7b6aa2",
+      "text": "17. Cái gì nên giặt, cái gì nên không?",
+      "seconds": 3.657,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 16,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0047.json:r011": {
+      "image_sha256": "8855098c1da6fe5b4308e4761474fe34e898373e1806b22168311f8b54d41355",
+      "text": "18. Để mặc trở về thăm cha mẹ.",
+      "seconds": 2.86,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 12,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0047.json:r012": {
+      "image_sha256": "445747845367e3bc904b95af16596a57f5fdbf8f8ead8c53ea426f5718a4d24e",
+      "text": "Dịch thơ",
+      "seconds": 1.29,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 4,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0047.json:r013": {
+      "image_sha256": "be8ac9cb59e126cbc2a2b26886aee6dcfac3bc148fd09f7f8e3d45848ba7d7a2",
+      "text": "Dặn dò sư thị rõ ràng,\nVề thăm cha mẹ thưa chàng đặng hay.\nVò qua những áo thường này.\nGiặt qua những áo mặc ngày lễ công.\nCái thì giặt, cái thì không?\nViếng thăm cha mẹ mặc trong ngày về.",
+      "seconds": 12.989,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 62,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0048.json:r001": {
+      "image_sha256": "ea78f05ec3c1d984d96ee221bdb983e28e44b1fff18a9fda5ec3eb247d9b2702",
+      "text": "Chú giải của Chu Hy",
+      "seconds": 1.868,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 7,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0048.json:r002": {
+      "image_sha256": "034d463d440c98369114681439dfb2baa02150335f43aae6ac70b39b8852955d",
+      "text": "Chương này thuộc phu ngôn, nói, báo cho biết, 師 sư, nữ sư, bà vú, 薄 bạc, hẩy 污 ô, vò cho hết dơ (như trị loạn thì nói loạn), 淚 hoãn, giặt cho sạch, 私 tư, áo mặc thường 衣 y, áo lê, 害 hạt, sao? 寧 ninh, yên, thăm viếng cha mẹ xem có bình yên không.",
+      "seconds": 22.173,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 108,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0048.json:r003": {
+      "image_sha256": "b84130baebcc4d867258c9640d8d9e8e8f9929b852f7e2ec2d782025520f86db",
+      "text": "Chương 2 đã nói thành quần áo bằng vải mịn, vải thô. Ở chương cuối này, nàng bèn nói với bà vú già thưa lại với chồng ý nàng muốn trở về thăm cha mẹ. Nàng lại dặn: \"Hãy vò áo thường, hãy giặt áo lễ. Cái gì nên giặt? Cái gì nên chưa? Vì tôi sẽ mặc những áo đó để trở về thăm cha mẹ.\"",
+      "seconds": 20.6,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 100,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0048.json:r004": {
+      "image_sha256": "0bc32ddfbd00384fcebbefb0cdca85078f3b5ef99882711d61db1ac688b79252",
+      "text": "Thiên Cát đàm có 3 chương, mỗi chương 6 câu.",
+      "seconds": 4.465,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 20,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0048.json:r005": {
+      "image_sha256": "c9f49f0a8bbdacc70c36588a808311e5804671f7654637b4c2e989950323d2f7",
+      "text": "Bài thơ này chính do Hậu phi Thái Tự làm ra, cho nên không có lời khen tặng. Nhưng ở bài thơ này, có thể nhận thấy nàng đã sang mà còn siêng năng, đã giàu mà còn cần kiệm, đã lớn mà lòng kính mến bà sư phó không giảm, đã lấy chồng mà đạo hiếu với cha mẹ không suy kém, đều là đức hạnh đôn hậu của nàng mà người đời không dễ gì có được. Bài tiểu tự cho đấy là căn bản của bà Hậu phi, mong cũng gần đúng vậy.",
+      "seconds": 24.146,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 118,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0048.json:r006": {
+      "image_sha256": "98414c9c648babaf041b04672c217ba071cc643145a9e2f3620240458096cc98",
+      "text": "BÀI THỨ 3",
+      "seconds": 2.064,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 8,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0048.json:r007": {
+      "image_sha256": "8822dbaac1c8e6083f6e127629ef53bd9bc2cc9673d48e175def8101e6c25690",
+      "text": "CHƯƠNG I",
+      "seconds": 1.684,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 6,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0048.json:r008": {
+      "image_sha256": "2498b7621aaa2a84db7157c2d43de4f5d42763704079b35928d2569402357237",
+      "text": "卷耳",
+      "seconds": 1.089,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 3,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0048.json:r009": {
+      "image_sha256": "852c93390cd224c954a7ce813072f41eff645c5f6a853cd17d488e6b80a9bd65",
+      "text": "Quyển nhị (Chu nam 3)",
+      "seconds": 2.894,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 12,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0048.json:r010": {
+      "image_sha256": "4433966daf2797a966db92a589b202334e06ccd12d6ef5d4c2cbaaab86f43554",
+      "text": "采采卷耳\n不盈筐\n嗟我怀人\n寘彼周行",
+      "seconds": 4.436,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 20,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    },
+    "page-0048.json:r011": {
+      "image_sha256": "7830f143a38b540b61c70827cef9941861dbf798b6430e01829d5d08e31e2f3e",
+      "text": "1. Thái thái quyển nhị,\n2. Pát doanh khuynh khuông.\n3. Ta ngã hoài nhân,\n4. Chí bỉ chu hàng.",
+      "seconds": 8.105,
+      "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+      "device": "cuda:0",
+      "generated_tokens": 38,
+      "possibly_truncated": false,
+      "quantization": "4bit",
+      "device_map": {
+        "model.visual": "cuda:0",
+        "model.language_model.embed_tokens": "cpu",
+        "model.language_model.layers": "cuda:0",
+        "model.language_model.norm": "cuda:0",
+        "model.language_model.rotary_emb": "cuda:0",
+        "lm_head": "cpu"
+      },
+      "prompt": "Transcribe all visible text in reading order. Preserve traditional Chinese characters, Vietnamese diacritics, original spelling, punctuation and line breaks. Do not translate, correct, explain or invent text. Output only the transcription."
+    }
+  },
+  "layout_manifest_sha256": "9747156814174ff8c0819bb89e67abe27bb2f45688a2edabec1ea43ee41749d0"
+}
