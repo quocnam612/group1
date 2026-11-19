@@ -1,0 +1,19 @@
+{
+  "source_pdf": "Kinh Thi - Ta Quang Phát 1 (tr1-346).pdf",
+  "pdf_pages": [38, 48],
+  "page_count": 11,
+  "mapping_basis": "The 11 submitted page images are in PDF page order and their text matches the saved OCR page records.",
+  "images": [
+    {"page": 38, "file": "codex-clipboard-ecea4ebc-e3aa-49ca-bbaa-d0e77476630f.png", "sha256": "8646f9c4bc0dc0b6da9c78bf7eb44c812f90bef933b3e0a55663ef4ff0a62fbd"},
+    {"page": 39, "file": "codex-clipboard-69da81db-cf9d-49f4-82fd-eb541db54c13.png", "sha256": "e335f8243d5389d7a51655ef91ae6c3e69f03af658e91cd640e2ad7da0319dfd"},
+    {"page": 40, "file": "codex-clipboard-16066ab3-6d1a-41a6-9579-6d8a72e5f4f7.png", "sha256": "e8d292bcd75a1b185651980db7c4a0d0429b8873350178cb0b111a04db386a16"},
+    {"page": 41, "file": "codex-clipboard-75384d78-0c71-4c5a-a0b5-337cc0d8fd16.png", "sha256": "02be78b6a229e7b9f5dff4b6efda5c869aacbdbadb8e429e14c39a6beff95980"},
+    {"page": 42, "file": "codex-clipboard-9a6f2bda-29ab-418f-bfa6-d74c8555247f.png", "sha256": "17928f34784ee944feee6034583d336d19c67426df7bb7c8d457d06d96c4dca8"},
+    {"page": 43, "file": "codex-clipboard-e2f4b01d-3de3-4ca5-a024-2f0f10e1c7ea.png", "sha256": "c1d7fa4e493069023612af13e5c6b1a5880860cd57eb77f81dabdec41e4a62c3"},
+    {"page": 44, "file": "codex-clipboard-2a00671a-9822-4f7a-b6e3-525a6482678a.png", "sha256": "14f806fded7d166d9f82ee0b9c325a9a8526ab87226dfe98b0e03d2ff43f52a4"},
+    {"page": 45, "file": "codex-clipboard-1307d6c5-0b07-4e58-8440-b2e36a89dc74.png", "sha256": "5e6a1d471825183c7b7788356af326867cf1df0b8215b246d2ee4c19594a5679"},
+    {"page": 46, "file": "codex-clipboard-c64c79e1-32bf-4c6e-831b-96a8aa694c13.png", "sha256": "1b67c1dcf35ca72b3d41c034b40cfc8407bb2b75ab0dd70fd607e23619847ba1"},
+    {"page": 47, "file": "codex-clipboard-c06497f7-45c2-4ed0-a809-6aa915ff2aa1.png", "sha256": "e9adb13478c71870fffdd32ecdbb16a5d8d30ad1408fd99950893b929ee3c4f6"},
+    {"page": 48, "file": "codex-clipboard-bbb75b1e-1139-4f8c-bdb0-adbbb4964014.png", "sha256": "f99548fd8c702f3fe2fcaa693dbbd5f3a4d7e066291837ad2a229d4ae04676d2"}
+  ]
+}

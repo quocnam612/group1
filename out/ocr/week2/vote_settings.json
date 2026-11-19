@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "pages": [
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48
+  ],
+  "method": "Progressive character-level Levenshtein alignment and majority vote.",
+  "tie_break": "Lowest per-language CER on this reference set; engine order breaks remaining ties.",
+  "reference_set": "gold\\ocr\\week2",
+  "engine_order_by_reference_cer": {
+    "han": [
+      "paddleocr",
+      "qwen2.5-vl",
+      "got-ocr2"
+    ],
+    "vietnamese": [
+      "qwen2.5-vl",
+      "paddleocr",
+      "got-ocr2"
+    ]
+  },
+  "calibration_cer": {
+    "han": {
+      "paddleocr": {
+        "errors": 81,
+        "reference_characters": 244,
+        "cer": 0.3319672131147541
+      },
+      "got-ocr2": {
+        "errors": 111,
+        "reference_characters": 244,
+        "cer": 0.45491803278688525
+      },
+      "qwen2.5-vl": {
+        "errors": 101,
+        "reference_characters": 244,
+        "cer": 0.4139344262295082
+      }
+    },
+    "vietnamese": {
+      "paddleocr": {
+        "errors": 1278,
+        "reference_characters": 8405,
+        "cer": 0.1520523497917906
+      },
+      "got-ocr2": {
+        "errors": 1918,
+        "reference_characters": 8405,
+        "cer": 0.22819750148721
+      },
+      "qwen2.5-vl": {
+        "errors": 75,
+        "reference_characters": 8405,
+        "cer": 0.00892325996430696
+      }
+    }
+  },
+  "normalization": "NFC; collapse whitespace; ignore whitespace in Han/Vietnamese language CER.",
+  "limitations": [
+    "Tie-break rankings use the same pages being scored; treat these CER values as calibration results, not held-out estimates.",
+    "can_kiem_tra is retained as a union and excluded from voting and CER."
+  ],
+  "input_sha256": {
+    "paddleocr": {
+      "page-0038.json": "f03eede2b9d396a9184be8fb8179382d21767aeb5552086ce533bcde1bc9075b",
+      "page-0039.json": "b26bdc96046ccc09b5f910c2681ba8a50973c1b291d25662a05f9e89ca1227ae",
+      "page-0040.json": "88d5421a941bce83b00275c30eeca14443af2d52a138b741959beafaf5e7b477",
+      "page-0041.json": "8070b3e7b1963406c27ea8e2bda4b57e79112a7e7876a2fab3e3f0bcaf1692c8",
+      "page-0042.json": "1175d70d2761d810cffe9eda8b948030fb56f42bdf8c248ec23e6f33ab6d670e",
+      "page-0043.json": "6257c7cef8487f9638b3120804a111a4f219de8bae467d75f271a0c9cdb14de2",
+      "page-0044.json": "e6cab1ebb3328469a4b535e290b30592e3f4dde0cd27bd9d348923a2e2b1a33c",
+      "page-0045.json": "f1abacab77ac6e742d4edd58bd1a6f23df64c5bd470913545e9891b2a2b9d295",
+      "page-0046.json": "2d22bc8efcf651ea4c938043d4fd20dbe537a587d22372b6b792d0d4319a4d3e",
+      "page-0047.json": "a43a79d837d33d1b559a4d2bdbfa9d24f2c0c08805b5d20cd5c54323c3d00c97",
+      "page-0048.json": "92fa5dc516b23d06a94820b7d7aedd1403de70863a14cad754ff9e6d2bbd75b7"
+    },
+    "got-ocr2": {
+      "page-0038.json": "30fb6f2d17f74e96e3abc4a7c81afa26a53c6aa1736be97053ec7b0ecc900dd7",
+      "page-0039.json": "9c23194dd031de50f95c38ad43468efee836b52c1db83792640d9fdbb27f5e9c",
+      "page-0040.json": "e601802f199425efadde493f695d0fba5a949347f345545b79edf2bb2f4761cf",
+      "page-0041.json": "51558e6c6ea914b8bfa58e0e2ced81b5ba0ee7ef32a7532be912cee5a406d68a",
+      "page-0042.json": "79c0267c6c0f0b858ff13a4d8ce0780f3c9c19432c99a76044afe824364b0b66",
+      "page-0043.json": "73d712395a9445e11394ab0f5106e3a2581bba116fe7f2e399fccb7433550774",
+      "page-0044.json": "55be9aaac6a33940abebc328db03adeaac88fe99e7ee29a85b026a126d5c4c65",
+      "page-0045.json": "ebd82890283f6ab86caacad50a339b3e78e614b9aee8529c6f3722f01eef5fe2",
+      "page-0046.json": "de5e4c20a6eab84e2d35262b30f5db91e594f7f4f32a244b19054d44c0cafbc5",
+      "page-0047.json": "ea375e943df0572026cd3847283412249a63b88be0cd1a4356f0db7cb1aab91d",
+      "page-0048.json": "5243619a0bed6512fcebcf7ce29d4f6fda9dd50652850cb1ae55c5cd2d479f9f"
+    },
+    "qwen2.5-vl": {
+      "page-0038.json": "acdb5772aeba661a6c103c40bee2a5003e73568b76cb69073f0f66a74c4dd1a2",
+      "page-0039.json": "770afb984066339bd2a6ff45c62d75d3bf09e07624f23c3432fa0a8765304964",
+      "page-0040.json": "96040dc127b1b5ad2694690bb7bcab8874185ab82b73dbdfad4ae66edc00d248",
+      "page-0041.json": "c1f0c9505b4acae7428d75bd01c5862f7fc4aeef6ad9a16db1010837e80e5e33",
+      "page-0042.json": "4c6de46759f709d572a5d4956fc6e80054eed4db778c58372d30bc0e8ac1b236",
+      "page-0043.json": "df5140afb24383d74ef8ee7e7be3f236ac4cfcbffe2c98a0dc39b2beefd37691",
+      "page-0044.json": "02444717f3af1b2d9321ee76dd5fd980fa3c52ad3807045b6e9aaf89aff90b04",
+      "page-0045.json": "978bad6b27ff659d7b3fb295f9e76e8d55cfce53f11e8797f734ec81879307c8",
+      "page-0046.json": "4da2a9aef1a8d65ee8c24394aecae91cab2be71909a1c28fac242d1f9d64e612",
+      "page-0047.json": "56b0de6a9e5080892bd0b8c88b4f698f7f215520d51f0bee5a54694c58093fd7",
+      "page-0048.json": "660f89f30e7ec6b4b640b3311ffb2180b384524dd67ac2bdef82e2833aff13af"
+    }
+  }
+}

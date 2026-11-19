@@ -32,12 +32,18 @@ assignments:
     source: ocr
     purpose: ocr_evaluation
 
-# Cấu hình dự kiến cho các bước sẽ triển khai; chưa phải kết quả thực nghiệm.
+# Cấu hình pipeline dự kiến; kết quả hiệu chỉnh OCR tuần 2 được ghi dưới `ocr`.
 ocr:
   engines: [paddleocr, qwen2.5-vl, got-ocr2]
   vote: char_majority
   tie_break: lowest_cer
   dpi: 300
+  # Hiệu chỉnh trên toàn bộ 11 ảnh được cung cấp, tương ứng PDF 38–48.
+  evaluation_pages: "38-48"
+  tie_break_scope: evaluation_sample
+  selected_engine_by_layer:
+    han: paddleocr
+    vietnamese: qwen2.5-vl
 
 punctuate:
   model: raynardj/classical-chinese-punctuation-guwen-biaodian

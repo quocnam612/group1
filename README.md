@@ -139,24 +139,38 @@ Qwen trên một vùng Hán, 31 tiêu đề Latin và đủ **79 vùng tiếng V
 9 vùng phiên âm, 27 vùng dịch nghĩa, 17 vùng dịch thơ, 26 vùng chú giải.
 Đã đối chiếu 34 crop tiêu đề với ảnh và toàn bộ 11 vùng tiếng Việt trang 40;
 bản sửa nằm trong `patches/ocr_titles.tsv` và `patches/ocr_vietnamese_page40.tsv`.
-Các vùng tiếng Việt ngoài trang 40 chưa kiểm tay đầy đủ.
-Các tầng còn `hint_only`
-chưa được coi là đã chạy đủ ba công cụ. Bản tham chiếu chưa kiểm đủ; chưa có voting hoặc CER.
-Các file toàn trang không còn trên ổ đĩa tại thời điểm chuyển đổi; bố cục và
-mọi kết quả crop hiện có được giữ nguyên, không dựng lại kết quả đã mất.
-Các JSON archive này hiện đã được dọn khỏi `pages/`; viewer còn là bản của
-lượt chạy trước. Lượt chạy mới dùng format tham chiếu ở ba thư mục model.
+Sau đó nhận thêm ảnh đầy đủ của PDF trang 38–48, đối chiếu nội dung các tầng và
+cập nhật bản tham chiếu. `gold/ocr/week2/image_manifest.json` ghi thứ tự ảnh,
+trang PDF và SHA-256 để truy nguyên tập ảnh; ảnh không được chép vào repo.
+Các file toàn trang OCR cũ không còn trên ổ đĩa; bố cục và kết quả crop được giữ
+nguyên. JSON archive cũ đã dọn khỏi `pages/`, viewer vẫn là bản xem lượt trước.
+Ba thư mục model hiện giữ OCR thô theo format tham chiếu; voting là đầu ra riêng.
 
 ### Bản tham chiếu OCR
 
-Sửa bản tham chiếu chép tay tại `gold/ocr/week2/page-0038.json` đến
-`page-0048.json`, đối chiếu với ảnh cùng tên trong `out/ocr/week2/images/`.
+Bản tham chiếu chép tay nằm tại `gold/ocr/week2/page-0038.json` đến
+`page-0048.json`, đối chiếu với 11 ảnh do người dùng cung cấp.
 Mỗi file chỉ có các mảng dòng `tieu_de`, `han`, `phien_am`, `dich_sat`,
 `dich_tho`, `chu_thich`, `can_kiem_tra` ở cấp ngoài cùng. Số trang lấy từ tên
 file; metadata bố cục và cấu hình chạy được giữ ở kết quả OCR trong `out/`.
-`can_kiem_tra` chứa các dòng chưa phân loại để kiểm lại. Các bản tham chiếu
-này mới là bản nháp từ OCR, cần kiểm toàn bộ trước khi dùng để tính CER.
-Khi chấm, so bản tham chiếu đã kiểm với OCR thô của từng công cụ.
+`can_kiem_tra` chứa nhiễu chưa phân loại và bị loại khỏi CER. Bản tham chiếu giữ
+cách viết và lỗi in nhìn thấy trong sách; không lấy nội dung đã chuẩn hoá để
+thay cho cách in nguồn. Khi chấm, so bản tham chiếu với OCR thô của từng công cụ.
+
+### Voting và CER tuần 2
+
+Chạy voting và dựng lại bảng CER trên cùng tập trang bằng:
+
+```sh
+python src/ocr_vote.py --pages 38-48
+python src/ocr_week2_report.py --pages 38-48
+```
+
+Voting căn chỉnh ký tự bằng Levenshtein, chọn đa số và xử lý hòa theo CER thấp
+nhất trên tập trang này. Đầu ra nằm ở `out/ocr/week2/pages/voting/`; cấu hình
+và thứ tự ưu tiên được ghi ở `out/ocr/week2/vote_settings.json`. Vì tie-break
+dùng chính tập đang chấm, CER là số liệu hiệu chỉnh, không phải holdout.
+`comparison.md` tách riêng ký tự Hán và phần Việt, đồng thời có bảng theo tầng.
 
 ### Môi trường
 
@@ -237,8 +251,9 @@ thêm `--overwrite` để OCR lại từ đầu. Chế độ này xử lý toàn
 ### Thử cấu hình cải thiện trên trang 38
 
 Đã đối chiếu ảnh và sửa bản tham chiếu trang 38; thay đổi được ghi trong
-`patches/ocr_reference_page38.tsv`. Các trang tham chiếu khác vẫn là bản nháp.
-Kết quả đối chiếu và thử cấu hình nằm ở `out/ocr/week2/comparison.md`.
+`patches/ocr_reference_page38.tsv`. Thử nghiệm `--profile scan` riêng trang 38
+được lưu tại `out/ocr/week2/scan_profile_probe.md`. CER trên toàn bộ tập trang
+38–48 nằm tại `out/ocr/week2/comparison.md`.
 
 `--profile scan` tách dòng ngang, phóng 2×, thêm viền trắng và tăng tương phản
 để đọc scan. Qwen dùng prompt theo chữ Hán/Việt, `repetition_penalty=1.0` thay
@@ -358,9 +373,9 @@ out/
 ```
 
 JSON theo trang là dữ liệu trung gian; `out/corpus.jsonl` cuối kỳ vẫn phải theo
-schema chung của đề. Bản tham chiếu còn ở dạng nháp; voting, CER và căn chỉnh
-bản dịch chưa được triển khai. Dùng cùng ảnh/crop và phạm vi cho ba công cụ và bản tham chiếu;
-trang 44 có cả phần đầu bài Cát đàm nên cần thống nhất phạm vi.
+schema chung của đề. Voting ký tự và CER đã chạy trên cùng 11 trang 38–48.
+Trang 44 có cả phần đầu bài Cát đàm; các tầng được chấm theo đúng phạm vi nhìn
+thấy trên ảnh. Căn chỉnh corpus cuối kỳ chưa được triển khai.
 
 Hai VLM cố định revision trong `src/ocr.py`; model tải vào `.cache/ocr/` và
 được dùng lại. CLI hiện chưa đọc `config.yaml`. Nếu CUDA không khả dụng trong
@@ -387,16 +402,20 @@ Số liệu lấy từ `tutorials/han_viet_corpus_demo/out/report.md`.
   `tutorials/reports/week1_page_review.md` và `report.pdf`.
   Trang 7 Đạo Đức Kinh chỉ đối chiếu một phần; trang 44 Kinh Thi chỉ lấy
   phần thuộc bài Quan thư.
-- **Tuần 2:** đã chạy ba công cụ OCR trên 11 trang PDF 38–48 và thử tách bố cục.
-  Còn thiếu bản tham chiếu được kiểm tra, căn chỉnh hoàn chỉnh, voting và
-  bảng CER riêng Hán/Việt; các cặp từ layout hiện mới là đề xuất.
+- **Tuần 2:** đã chạy ba công cụ OCR, đối chiếu bản tham chiếu với 11 ảnh trang
+  PDF 38–48, sinh voting ký tự và bảng CER riêng Hán/Việt. CER voting là 12,30%
+  cho Hán và 3,28% cho Việt. Voting tốt hơn từng công cụ ở CER Hán gộp, nhưng
+  chưa tốt hơn Qwen ở tiếng Việt (0,89%). Riêng tầng câu Hán, PaddleOCR đạt
+  5,95% so với voting 7,74%; cấu hình theo tầng chọn PaddleOCR cho `han` và
+  Qwen2.5-VL cho các tầng tiếng Việt. Voting được giữ để đối chiếu.
+  Căn chỉnh corpus và các cặp layout vẫn cần hoàn thiện.
 - **Tuần 3–5:** hoàn thiện corpus chính, bộ gold, đánh giá và cải tiến căn chỉnh,
   rồi xử lý phần mở rộng. `out/corpus.jsonl`, `gold/gold.jsonl`,
   `eval/eval.py`, `out/source_errors.tsv` hiện còn là file khung.
 
 | Chỉ số cuối kỳ | Hiện tại | Yêu cầu |
 | --- | --- | --- |
-| CER từng công cụ và voting, riêng Hán/Việt | Chưa đo | Voting thấp hơn từng công cụ đơn lẻ |
+| CER OCR theo Hán/Việt | Đã đo trên 11 trang; voting Hán 12,30%, Việt 3,28% | Voting thấp hơn từng công cụ; chưa đạt với tiếng Việt |
 | Precision / recall căn chỉnh | Chưa đo trên gold | ≥90% / ≥80% |
 | Độ phủ chữ Hán | Chưa đo | ≥85% phần được giao |
 | Tỉ lệ cấp câu | 2.017/2.126 cặp, khoảng 94,9% trong demo | Cần đánh giá thêm theo tỉ lệ chữ Hán từng sách |
