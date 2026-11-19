@@ -1,7 +1,7 @@
 """Run the same layout crops with each engine and write text-only page JSONs."""
 from __future__ import annotations
 
-from copy import copy
+from copy import copy, deepcopy
 import hashlib
 import json
 import os
@@ -16,11 +16,26 @@ def sha256(path):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
 
+def compatible_native_record(source_settings, record, args, image_sha256):
+    """Reuse only equivalent native-image Qwen inference, never reviewed text."""
+    import ocr
+    keys = ("engine", "device", "seed", "quantization", "max_pixels", "model", "revision")
+    if any(source_settings.get(key) != getattr(args, key, None) for key in keys):
+        return False
+    if bool(source_settings.get("cpu_offload")) != bool(getattr(args, "cpu_offload", False)):
+        return False
+    return (record.get("image_sha256") == image_sha256 and record.get("prompt") == ocr.PROMPT
+            and record.get("model") == args.model and record.get("revision") == args.revision
+            and not record.get("possibly_truncated") and isinstance(record.get("generated_tokens"), int)
+            and record["generated_tokens"] < args.max_new_tokens)
+
+
 def write_crop_manifest(page_paths, assets_dir, output):
-    """Keep crop order and hashes, without OCR hints or corrected text."""
+    """Keep crop geometry and hashes, without OCR hints or corrected text."""
     from pages import read_page, regions, save_json
     output, assets_dir = Path(output), Path(assets_dir)
     entries = []
+    sources = []
     for path in sorted(page_paths):
         page = read_page(path)
         by_id = {r["id"]: r for r in regions(page)}
@@ -32,12 +47,27 @@ def write_crop_manifest(page_paths, assets_dir, output):
                 crop = assets_dir / region["crop"]
                 items.append({"id": id_, "layer": region["layer"], "crop": region["crop"],
                               "image_sha256": sha256(crop)})
-        entries.append({"file": Path(path).name, "page": page["page"], "regions": items})
+                if "bbox" in region:
+                    items[-1]["bbox"] = region["bbox"]
+        entry = {"file": Path(path).name, "page": page["page"], "regions": items}
+        source = page.get("source", {})
+        if source.get("image"):
+            from PIL import Image
+            image = Path(source["image"])
+            with Image.open(image) as im:
+                size = list(im.size)
+            entry.update(image=os.path.relpath(image.resolve(), assets_dir.resolve()),
+                         image_sha256=sha256(image), image_size=size)
+        if source.get("pdf_sha256") and source.get("dpi"):
+            sources.append({"pdf_sha256": source["pdf_sha256"], "dpi": source["dpi"]})
+        entries.append(entry)
     if not entries:
         raise ValueError("No page layouts available to make a crop manifest")
-    save_json(output, {"schema_version": 1,
-                       "assets_dir": os.path.relpath(assets_dir.resolve(), output.parent.resolve()),
-                       "pages": entries})
+    manifest = {"schema_version": 2,
+                "assets_dir": os.path.relpath(assets_dir.resolve(), output.parent.resolve()), "pages": entries}
+    if len(sources) == len(entries) and all(s == sources[0] for s in sources):
+        manifest["source"] = sources[0]
+    save_json(output, manifest)
     return output
 
 
@@ -57,7 +87,8 @@ def run(args):
     if getattr(args, "paddle_mode", None):
         raise ValueError("Reference format selects PaddleOCR Han/Vietnamese mode automatically")
     scan = getattr(args, "profile", None) == "scan"
-    if scan:
+    balanced = getattr(args, "profile", None) == "balanced"
+    if scan or balanced:
         selected_pages = [dict(page, regions=[r for r in page["regions"] if r["layer"] != "can_kiem_tra"])
                           for page in selected_pages]
     if args.engine != "qwen2.5-vl":
@@ -66,13 +97,25 @@ def run(args):
         args.lang = None
         args.model = args.model or ocr.MODELS[args.engine]
         args.revision = args.revision or ocr.MODEL_REVISIONS.get(args.model)
-    ignored = {"func", "input", "output", "overwrite", "limit", "layers", "pages", "layout", "format"}
+    ignored = {"func", "input", "output", "overwrite", "limit", "layers", "pages", "layout", "format", "native_cache"}
     settings = {k: v for k, v in vars(args).items() if k not in ignored}
     if scan:
         from ocr_preprocess import SCAN_SETTINGS
         settings["preprocessing"] = SCAN_SETTINGS
         if args.engine == "got-ocr2":
             settings["got_profile"] = {"unit": "han-lines; other crops unchanged", "crop_to_patches": False}
+    if balanced:
+        from ocr_preprocess import SCAN_SETTINGS
+        settings["preprocessing"] = {"han": SCAN_SETTINGS, "vietnamese": "original block image"}
+    if args.engine == "tesseract":
+        if not (scan or balanced):
+            raise ValueError("Tesseract requires --profile scan or balanced")
+        installation = ocr.ROOT / ".cache/ocr/tesseract/installation.json"
+        settings["tesseract"] = json.loads(installation.read_text(encoding="utf-8"))
+        settings["language_policy"] = "chi_tra for Han, vie+chi_tra for commentary, vie otherwise"
+        settings["psm"] = "7 for Han; 6 for Vietnamese" if balanced else 7
+        settings["oem"] = 1
+        settings["decoder_dictionaries"] = "Vietnamese only" if balanced else False
     settings["paddle_language_policy"] = "Han-only rows: chinese_cht; all other crops: vi" if args.engine == "paddleocr" else None
     output = args.output / args.engine
     # Model metadata is written once, outside the JSONs the user checks by hand.
@@ -93,6 +136,13 @@ def run(args):
         metadata = {"settings": settings, "records": {}}
     metadata["layout_manifest_sha256"] = sha256(manifest_path)
     settings_hash = hashlib.sha256(json.dumps(settings, sort_keys=True).encode()).hexdigest()
+    native_cache = None
+    cache_path = getattr(args, "native_cache", None)
+    if cache_path:
+        if not balanced or args.engine != "qwen2.5-vl":
+            raise ValueError("--native-cache requires Qwen with --profile balanced")
+        native_cache = json.loads(cache_path.read_text(encoding="utf-8"))
+        native_cache["source_sha256"] = sha256(cache_path)
     jobs = []
     for page in selected_pages:
         if Path(page["file"]).name != page["file"]:
@@ -109,13 +159,20 @@ def run(args):
     runners = {}
     def recognize(region, image):
         mode = "han" if region["layer"] in HAN_LAYERS else "viet"
-        key = mode if args.engine == "paddleocr" else args.engine
+        if args.engine == "tesseract":
+            mode = "chi_tra" if mode == "han" else "vie+chi_tra" if region["layer"] == "chu_thich" else "vie"
+        key = mode if args.engine in ("paddleocr", "tesseract") else args.engine
         if key not in runners:
             options = copy(args)
             if args.engine == "paddleocr":
                 options.lang = "chinese_cht" if mode == "han" else "vi"
                 options.paddle_mode = "han-lines" if mode == "han" else "viet-lines" if scan else "page"
                 runners[key] = ocr.paddle_runner(options)
+            elif args.engine == "tesseract":
+                options.tesseract_language = mode
+                options.tesseract_psm = 6 if balanced and mode != "chi_tra" else 7
+                options.tesseract_dictionaries = balanced and mode != "chi_tra"
+                runners[key] = ocr.tesseract_runner(options)
             else:
                 runners[key] = ocr.vlm_runner(options)
         return runners[key](image)
@@ -123,15 +180,26 @@ def run(args):
     for index, (page, region, image) in enumerate(jobs, 1):
         identity = f"{page['file']}:{region['id']}"
         record = metadata["records"].get(identity)
-        if record and not args.overwrite:
+        reused_native = False
+        if native_cache and region["layer"] not in HAN_LAYERS:
+            candidate = native_cache.get("records", {}).get(identity)
+            if candidate and compatible_native_record(native_cache["settings"], candidate, args, region["image_sha256"]):
+                record = deepcopy(candidate)
+                record["settings_sha256"] = settings_hash
+                record["native_cache"] = {"file": str(cache_path), "sha256": native_cache["source_sha256"],
+                                          "reason": "Same source pixels, model, prompt, seed and decoder; token limit not binding."}
+                metadata["records"][identity] = record
+                save_json(metadata_path, metadata)
+                reused_native = True
+        if record and (not args.overwrite or reused_native):
             if record["image_sha256"] != region["image_sha256"]:
                 raise ValueError(f"Saved OCR uses a different crop: {identity}; use --overwrite")
             if record.get("settings_sha256", settings_hash) != settings_hash:
                 raise ValueError(f"Saved OCR uses different settings: {identity}; use --overwrite")
-            print(f"[{index}/{len(jobs)}] Cached: {image.name}", flush=True)
+            print(f"[{index}/{len(jobs)}] Cached{' native' if reused_native else ''}: {image.name}", flush=True)
         else:
             started = time.perf_counter()
-            if scan and (args.engine != "got-ocr2" or region["layer"] in HAN_LAYERS):
+            if (scan and args.engine != "got-ocr2") or (scan or balanced) and region["layer"] in HAN_LAYERS:
                 from ocr_preprocess import prepare_scan_lines
                 parts = []
                 for line_image, box in prepare_scan_lines(image, ocr.ROOT / ".cache/ocr/preprocessed"):
@@ -158,4 +226,6 @@ def run(args):
                 content[group].extend(completed[page["file"]][item["id"]]["text"].splitlines())
             save_json(output / page["file"], content)
             print(f"Saved: {output / page['file']}", flush=True)
+    # A cache-only run must also persist the current manifest identity.
+    save_json(metadata_path, metadata)
     print(f"Done: {len(selected_pages)} pages -> {output}; run metadata -> {metadata_path}", flush=True)

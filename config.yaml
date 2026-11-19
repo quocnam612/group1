@@ -1,5 +1,5 @@
 # Đường dẫn tương đối với thư mục gốc project.
-# Demo hiện tại đọc manifest.json, chưa đọc config.yaml.
+# Demo baseline đọc manifest.json; OCR Tuần 2 đọc config qua src/ocr_week2_pipeline.py.
 group: 1
 seed: 42
 data_dir: .
@@ -32,18 +32,38 @@ assignments:
     source: ocr
     purpose: ocr_evaluation
 
-# Cấu hình pipeline dự kiến; kết quả hiệu chỉnh OCR tuần 2 được ghi dưới `ocr`.
+# `src/ocr_week2_pipeline.py` đọc phần OCR; pipeline corpus còn được triển khai tiếp.
 ocr:
-  engines: [paddleocr, qwen2.5-vl, got-ocr2]
+  engines: [paddleocr, got-ocr2, qwen2.5-vl, tesseract]
   vote: char_majority
   tie_break: lowest_cer
   dpi: 300
+  sample_pdf: "chinh/Kinh Thi - Ta Quang Phát 1 (tr1-346).pdf"
   # Hiệu chỉnh trên toàn bộ 11 ảnh được cung cấp, tương ứng PDF 38–48.
   evaluation_pages: "38-48"
   tie_break_scope: evaluation_sample
-  selected_engine_by_layer:
-    han: paddleocr
-    vietnamese: qwen2.5-vl
+  selected_output: voting
+  vote_alignment: star
+  vote_engines: [paddleocr, got-ocr2, qwen2.5-vl, tesseract]
+  # Mỗi hệ chữ đều có >=3 phiếu; GOT có CER Việt cao nhất nên không bỏ phiếu Việt.
+  vote_vietnamese_engines: [paddleocr, qwen2.5-vl, tesseract]
+  engine_options:
+    paddleocr:
+      device: cpu
+    got-ocr2:
+      device: cuda:0
+      profile: scan
+      max_new_tokens: 2048
+    qwen2.5-vl:
+      device: cuda:0
+      profile: balanced
+      quantization: 4bit
+      cpu_offload: true
+      max_new_tokens: 512
+      max_pixels: 401408
+    tesseract:
+      device: cpu
+      profile: balanced
 
 punctuate:
   model: raynardj/classical-chinese-punctuation-guwen-biaodian

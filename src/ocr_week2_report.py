@@ -32,6 +32,8 @@ def parse_pages(value: str) -> list[int]:
 
 def available_engines(prediction_dir: Path) -> list[str]:
     engines = list(ENGINES)
+    if (prediction_dir / "tesseract").is_dir():
+        engines.append("tesseract")
     if (prediction_dir / VOTE).is_dir():
         engines.append(VOTE)
     return engines
@@ -98,7 +100,7 @@ def render(engines, per_field, by_language, pages) -> str:
         "",
         "CER là khoảng cách Levenshtein ký tự chia cho số ký tự tham chiếu. Dữ liệu được chuẩn hóa NFC; khoảng trắng bị bỏ khi tính CER tách Hán/Việt để không tính khác biệt xuống dòng.",
         "Chữ Hán gồm ký tự CJK trong mọi tầng, kể cả tiêu đề và chú giải; phần Việt gồm các ký tự còn lại. `can_kiem_tra` bị loại khỏi voting và CER.",
-        "Voting căn chỉnh chuỗi ba công cụ bằng Levenshtein rồi chọn đa số ký tự. Khi hai công cụ chọn hai ký tự khác nhau, dùng công cụ có CER thấp hơn theo ngôn ngữ trên chính tập trang này; vì vậy đây là số liệu hiệu chỉnh, không phải holdout độc lập.",
+        "Voting căn chỉnh chuỗi các công cụ bằng Levenshtein rồi chọn đa số ký tự, kể cả lựa chọn bỏ ký tự. Khi hòa, dùng công cụ có CER thấp hơn theo ngôn ngữ trên chính tập trang này; vì vậy đây là số liệu hiệu chỉnh, không phải holdout độc lập.",
         "",
     ])
     return "\n".join(lines)
@@ -116,6 +118,13 @@ def main() -> None:
     except FileNotFoundError as exc:
         parser.error(f"missing input: {exc.filename}")
     report = render(engines, per_field, by_language, args.pages)
+    settings_path = args.predictions.parent / "vote_settings.json"
+    if settings_path.exists():
+        settings = json.loads(settings_path.read_text(encoding="utf-8"))
+        voters = settings.get("voters_by_language")
+        if voters:
+            report += ("\nCông cụ voting Hán: "+", ".join(voters["han"])+".\n"
+                       "Công cụ voting Việt: "+", ".join(voters["vietnamese"])+".\n")
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(report + "\n", encoding="utf-8")
     if hasattr(sys.stdout, "reconfigure"):

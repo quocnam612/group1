@@ -9,6 +9,7 @@ import json
 import os
 from pathlib import Path
 import subprocess
+import shutil
 import sys
 import time
 import unicodedata
@@ -178,6 +179,34 @@ def paddle_runner(args):
     return recognize
 
 
+def tesseract_runner(args):
+    prefix = ROOT / ".cache/ocr/tesseract"
+    binary = prefix / "usr/bin/tesseract"
+    if not binary.exists():
+        installed = shutil.which("tesseract")
+        if not installed:
+            raise ValueError("Tesseract is missing; run python3 scripts/setup_tesseract.py on Arch Linux")
+        binary = Path(installed)
+    language = args.tesseract_language
+    page_segmentation = getattr(args, "tesseract_psm", 7)
+    dictionaries = getattr(args, "tesseract_dictionaries", False)
+    env = os.environ.copy()
+    if (prefix / "usr/lib").exists():
+        env["LD_LIBRARY_PATH"] = str(prefix / "usr/lib")+os.pathsep+env.get("LD_LIBRARY_PATH", "")
+    model_dir = prefix / "tessdata"
+    hashes = {lang: hashlib.sha256((model_dir / (lang+".traineddata")).read_bytes()).hexdigest()
+              for lang in language.split("+")}
+    def recognize(path):
+        command = [str(binary), str(path), "stdout", "--tessdata-dir", str(model_dir),
+                   "-l", language, "--oem", "1", "--psm", str(page_segmentation), "--dpi", "300",
+                   "-c", f"load_system_dawg={int(dictionaries)}", "-c", f"load_freq_dawg={int(dictionaries)}",
+                   "-c", "preserve_interword_spaces=1"]
+        result = subprocess.run(command, env=env, capture_output=True, text=True, check=True, timeout=60)
+        return result.stdout.rstrip("\n\f"), {"recognition_language": language, "psm": page_segmentation, "oem": 1,
+                                             "model_sha256": hashes, "decoder_dictionaries": dictionaries}
+    return recognize
+
+
 def paddle_viet_line_runner(args):
     """Recognize the entire isolated line, without a second text detector."""
     from PIL import Image
@@ -307,7 +336,8 @@ def vlm_runner(args):
     def recognize(path):
         with Image.open(path) as opened:
             picture = opened.convert("RGB")
-        scan = getattr(args, "profile", None) == "scan"
+        profile = getattr(args, "profile", None)
+        scan = profile == "scan" or profile == "balanced" and Path(path).parent.name in ("han", "tieu_de_han")
         transcription_prompt = PROMPT
         if scan:
             from ocr_preprocess import qwen_scan_prompt
@@ -344,10 +374,12 @@ def vlm_runner(args):
 
 def run(args):
     if getattr(args, "profile", None) and getattr(args, "format", None) != "reference":
-        raise ValueError("--profile scan requires --format reference")
+        raise ValueError("--profile requires --format reference")
     if getattr(args, "format", None) == "reference":
         from ocr_reference import run as run_reference
         return run_reference(args)
+    if args.engine == "tesseract":
+        raise ValueError("Tesseract is supported with --format reference")
     from pages import get_ocr, image_identity, ocr_key, page_path, put_ocr, read_page, regions
     if getattr(args, "pages", None) and not getattr(args, "layers", None):
         raise ValueError("--pages requires --layers when running OCR")
@@ -437,11 +469,13 @@ def main():
     cropper.add_argument("--overwrite", action="store_true")
     cropper.set_defaults(func=crop)
     runner = commands.add_parser("run", help="Run one OCR engine on the same input images/crops")
-    runner.add_argument("--engine", choices=("paddleocr", *MODELS), required=True)
+    runner.add_argument("--engine", choices=("paddleocr", "tesseract", *MODELS), required=True)
     runner.add_argument("--format", choices=("archive", "reference"), default=argparse.SUPPRESS,
                         help="reference writes raw OCR as text-only page JSONs in output/<engine>/")
-    runner.add_argument("--profile", choices=("scan",), default=argparse.SUPPRESS,
-                        help="Reference format: split horizontal lines, upscale and preserve scan details")
+    runner.add_argument("--profile", choices=("scan", "balanced"), default=argparse.SUPPRESS,
+                        help="scan isolates text rows; balanced isolates Han and preserves Vietnamese blocks")
+    runner.add_argument("--native-cache", type=Path, default=argparse.SUPPRESS,
+                        help="Balanced Qwen: reuse verified equivalent native-image OCR records from a prior run JSON")
     runner.add_argument("--layout", type=Path, default=argparse.SUPPRESS,
                         help="Crop manifest for reference format; default: out/ocr/week2/layout/regions.json")
     runner.add_argument("--input", type=Path, default=Path("out/ocr/week2/images"))

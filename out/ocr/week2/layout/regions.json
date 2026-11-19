@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "assets_dir": ".",
   "pages": [
     {
@@ -10,80 +10,164 @@
           "id": "r001",
           "layer": "tieu_de",
           "crop": "images/tieu_de/page-0038-r001.png",
-          "image_sha256": "20b7a2d4d951bbd9a90d923201d405bbd93b14fb56cb169d44751e124cdea3af"
+          "image_sha256": "20b7a2d4d951bbd9a90d923201d405bbd93b14fb56cb169d44751e124cdea3af",
+          "bbox": [
+            507,
+            163,
+            1002,
+            257
+          ]
         },
         {
           "id": "r002",
           "layer": "tieu_de",
           "crop": "images/tieu_de/page-0038-r002.png",
-          "image_sha256": "d5749ced844de7e47a53afacc84ef80963832eb33d2806d6e6f33dcc721c26b8"
+          "image_sha256": "d5749ced844de7e47a53afacc84ef80963832eb33d2806d6e6f33dcc721c26b8",
+          "bbox": [
+            611,
+            327,
+            895,
+            399
+          ]
         },
         {
           "id": "r003",
           "layer": "tieu_de_han",
           "crop": "images/tieu_de_han/page-0038-r003.png",
-          "image_sha256": "02b5120d5e1a78a66bcaf50a27afeb14ea23d2a79e4a9c0256868e3168c081b4"
+          "image_sha256": "02b5120d5e1a78a66bcaf50a27afeb14ea23d2a79e4a9c0256868e3168c081b4",
+          "bbox": [
+            254,
+            432,
+            397,
+            514
+          ]
         },
         {
           "id": "r004",
           "layer": "tieu_de_viet",
           "crop": "images/tieu_de_viet/page-0038-r004.png",
-          "image_sha256": "dadf5b3f0d52de2f51b65e3b07a3c09a87443be9ad3faa6210e503adb9aad2f3"
+          "image_sha256": "dadf5b3f0d52de2f51b65e3b07a3c09a87443be9ad3faa6210e503adb9aad2f3",
+          "bbox": [
+            558,
+            444,
+            1095,
+            512
+          ]
         },
         {
           "id": "r005",
           "layer": "han",
           "crop": "images/han/page-0038-r005.png",
-          "image_sha256": "76208875894639bbc7d38758ba417e29684c2dffc073070ac007b728be061033"
+          "image_sha256": "76208875894639bbc7d38758ba417e29684c2dffc073070ac007b728be061033",
+          "bbox": [
+            198,
+            521,
+            463,
+            868
+          ]
         },
         {
           "id": "r006",
           "layer": "phien_am",
           "crop": "images/phien_am/page-0038-r006.png",
-          "image_sha256": "c899c8a9beec82e2ae6d2087a11647280657d7c51dfb837166723c11095e712f"
+          "image_sha256": "c899c8a9beec82e2ae6d2087a11647280657d7c51dfb837166723c11095e712f",
+          "bbox": [
+            552,
+            534,
+            1121,
+            876
+          ]
         },
         {
           "id": "r007",
           "layer": "tieu_de",
           "crop": "images/tieu_de/page-0038-r007.png",
-          "image_sha256": "5c0b4cafb9ae7d571d389b4acbd89106e45ef14fbdbcb889f909a38011a0c5cc"
+          "image_sha256": "5c0b4cafb9ae7d571d389b4acbd89106e45ef14fbdbcb889f909a38011a0c5cc",
+          "bbox": [
+            615,
+            922,
+            901,
+            995
+          ]
         },
         {
           "id": "r008",
           "layer": "dich_sat",
           "crop": "images/dich_sat/page-0038-r008.png",
-          "image_sha256": "897dc5022b7f8ee18d06536f1c98b08b708b6304eb83a4cd7376c6c0d5ec39c0"
+          "image_sha256": "897dc5022b7f8ee18d06536f1c98b08b708b6304eb83a4cd7376c6c0d5ec39c0",
+          "bbox": [
+            163,
+            1009,
+            1188,
+            1274
+          ]
         },
         {
           "id": "r009",
           "layer": "tieu_de",
           "crop": "images/tieu_de/page-0038-r009.png",
-          "image_sha256": "9071abec9b57fa3d8ebddf4938c533fdea830a4ad849040b32a602547e24154b"
+          "image_sha256": "9071abec9b57fa3d8ebddf4938c533fdea830a4ad849040b32a602547e24154b",
+          "bbox": [
+            644,
+            1320,
+            879,
+            1393
+          ]
         },
         {
           "id": "r010",
           "layer": "dich_tho",
           "crop": "images/dich_tho/page-0038-r010.png",
-          "image_sha256": "0c18cda9674a2eea2232b10f59402538e24f9f253398812845356f77904b1d6b"
+          "image_sha256": "0c18cda9674a2eea2232b10f59402538e24f9f253398812845356f77904b1d6b",
+          "bbox": [
+            162,
+            1408,
+            1049,
+            1675
+          ]
         },
         {
           "id": "r011",
           "layer": "can_kiem_tra",
           "crop": "images/can_kiem_tra/page-0038-r011.png",
-          "image_sha256": "ba5ba6d143393e2de3bace89ef7a5c803a7ec1d38a0409b4d1399eea7622804e"
+          "image_sha256": "ba5ba6d143393e2de3bace89ef7a5c803a7ec1d38a0409b4d1399eea7622804e",
+          "bbox": [
+            1215,
+            1464,
+            1256,
+            1518
+          ]
         },
         {
           "id": "r012",
           "layer": "tieu_de",
           "crop": "images/tieu_de/page-0038-r012.png",
-          "image_sha256": "2a8d94ee9421ce3db2a7e8cd3e220fd21735d6ef02096635a5ca067958711a6b"
+          "image_sha256": "2a8d94ee9421ce3db2a7e8cd3e220fd21735d6ef02096635a5ca067958711a6b",
+          "bbox": [
+            493,
+            1691,
+            1019,
+            1769
+          ]
         },
         {
           "id": "r013",
           "layer": "chu_thich",
           "crop": "images/chu_thich/page-0038-r013.png",
-          "image_sha256": "1063c1b8b376804e01be90bac577851711cedc9da96beef8e75540028af9f6fc"
+          "image_sha256": "1063c1b8b376804e01be90bac577851711cedc9da96beef8e75540028af9f6fc",
+          "bbox": [
+            75,
+            1776,
+            1439,
+            2086
+          ]
         }
+      ],
+      "image": "../images/page-0038.png",
+      "image_sha256": "33840ee580a24e8b1a43e7a010b679095ce258122c1d05574950e2708d96bd66",
+      "image_size": [
+        1538,
+        2246
       ]
     },
     {
@@ -94,38 +178,80 @@
           "id": "r001",
           "layer": "chu_thich",
           "crop": "images/chu_thich/page-0039-r001.png",
-          "image_sha256": "df87b80353bc6b3ec3af26b363e2782b1b9b6c9d1b88165062b9589dc3d757c2"
+          "image_sha256": "df87b80353bc6b3ec3af26b363e2782b1b9b6c9d1b88165062b9589dc3d757c2",
+          "bbox": [
+            104,
+            176,
+            1457,
+            357
+          ]
         },
         {
           "id": "r002",
           "layer": "chu_thich",
           "crop": "images/chu_thich/page-0039-r002.png",
-          "image_sha256": "1f6685921353bd8137d5eb321b91e6eebcbafee567ed31c4055a6ac9cf4f4b28"
+          "image_sha256": "1f6685921353bd8137d5eb321b91e6eebcbafee567ed31c4055a6ac9cf4f4b28",
+          "bbox": [
+            102,
+            352,
+            1460,
+            908
+          ]
         },
         {
           "id": "r003",
           "layer": "chu_thich",
           "crop": "images/chu_thich/page-0039-r003.png",
-          "image_sha256": "26b50d2bd406940e60ff965a7a0852795a942d71c59211d81d21cb4a6eebbdf8"
+          "image_sha256": "26b50d2bd406940e60ff965a7a0852795a942d71c59211d81d21cb4a6eebbdf8",
+          "bbox": [
+            100,
+            908,
+            1461,
+            1048
+          ]
         },
         {
           "id": "r004",
           "layer": "chu_thich",
           "crop": "images/chu_thich/page-0039-r004.png",
-          "image_sha256": "2bc18fdc93e660eda58af525a460aa1026f622c3385c73d301007c6c4a7ec8d0"
+          "image_sha256": "2bc18fdc93e660eda58af525a460aa1026f622c3385c73d301007c6c4a7ec8d0",
+          "bbox": [
+            101,
+            1038,
+            1460,
+            1625
+          ]
         },
         {
           "id": "r005",
           "layer": "chu_thich",
           "crop": "images/chu_thich/page-0039-r005.png",
-          "image_sha256": "79ef1244381c8639a82c3ac91ef6b0803098a00ae7f1cd049c5a5326249e1c75"
+          "image_sha256": "79ef1244381c8639a82c3ac91ef6b0803098a00ae7f1cd049c5a5326249e1c75",
+          "bbox": [
+            95,
+            1611,
+            1460,
+            1752
+          ]
         },
         {
           "id": "r006",
           "layer": "chu_thich",
           "crop": "images/chu_thich/page-0039-r006.png",
-          "image_sha256": "7ec9d7b4a3ba74db65a3fd72c65dfb1caa10d35fda8eec074ef40e9cce964e6b"
+          "image_sha256": "7ec9d7b4a3ba74db65a3fd72c65dfb1caa10d35fda8eec074ef40e9cce964e6b",
+          "bbox": [
+            103,
+            1732,
+            1460,
+            2099
+          ]
         }
+      ],
+      "image": "../images/page-0039.png",
+      "image_sha256": "edace7dc076e9f9b7218fa19256c276dc07845c5513211d1365442384eeab415",
+      "image_size": [
+        1538,
+        2246
       ]
     },
     {
@@ -136,92 +262,188 @@
           "id": "r001",
           "layer": "chu_thich",
           "crop": "images/chu_thich/page-0040-r001.png",
-          "image_sha256": "75c1b6afcfb3a2a468f692186612d4b9522a4a47e379c0f8a14039e27b77d4b5"
+          "image_sha256": "75c1b6afcfb3a2a468f692186612d4b9522a4a47e379c0f8a14039e27b77d4b5",
+          "bbox": [
+            118,
+            203,
+            1488,
+            337
+          ]
         },
         {
           "id": "r002",
           "layer": "tieu_de",
           "crop": "images/tieu_de/page-0040-r002.png",
-          "image_sha256": "3da0945eee5ec81a566bc1938980cb40fb7366a31b24bdf8df7071c7fd250303"
+          "image_sha256": "3da0945eee5ec81a566bc1938980cb40fb7366a31b24bdf8df7071c7fd250303",
+          "bbox": [
+            657,
+            387,
+            950,
+            452
+          ]
         },
         {
           "id": "r003",
           "layer": "han",
           "crop": "images/han/page-0040-r003.png",
-          "image_sha256": "5137032993afae542abd163a0b5e339961982712045bb5b6b44ee32707ac965d"
+          "image_sha256": "5137032993afae542abd163a0b5e339961982712045bb5b6b44ee32707ac965d",
+          "bbox": [
+            222,
+            480,
+            538,
+            1216
+          ]
         },
         {
           "id": "r004",
           "layer": "phien_am",
           "crop": "images/phien_am/page-0040-r004.png",
-          "image_sha256": "54903590071f89f2ee48c5f20fb8ffe9f46e71f0e111a49f8d2acbd745485b4d"
+          "image_sha256": "54903590071f89f2ee48c5f20fb8ffe9f46e71f0e111a49f8d2acbd745485b4d",
+          "bbox": [
+            643,
+            498,
+            1336,
+            1199
+          ]
         },
         {
           "id": "r005",
           "layer": "tieu_de",
           "crop": "images/tieu_de/page-0040-r005.png",
-          "image_sha256": "62bda860e8093873b6e3463db01e526956f5486f3433733a2ca1757ecc77a1f9"
+          "image_sha256": "62bda860e8093873b6e3463db01e526956f5486f3433733a2ca1757ecc77a1f9",
+          "bbox": [
+            666,
+            1245,
+            949,
+            1317
+          ]
         },
         {
           "id": "r006",
           "layer": "dich_sat",
           "crop": "images/dich_sat/page-0040-r006.png",
-          "image_sha256": "f63975bef3dfee12d96c88956489b2b8780ace5f6ebceca96801dab6dd780f93"
+          "image_sha256": "f63975bef3dfee12d96c88956489b2b8780ace5f6ebceca96801dab6dd780f93",
+          "bbox": [
+            214,
+            1331,
+            1309,
+            1399
+          ]
         },
         {
           "id": "r007",
           "layer": "dich_sat",
           "crop": "images/dich_sat/page-0040-r007.png",
-          "image_sha256": "84f6cd54ac47c13b50515f8dbc664a5b2ac11f5bccabbc0556bbcedb407495e3"
+          "image_sha256": "84f6cd54ac47c13b50515f8dbc664a5b2ac11f5bccabbc0556bbcedb407495e3",
+          "bbox": [
+            118,
+            1390,
+            1485,
+            1521
+          ]
         },
         {
           "id": "r008",
           "layer": "dich_sat",
           "crop": "images/dich_sat/page-0040-r008.png",
-          "image_sha256": "c972c0040f4cb11d2edb51ba16589af3184a1f66ef9834fefdd77aea46a76fc1"
+          "image_sha256": "c972c0040f4cb11d2edb51ba16589af3184a1f66ef9834fefdd77aea46a76fc1",
+          "bbox": [
+            212,
+            1516,
+            837,
+            1587
+          ]
         },
         {
           "id": "r009",
           "layer": "dich_sat",
           "crop": "images/dich_sat/page-0040-r009.png",
-          "image_sha256": "7c1bfea4294133df6f41fae7f2a0a5f8cebb2adf004566db1aa65d9720323ef1"
+          "image_sha256": "7c1bfea4294133df6f41fae7f2a0a5f8cebb2adf004566db1aa65d9720323ef1",
+          "bbox": [
+            209,
+            1576,
+            1232,
+            1657
+          ]
         },
         {
           "id": "r010",
           "layer": "dich_sat",
           "crop": "images/dich_sat/page-0040-r010.png",
-          "image_sha256": "5f73451a6ebf2e4eb7630cd6a9aaa3604006e70e689078cf45c9a9f5498ac714"
+          "image_sha256": "5f73451a6ebf2e4eb7630cd6a9aaa3604006e70e689078cf45c9a9f5498ac714",
+          "bbox": [
+            210,
+            1641,
+            826,
+            1719
+          ]
         },
         {
           "id": "r011",
           "layer": "dich_sat",
           "crop": "images/dich_sat/page-0040-r011.png",
-          "image_sha256": "b4b5c9c1196f5a38988d36f406a96476d23ff35f35ec7a799a8583ce3698d127"
+          "image_sha256": "b4b5c9c1196f5a38988d36f406a96476d23ff35f35ec7a799a8583ce3698d127",
+          "bbox": [
+            212,
+            1712,
+            1106,
+            1783
+          ]
         },
         {
           "id": "r012",
           "layer": "dich_sat",
           "crop": "images/dich_sat/page-0040-r012.png",
-          "image_sha256": "1ffb0217a8e686146ab0b6075e154d9985a070a8c95c402790ad313c0a1a61d7"
+          "image_sha256": "1ffb0217a8e686146ab0b6075e154d9985a070a8c95c402790ad313c0a1a61d7",
+          "bbox": [
+            213,
+            1776,
+            1326,
+            1848
+          ]
         },
         {
           "id": "r013",
           "layer": "dich_sat",
           "crop": "images/dich_sat/page-0040-r013.png",
-          "image_sha256": "5551be9840034219494efb8750d2535264d25dffaa730744de1913651da048ed"
+          "image_sha256": "5551be9840034219494efb8750d2535264d25dffaa730744de1913651da048ed",
+          "bbox": [
+            213,
+            1842,
+            1348,
+            1912
+          ]
         },
         {
           "id": "r014",
           "layer": "tieu_de",
           "crop": "images/tieu_de/page-0040-r014.png",
-          "image_sha256": "ca7d7350a7780126720e71298cd80995545f34362e69045e8d3971ba07656728"
+          "image_sha256": "ca7d7350a7780126720e71298cd80995545f34362e69045e8d3971ba07656728",
+          "bbox": [
+            693,
+            1956,
+            927,
+            2025
+          ]
         },
         {
           "id": "r015",
           "layer": "dich_tho",
           "crop": "images/dich_tho/page-0040-r015.png",
-          "image_sha256": "94e1596b37dcd40d3ff5a02d01a313cc77d9b91cda17008e7827f40f48a0127e"
+          "image_sha256": "94e1596b37dcd40d3ff5a02d01a313cc77d9b91cda17008e7827f40f48a0127e",
+          "bbox": [
+            212,
+            2044,
+            985,
+            2176
+          ]
         }
+      ],
+      "image": "../images/page-0040.png",
+      "image_sha256": "60d036dc70f22b24678dd9765f3952fbf75462d196e197b24a3b595ed29895f5",
+      "image_size": [
+        1538,
+        2246
       ]
     },
     {
@@ -232,74 +454,152 @@
           "id": "r001",
           "layer": "dich_tho",
           "crop": "images/dich_tho/page-0041-r001.png",
-          "image_sha256": "096c7fe78878b2f1cebf099118bd8799bdd2c8e8bb1904fe4c9d2d025fb49923"
+          "image_sha256": "096c7fe78878b2f1cebf099118bd8799bdd2c8e8bb1904fe4c9d2d025fb49923",
+          "bbox": [
+            204,
+            155,
+            892,
+            223
+          ]
         },
         {
           "id": "r002",
           "layer": "dich_tho",
           "crop": "images/dich_tho/page-0041-r002.png",
-          "image_sha256": "c67898aeacba08b40e79324eb1bc6527f84e6acc1d2d69a5aacfdc8d5233341b"
+          "image_sha256": "c67898aeacba08b40e79324eb1bc6527f84e6acc1d2d69a5aacfdc8d5233341b",
+          "bbox": [
+            202,
+            217,
+            1076,
+            288
+          ]
         },
         {
           "id": "r003",
           "layer": "dich_tho",
           "crop": "images/dich_tho/page-0041-r003.png",
-          "image_sha256": "2d496beed01d0c8636733a5b224c1b46d6274295af42d513c6838fa8a766ecc1"
+          "image_sha256": "2d496beed01d0c8636733a5b224c1b46d6274295af42d513c6838fa8a766ecc1",
+          "bbox": [
+            203,
+            280,
+            889,
+            351
+          ]
         },
         {
           "id": "r004",
           "layer": "dich_tho",
           "crop": "images/dich_tho/page-0041-r004.png",
-          "image_sha256": "a65fdd76e29eb272689d6947286ba069e311312f2b1406b259a2f6f6a8679eed"
+          "image_sha256": "a65fdd76e29eb272689d6947286ba069e311312f2b1406b259a2f6f6a8679eed",
+          "bbox": [
+            199,
+            340,
+            993,
+            418
+          ]
         },
         {
           "id": "r005",
           "layer": "dich_tho",
           "crop": "images/dich_tho/page-0041-r005.png",
-          "image_sha256": "a240d93ba6593e065c4b14c9d11114171a434cdcb2c76c21ee6a1402f8134974"
+          "image_sha256": "a240d93ba6593e065c4b14c9d11114171a434cdcb2c76c21ee6a1402f8134974",
+          "bbox": [
+            199,
+            408,
+            853,
+            481
+          ]
         },
         {
           "id": "r006",
           "layer": "dich_tho",
           "crop": "images/dich_tho/page-0041-r006.png",
-          "image_sha256": "615d04bef25e6f442364a3a8640d11ece8609ca86c815ff71c8c406ba1fa9be8"
+          "image_sha256": "615d04bef25e6f442364a3a8640d11ece8609ca86c815ff71c8c406ba1fa9be8",
+          "bbox": [
+            203,
+            472,
+            1108,
+            548
+          ]
         },
         {
           "id": "r007",
           "layer": "tieu_de",
           "crop": "images/tieu_de/page-0041-r007.png",
-          "image_sha256": "ab0e8b6aeab95cece558e38674a0aa1e3b1e1c269d910b4e04ebf0002f34b22e"
+          "image_sha256": "ab0e8b6aeab95cece558e38674a0aa1e3b1e1c269d910b4e04ebf0002f34b22e",
+          "bbox": [
+            538,
+            588,
+            1054,
+            663
+          ]
         },
         {
           "id": "r008",
           "layer": "chu_thich",
           "crop": "images/chu_thich/page-0041-r008.png",
-          "image_sha256": "df4faba4b9881e3983938ccbe882215af4c6f5fce48f4d635ab9110483ced628"
+          "image_sha256": "df4faba4b9881e3983938ccbe882215af4c6f5fce48f4d635ab9110483ced628",
+          "bbox": [
+            108,
+            668,
+            1472,
+            1308
+          ]
         },
         {
           "id": "r009",
           "layer": "chu_thich",
           "crop": "images/chu_thich/page-0041-r009.png",
-          "image_sha256": "6a0d371726d2b9a08c939fdf1cc4879039481197ac5af45025d872d1f8d4d8a6"
+          "image_sha256": "6a0d371726d2b9a08c939fdf1cc4879039481197ac5af45025d872d1f8d4d8a6",
+          "bbox": [
+            113,
+            1295,
+            1472,
+            1770
+          ]
         },
         {
           "id": "r010",
           "layer": "tieu_de",
           "crop": "images/tieu_de/page-0041-r010.png",
-          "image_sha256": "9340926aefa61f048bfef60968b1843fc6ab7312756787d3ea76dd951b6631e2"
+          "image_sha256": "9340926aefa61f048bfef60968b1843fc6ab7312756787d3ea76dd951b6631e2",
+          "bbox": [
+            637,
+            1816,
+            946,
+            1885
+          ]
         },
         {
           "id": "r011",
           "layer": "han",
           "crop": "images/han/page-0041-r011.png",
-          "image_sha256": "73b4d78c89bb1b791c358f34c0bc3176d4598980fbaf02db8b41413b54d9eb65"
+          "image_sha256": "73b4d78c89bb1b791c358f34c0bc3176d4598980fbaf02db8b41413b54d9eb65",
+          "bbox": [
+            219,
+            1922,
+            519,
+            2086
+          ]
         },
         {
           "id": "r012",
           "layer": "phien_am",
           "crop": "images/phien_am/page-0041-r012.png",
-          "image_sha256": "fbab96c24be4cc6b0e0985fd70773432b53a09ff0dc6545036ce54f1b8aea928"
+          "image_sha256": "fbab96c24be4cc6b0e0985fd70773432b53a09ff0dc6545036ce54f1b8aea928",
+          "bbox": [
+            629,
+            1928,
+            1159,
+            2090
+          ]
         }
+      ],
+      "image": "../images/page-0041.png",
+      "image_sha256": "c3690ecb14d14600d4098e4edfe816c8f832783a5ce8ac4871ba274cc20fd35c",
+      "image_size": [
+        1538,
+        2246
       ]
     },
     {
@@ -310,80 +610,164 @@
           "id": "r001",
           "layer": "han",
           "crop": "images/han/page-0042-r001.png",
-          "image_sha256": "6de0f972a8d6def88138e3813b1c7e3d5276bdfdbfdfdd07172e7a54ca0a772e"
+          "image_sha256": "6de0f972a8d6def88138e3813b1c7e3d5276bdfdbfdfdd07172e7a54ca0a772e",
+          "bbox": [
+            148,
+            166,
+            501,
+            688
+          ]
         },
         {
           "id": "r002",
           "layer": "phien_am",
           "crop": "images/phien_am/page-0042-r002.png",
-          "image_sha256": "81f6024a1a8a184f8f2300370faecba3c14ac421b9cd4a82c28b5f25ee3e16e1"
+          "image_sha256": "81f6024a1a8a184f8f2300370faecba3c14ac421b9cd4a82c28b5f25ee3e16e1",
+          "bbox": [
+            564,
+            170,
+            1105,
+            699
+          ]
         },
         {
           "id": "r003",
           "layer": "tieu_de",
           "crop": "images/tieu_de/page-0042-r003.png",
-          "image_sha256": "4b13051fe200adcb8901dd1498c20f1542375e88c0065e908e674916249bff69"
+          "image_sha256": "4b13051fe200adcb8901dd1498c20f1542375e88c0065e908e674916249bff69",
+          "bbox": [
+            589,
+            740,
+            871,
+            815
+          ]
         },
         {
           "id": "r004",
           "layer": "dich_sat",
           "crop": "images/dich_sat/page-0042-r004.png",
-          "image_sha256": "d5ff889525160a2fd31e7c0fb882cfe5e35a26ace9a39eeec4b7089e2fb5d025"
+          "image_sha256": "d5ff889525160a2fd31e7c0fb882cfe5e35a26ace9a39eeec4b7089e2fb5d025",
+          "bbox": [
+            140,
+            828,
+            942,
+            899
+          ]
         },
         {
           "id": "r005",
           "layer": "dich_sat",
           "crop": "images/dich_sat/page-0042-r005.png",
-          "image_sha256": "b122d1554ddf4d98ed40ce82ee56a4a255208aef41ef9c504e63a9e00bc54e83"
+          "image_sha256": "b122d1554ddf4d98ed40ce82ee56a4a255208aef41ef9c504e63a9e00bc54e83",
+          "bbox": [
+            41,
+            893,
+            1407,
+            1027
+          ]
         },
         {
           "id": "r006",
           "layer": "dich_sat",
           "crop": "images/dich_sat/page-0042-r006.png",
-          "image_sha256": "d6c6ccc8b754dd5566f5e802e23a24cfcdfe174c3273a905f6a822da11f1bd2e"
+          "image_sha256": "d6c6ccc8b754dd5566f5e802e23a24cfcdfe174c3273a905f6a822da11f1bd2e",
+          "bbox": [
+            140,
+            1018,
+            797,
+            1086
+          ]
         },
         {
           "id": "r007",
           "layer": "dich_sat",
           "crop": "images/dich_sat/page-0042-r007.png",
-          "image_sha256": "4546864c5ffe9defca83f826334891714ff00c3e24f2d9a617eefd24e9fe89c9"
+          "image_sha256": "4546864c5ffe9defca83f826334891714ff00c3e24f2d9a617eefd24e9fe89c9",
+          "bbox": [
+            138,
+            1077,
+            1225,
+            1152
+          ]
         },
         {
           "id": "r008",
           "layer": "dich_sat",
           "crop": "images/dich_sat/page-0042-r008.png",
-          "image_sha256": "10636055b6e683ea4be19da1b5058da104bbdb6ffa83a8e1cb8eccb45e537cfe"
+          "image_sha256": "10636055b6e683ea4be19da1b5058da104bbdb6ffa83a8e1cb8eccb45e537cfe",
+          "bbox": [
+            138,
+            1143,
+            1261,
+            1216
+          ]
         },
         {
           "id": "r009",
           "layer": "dich_sat",
           "crop": "images/dich_sat/page-0042-r009.png",
-          "image_sha256": "17378e72438697d3ee5d4dd316ed7004b4593965fb1debe3fb914f0ce6d88f66"
+          "image_sha256": "17378e72438697d3ee5d4dd316ed7004b4593965fb1debe3fb914f0ce6d88f66",
+          "bbox": [
+            137,
+            1218,
+            1047,
+            1289
+          ]
         },
         {
           "id": "r010",
           "layer": "dich_sat",
           "crop": "images/dich_sat/page-0042-r010.png",
-          "image_sha256": "02ac4f1e61f4e7a5e58ba1cafec52cf44851083c3b378225889d58ab84f02a4b"
+          "image_sha256": "02ac4f1e61f4e7a5e58ba1cafec52cf44851083c3b378225889d58ab84f02a4b",
+          "bbox": [
+            137,
+            1295,
+            797,
+            1370
+          ]
         },
         {
           "id": "r011",
           "layer": "dich_sat",
           "crop": "images/dich_sat/page-0042-r011.png",
-          "image_sha256": "4fa401b53b5844aab3cf9d94b6621e05c1d95226a5a622bed5a4c79dd004b576"
+          "image_sha256": "4fa401b53b5844aab3cf9d94b6621e05c1d95226a5a622bed5a4c79dd004b576",
+          "bbox": [
+            135,
+            1360,
+            1308,
+            1433
+          ]
         },
         {
           "id": "r012",
           "layer": "tieu_de",
           "crop": "images/tieu_de/page-0042-r012.png",
-          "image_sha256": "2ba021c38b7413e7f84910de66d6c0ef8567e1a2cb287203a0d158f6a3b4c7d4"
+          "image_sha256": "2ba021c38b7413e7f84910de66d6c0ef8567e1a2cb287203a0d158f6a3b4c7d4",
+          "bbox": [
+            616,
+            1452,
+            851,
+            1522
+          ]
         },
         {
           "id": "r013",
           "layer": "dich_tho",
           "crop": "images/dich_tho/page-0042-r013.png",
-          "image_sha256": "8872098b3411631e608df2c6710b34f9704ac459f4b25b9b00d068ad97a2ee51"
+          "image_sha256": "8872098b3411631e608df2c6710b34f9704ac459f4b25b9b00d068ad97a2ee51",
+          "bbox": [
+            132,
+            1533,
+            1070,
+            2068
+          ]
         }
+      ],
+      "image": "../images/page-0042.png",
+      "image_sha256": "1cf100ea7b50aad85b446892fe7c1ff722c5f6a97c9feb4e9107bbafc97508d7",
+      "image_size": [
+        1538,
+        2246
       ]
     },
     {
@@ -394,32 +778,68 @@
           "id": "r001",
           "layer": "tieu_de",
           "crop": "images/tieu_de/page-0043-r001.png",
-          "image_sha256": "62b1cee226038ee3ff0238e21ffb379ffc263db692133d90aeda4dc2b183df77"
+          "image_sha256": "62b1cee226038ee3ff0238e21ffb379ffc263db692133d90aeda4dc2b183df77",
+          "bbox": [
+            505,
+            147,
+            1019,
+            224
+          ]
         },
         {
           "id": "r002",
           "layer": "chu_thich",
           "crop": "images/chu_thich/page-0043-r002.png",
-          "image_sha256": "6f325c101ef1da80849e45407b237ee2e706c579c2bcefd032dbaf53afcbc088"
+          "image_sha256": "6f325c101ef1da80849e45407b237ee2e706c579c2bcefd032dbaf53afcbc088",
+          "bbox": [
+            80,
+            229,
+            1435,
+            614
+          ]
         },
         {
           "id": "r003",
           "layer": "chu_thich",
           "crop": "images/chu_thich/page-0043-r003.png",
-          "image_sha256": "44cdbd80a885b11d23ca45c2784aa0431568bc72f68af9638dd69f762a54348f"
+          "image_sha256": "44cdbd80a885b11d23ca45c2784aa0431568bc72f68af9638dd69f762a54348f",
+          "bbox": [
+            79,
+            612,
+            1436,
+            1026
+          ]
         },
         {
           "id": "r004",
           "layer": "chu_thich",
           "crop": "images/chu_thich/page-0043-r004.png",
-          "image_sha256": "208add34a4c689c81397c38caf9e5d6cc3b1ac7b70acb17cf51379032f98dce0"
+          "image_sha256": "208add34a4c689c81397c38caf9e5d6cc3b1ac7b70acb17cf51379032f98dce0",
+          "bbox": [
+            77,
+            1018,
+            1435,
+            1146
+          ]
         },
         {
           "id": "r005",
           "layer": "chu_thich",
           "crop": "images/chu_thich/page-0043-r005.png",
-          "image_sha256": "d6bf05f29c464e4d844d9facf2212fc549c22fef08bd56922201235d037047af"
+          "image_sha256": "d6bf05f29c464e4d844d9facf2212fc549c22fef08bd56922201235d037047af",
+          "bbox": [
+            81,
+            1134,
+            1438,
+            2006
+          ]
         }
+      ],
+      "image": "../images/page-0043.png",
+      "image_sha256": "a60cb92e59118ebba9ea4f8c23172ec5dd2225be336792a55ac929ce131c1d3a",
+      "image_size": [
+        1538,
+        2246
       ]
     },
     {
@@ -430,62 +850,128 @@
           "id": "r001",
           "layer": "chu_thich",
           "crop": "images/chu_thich/page-0044-r001.png",
-          "image_sha256": "b1c5228ffcdc377f6bbb67174260dfb04a50b09b969d484f50a8108d6281e809"
+          "image_sha256": "b1c5228ffcdc377f6bbb67174260dfb04a50b09b969d484f50a8108d6281e809",
+          "bbox": [
+            65,
+            138,
+            1424,
+            376
+          ]
         },
         {
           "id": "r002",
           "layer": "chu_thich",
           "crop": "images/chu_thich/page-0044-r002.png",
-          "image_sha256": "143d5bc1c3aa1a02775a3b15fb05d5faf8376a88924d08bfa3b53638265cf912"
+          "image_sha256": "143d5bc1c3aa1a02775a3b15fb05d5faf8376a88924d08bfa3b53638265cf912",
+          "bbox": [
+            65,
+            372,
+            1425,
+            728
+          ]
         },
         {
           "id": "r003",
           "layer": "tieu_de",
           "crop": "images/tieu_de/page-0044-r003.png",
-          "image_sha256": "cd43e278acedc6b5f51ea2bb8e2ca17e4fba117d355248d210d1b36b54f8af06"
+          "image_sha256": "cd43e278acedc6b5f51ea2bb8e2ca17e4fba117d355248d210d1b36b54f8af06",
+          "bbox": [
+            572,
+            770,
+            915,
+            864
+          ]
         },
         {
           "id": "r004",
           "layer": "tieu_de",
           "crop": "images/tieu_de/page-0044-r004.png",
-          "image_sha256": "6f86925c04ed3c88f38c176d9caf0454e7afecfacf760ca36d87a14fb3abc0b6"
+          "image_sha256": "6f86925c04ed3c88f38c176d9caf0454e7afecfacf760ca36d87a14fb3abc0b6",
+          "bbox": [
+            603,
+            936,
+            888,
+            1008
+          ]
         },
         {
           "id": "r010",
           "layer": "tieu_de_viet",
           "crop": "images/tieu_de_viet/page-0044-r010.png",
-          "image_sha256": "9c7e4059d08f50a8a79dff553b8701fe5c8b2e77c720ecfd7e7d483da384a222"
+          "image_sha256": "9c7e4059d08f50a8a79dff553b8701fe5c8b2e77c720ecfd7e7d483da384a222",
+          "bbox": [
+            548,
+            1050,
+            1104,
+            1121
+          ]
         },
         {
           "id": "r011",
           "layer": "tieu_de_han",
           "crop": "images/tieu_de_han/page-0044-r011.png",
-          "image_sha256": "44c4d65beb8d99a762f1249637f6f458812f20b9bbf22601123445c002f47de6"
+          "image_sha256": "44c4d65beb8d99a762f1249637f6f458812f20b9bbf22601123445c002f47de6",
+          "bbox": [
+            243,
+            1052,
+            382,
+            1114
+          ]
         },
         {
           "id": "r006",
           "layer": "han",
           "crop": "images/han/page-0044-r006.png",
-          "image_sha256": "64158ebc96c0ced9c56c22399fd30fad924702b8a1c6be1b7e34294cb15c9fdd"
+          "image_sha256": "64158ebc96c0ced9c56c22399fd30fad924702b8a1c6be1b7e34294cb15c9fdd",
+          "bbox": [
+            159,
+            1120,
+            475,
+            1682
+          ]
         },
         {
           "id": "r012",
           "layer": "phien_am",
           "crop": "images/phien_am/page-0044-r012.png",
-          "image_sha256": "e4fbe3a16a892d6b7910edef3e69cb806d9aa0c766beb99bc4411b9ef534b670"
+          "image_sha256": "e4fbe3a16a892d6b7910edef3e69cb806d9aa0c766beb99bc4411b9ef534b670",
+          "bbox": [
+            543,
+            1138,
+            1274,
+            1665
+          ]
         },
         {
           "id": "r007",
           "layer": "tieu_de",
           "crop": "images/tieu_de/page-0044-r007.png",
-          "image_sha256": "7267a4738262544ed6a70bc0bcf24fe3c20d89f55b11a065028be68d16afc1f8"
+          "image_sha256": "7267a4738262544ed6a70bc0bcf24fe3c20d89f55b11a065028be68d16afc1f8",
+          "bbox": [
+            605,
+            1727,
+            884,
+            1796
+          ]
         },
         {
           "id": "r008",
           "layer": "dich_sat",
           "crop": "images/dich_sat/page-0044-r008.png",
-          "image_sha256": "9b0c94b1abc1751ae527e2bbc200a0850fa6c69d3831e01002046b6591b25a9c"
+          "image_sha256": "9b0c94b1abc1751ae527e2bbc200a0850fa6c69d3831e01002046b6591b25a9c",
+          "bbox": [
+            150,
+            1823,
+            740,
+            2084
+          ]
         }
+      ],
+      "image": "../images/page-0044.png",
+      "image_sha256": "59ab6b0a50cffdff5efc2c03943a0ee4602084b0161d9171240f213896ab4ccf",
+      "image_size": [
+        1538,
+        2246
       ]
     },
     {
@@ -496,98 +982,200 @@
           "id": "r001",
           "layer": "dich_sat",
           "crop": "images/dich_sat/page-0045-r001.png",
-          "image_sha256": "881259dae2327d67ef2390674bc9df43ce67290fc29d9148023a6696c417c741"
+          "image_sha256": "881259dae2327d67ef2390674bc9df43ce67290fc29d9148023a6696c417c741",
+          "bbox": [
+            203,
+            141,
+            810,
+            213
+          ]
         },
         {
           "id": "r002",
           "layer": "dich_sat",
           "crop": "images/dich_sat/page-0045-r002.png",
-          "image_sha256": "a80f39f971eb420c64643c5107309ffe6c33e0d3f272d2220a4c2df024a2e50f"
+          "image_sha256": "a80f39f971eb420c64643c5107309ffe6c33e0d3f272d2220a4c2df024a2e50f",
+          "bbox": [
+            201,
+            203,
+            995,
+            277
+          ]
         },
         {
           "id": "r003",
           "layer": "tieu_de",
           "crop": "images/tieu_de/page-0045-r003.png",
-          "image_sha256": "f007e00d94c4431b3e41fb717a3ca6666eea82f7441d022c895d6e991bcc84c6"
+          "image_sha256": "f007e00d94c4431b3e41fb717a3ca6666eea82f7441d022c895d6e991bcc84c6",
+          "bbox": [
+            681,
+            294,
+            917,
+            364
+          ]
         },
         {
           "id": "r004",
           "layer": "dich_tho",
           "crop": "images/dich_tho/page-0045-r004.png",
-          "image_sha256": "cb45143ed7cca46e7aa00ba783bc7763bb803003c7ba9dc07b213a39712cac9b"
+          "image_sha256": "cb45143ed7cca46e7aa00ba783bc7763bb803003c7ba9dc07b213a39712cac9b",
+          "bbox": [
+            201,
+            375,
+            809,
+            453
+          ]
         },
         {
           "id": "r005",
           "layer": "dich_tho",
           "crop": "images/dich_tho/page-0045-r005.png",
-          "image_sha256": "7c3fe8eb0b39ea48c97bc2227bec9120c71578b403b585c4af531069dbd5acbb"
+          "image_sha256": "7c3fe8eb0b39ea48c97bc2227bec9120c71578b403b585c4af531069dbd5acbb",
+          "bbox": [
+            200,
+            441,
+            958,
+            515
+          ]
         },
         {
           "id": "r006",
           "layer": "dich_tho",
           "crop": "images/dich_tho/page-0045-r006.png",
-          "image_sha256": "5c672e1b83905ba9c8621af1bcbbfd5def9abc6f6cacca2c7fb8cf15f62d1305"
+          "image_sha256": "5c672e1b83905ba9c8621af1bcbbfd5def9abc6f6cacca2c7fb8cf15f62d1305",
+          "bbox": [
+            201,
+            507,
+            811,
+            578
+          ]
         },
         {
           "id": "r007",
           "layer": "dich_tho",
           "crop": "images/dich_tho/page-0045-r007.png",
-          "image_sha256": "e6ed79b1bb38338427b7bd9c5736e4fb3a867db56fd8e8c0579ba4f4c3d45a3e"
+          "image_sha256": "e6ed79b1bb38338427b7bd9c5736e4fb3a867db56fd8e8c0579ba4f4c3d45a3e",
+          "bbox": [
+            198,
+            569,
+            1104,
+            651
+          ]
         },
         {
           "id": "r008",
           "layer": "dich_tho",
           "crop": "images/dich_tho/page-0045-r008.png",
-          "image_sha256": "06e4a4f6096569feaea63dc78cb67df5fa47d3ea173431992bade7e110efda4f"
+          "image_sha256": "06e4a4f6096569feaea63dc78cb67df5fa47d3ea173431992bade7e110efda4f",
+          "bbox": [
+            197,
+            634,
+            914,
+            714
+          ]
         },
         {
           "id": "r009",
           "layer": "dich_tho",
           "crop": "images/dich_tho/page-0045-r009.png",
-          "image_sha256": "830c0936eb9df28912fd2e222a43a0e358bbeb12a35bd3ab5e4f645720a4afc7"
+          "image_sha256": "830c0936eb9df28912fd2e222a43a0e358bbeb12a35bd3ab5e4f645720a4afc7",
+          "bbox": [
+            189,
+            708,
+            1015,
+            790
+          ]
         },
         {
           "id": "r010",
           "layer": "tieu_de",
           "crop": "images/tieu_de/page-0045-r010.png",
-          "image_sha256": "15fe1b4260c0e1893eaf48043c2c44c6584b529a13262bb5214ef30658f9650c"
+          "image_sha256": "15fe1b4260c0e1893eaf48043c2c44c6584b529a13262bb5214ef30658f9650c",
+          "bbox": [
+            539,
+            825,
+            1057,
+            905
+          ]
         },
         {
           "id": "r011",
           "layer": "chu_thich",
           "crop": "images/chu_thich/page-0045-r011.png",
-          "image_sha256": "9fa7be6334182878b9d1da10216a838d310aac1e48474282be1aa6542159742c"
+          "image_sha256": "9fa7be6334182878b9d1da10216a838d310aac1e48474282be1aa6542159742c",
+          "bbox": [
+            112,
+            918,
+            1474,
+            1302
+          ]
         },
         {
           "id": "r012",
           "layer": "chu_thich",
           "crop": "images/chu_thich/page-0045-r012.png",
-          "image_sha256": "705086f5de6622ae3c5f169738f7f05ffbdf29536a77c629223d507fd279340c"
+          "image_sha256": "705086f5de6622ae3c5f169738f7f05ffbdf29536a77c629223d507fd279340c",
+          "bbox": [
+            112,
+            1289,
+            1477,
+            1480
+          ]
         },
         {
           "id": "r013",
           "layer": "chu_thich",
           "crop": "images/chu_thich/page-0045-r013.png",
-          "image_sha256": "6ba9696be6924fabfa7cabab2cfde17f17de1a6abcce64a646e51c38acade9de"
+          "image_sha256": "6ba9696be6924fabfa7cabab2cfde17f17de1a6abcce64a646e51c38acade9de",
+          "bbox": [
+            116,
+            1472,
+            1474,
+            1600
+          ]
         },
         {
           "id": "r014",
           "layer": "tieu_de",
           "crop": "images/tieu_de/page-0045-r014.png",
-          "image_sha256": "5e68d7e5f1be10eb8b2107cd97536771909c6720e1afbaeec1b625d02bea5566"
+          "image_sha256": "5e68d7e5f1be10eb8b2107cd97536771909c6720e1afbaeec1b625d02bea5566",
+          "bbox": [
+            646,
+            1675,
+            942,
+            1747
+          ]
         },
         {
           "id": "r015",
           "layer": "han",
           "crop": "images/han/page-0045-r015.png",
-          "image_sha256": "ee3db808aeb3aaf71749791083ae9f8a2fde810593f50f9a8426f77ad9700064"
+          "image_sha256": "ee3db808aeb3aaf71749791083ae9f8a2fde810593f50f9a8426f77ad9700064",
+          "bbox": [
+            210,
+            1779,
+            496,
+            2035
+          ]
         },
         {
           "id": "r016",
           "layer": "phien_am",
           "crop": "images/phien_am/page-0045-r016.png",
-          "image_sha256": "8f015b41cf298ff6d5e5248462acb783a25c4f351beabdfbd0780d1e227a15bb"
+          "image_sha256": "8f015b41cf298ff6d5e5248462acb783a25c4f351beabdfbd0780d1e227a15bb",
+          "bbox": [
+            631,
+            1789,
+            1216,
+            2045
+          ]
         }
+      ],
+      "image": "../images/page-0045.png",
+      "image_sha256": "b6e78774adf13398f2de583c92253360a39096387e986a695ff21a7630288c5e",
+      "image_size": [
+        1538,
+        2246
       ]
     },
     {
@@ -598,56 +1186,116 @@
           "id": "r001",
           "layer": "han",
           "crop": "images/han/page-0046-r001.png",
-          "image_sha256": "4bb759ed6e2b103dc21b607a7b0639d791ebbefd97f95e9d61aea342ecadfb49"
+          "image_sha256": "4bb759ed6e2b103dc21b607a7b0639d791ebbefd97f95e9d61aea342ecadfb49",
+          "bbox": [
+            190,
+            129,
+            478,
+            386
+          ]
         },
         {
           "id": "r002",
           "layer": "phien_am",
           "crop": "images/phien_am/page-0046-r002.png",
-          "image_sha256": "5b8f5bfc712d47a9c30ab1f026e42303c7a85d80fe6672bd65a1edbcc4a3f87e"
+          "image_sha256": "5b8f5bfc712d47a9c30ab1f026e42303c7a85d80fe6672bd65a1edbcc4a3f87e",
+          "bbox": [
+            621,
+            140,
+            1185,
+            379
+          ]
         },
         {
           "id": "r003",
           "layer": "tieu_de",
           "crop": "images/tieu_de/page-0046-r003.png",
-          "image_sha256": "7ec7e68645088b97a6cc3e0816acce5245922f2098237630b80ca9b4cec64ca7"
+          "image_sha256": "7ec7e68645088b97a6cc3e0816acce5245922f2098237630b80ca9b4cec64ca7",
+          "bbox": [
+            643,
+            470,
+            923,
+            539
+          ]
         },
         {
           "id": "r004",
           "layer": "dich_sat",
           "crop": "images/dich_sat/page-0046-r004.png",
-          "image_sha256": "d420af0946dcf15da6933abc52ec84771e6ed5a54a852349182e581e67b9c904"
+          "image_sha256": "d420af0946dcf15da6933abc52ec84771e6ed5a54a852349182e581e67b9c904",
+          "bbox": [
+            188,
+            555,
+            803,
+            952
+          ]
         },
         {
           "id": "r005",
           "layer": "tieu_de",
           "crop": "images/tieu_de/page-0046-r005.png",
-          "image_sha256": "3303f6f983b0f509e2a9e1a55469d5d79bfa68a210730ff2e53b2408881b85b0"
+          "image_sha256": "3303f6f983b0f509e2a9e1a55469d5d79bfa68a210730ff2e53b2408881b85b0",
+          "bbox": [
+            666,
+            994,
+            903,
+            1067
+          ]
         },
         {
           "id": "r006",
           "layer": "dich_tho",
           "crop": "images/dich_tho/page-0046-r006.png",
-          "image_sha256": "aa8d80db79f8d3e1e0810f456812ef7ab900e7c9eb31c7e90536b2e3d121bbcb"
+          "image_sha256": "aa8d80db79f8d3e1e0810f456812ef7ab900e7c9eb31c7e90536b2e3d121bbcb",
+          "bbox": [
+            182,
+            1078,
+            1021,
+            1478
+          ]
         },
         {
           "id": "r007",
           "layer": "tieu_de",
           "crop": "images/tieu_de/page-0046-r007.png",
-          "image_sha256": "33fdd27dfb22a0a116f2265694ff1233e7dadaa6c809fca4f1389831b19cf94a"
+          "image_sha256": "33fdd27dfb22a0a116f2265694ff1233e7dadaa6c809fca4f1389831b19cf94a",
+          "bbox": [
+            525,
+            1514,
+            1043,
+            1590
+          ]
         },
         {
           "id": "r008",
           "layer": "chu_thich",
           "crop": "images/chu_thich/page-0046-r008.png",
-          "image_sha256": "a3e503c140de699e6b3476648ee5c5bcc0a7b26465fc39a58381350fff09acca"
+          "image_sha256": "a3e503c140de699e6b3476648ee5c5bcc0a7b26465fc39a58381350fff09acca",
+          "bbox": [
+            92,
+            1605,
+            1459,
+            1803
+          ]
         },
         {
           "id": "r009",
           "layer": "chu_thich",
           "crop": "images/chu_thich/page-0046-r009.png",
-          "image_sha256": "661b1219b876f78a05bfa080c6c29f3879eab148dc0f26a56ed5d1dd36ca9f73"
+          "image_sha256": "661b1219b876f78a05bfa080c6c29f3879eab148dc0f26a56ed5d1dd36ca9f73",
+          "bbox": [
+            91,
+            1805,
+            1459,
+            2044
+          ]
         }
+      ],
+      "image": "../images/page-0046.png",
+      "image_sha256": "9f32d07f2165775651b55c26e1ec59d50c558957dfc265fb025243f287e75e37",
+      "image_size": [
+        1538,
+        2246
       ]
     },
     {
@@ -658,80 +1306,164 @@
           "id": "r001",
           "layer": "chu_thich",
           "crop": "images/chu_thich/page-0047-r001.png",
-          "image_sha256": "44b73f341a75982dad39f080c0ee18fe92063457e6779d6acfaf0cbb38d81664"
+          "image_sha256": "44b73f341a75982dad39f080c0ee18fe92063457e6779d6acfaf0cbb38d81664",
+          "bbox": [
+            147,
+            154,
+            1498,
+            283
+          ]
         },
         {
           "id": "r002",
           "layer": "tieu_de",
           "crop": "images/tieu_de/page-0047-r002.png",
-          "image_sha256": "de12ab3e99f907451834dcfa675da51227db4037bb0945b2f39e7d95c6835f6d"
+          "image_sha256": "de12ab3e99f907451834dcfa675da51227db4037bb0945b2f39e7d95c6835f6d",
+          "bbox": [
+            672,
+            328,
+            985,
+            399
+          ]
         },
         {
           "id": "r003",
           "layer": "han",
           "crop": "images/han/page-0047-r003.png",
-          "image_sha256": "a722e69cad2420caff87a33b51cd21641c0e8e016ee3726fe9d7d45f663eed4c"
+          "image_sha256": "a722e69cad2420caff87a33b51cd21641c0e8e016ee3726fe9d7d45f663eed4c",
+          "bbox": [
+            245,
+            423,
+            570,
+            989
+          ]
         },
         {
           "id": "r004",
           "layer": "phien_am",
           "crop": "images/phien_am/page-0047-r004.png",
-          "image_sha256": "038213e63f21e9a47d916ceff8062179bc57e0c2b54001cd2e7e4487b291d7cc"
+          "image_sha256": "038213e63f21e9a47d916ceff8062179bc57e0c2b54001cd2e7e4487b291d7cc",
+          "bbox": [
+            680,
+            442,
+            1288,
+            971
+          ]
         },
         {
           "id": "r005",
           "layer": "tieu_de",
           "crop": "images/tieu_de/page-0047-r005.png",
-          "image_sha256": "d3889de598407a09e63ee0fb9d32cafbcfcbb62fd1959d09e699afc479c9d5e0"
+          "image_sha256": "d3889de598407a09e63ee0fb9d32cafbcfcbb62fd1959d09e699afc479c9d5e0",
+          "bbox": [
+            685,
+            986,
+            974,
+            1060
+          ]
         },
         {
           "id": "r006",
           "layer": "dich_sat",
           "crop": "images/dich_sat/page-0047-r006.png",
-          "image_sha256": "c0127b7a4b98a356204998aa840aea6fc717b979b918c6f94117d3815429216f"
+          "image_sha256": "c0127b7a4b98a356204998aa840aea6fc717b979b918c6f94117d3815429216f",
+          "bbox": [
+            237,
+            1072,
+            805,
+            1146
+          ]
         },
         {
           "id": "r007",
           "layer": "dich_sat",
           "crop": "images/dich_sat/page-0047-r007.png",
-          "image_sha256": "de85a14191f2c26fece9a1afb4af999081607c398de75324c022c5e1742c73e0"
+          "image_sha256": "de85a14191f2c26fece9a1afb4af999081607c398de75324c022c5e1742c73e0",
+          "bbox": [
+            143,
+            1151,
+            1500,
+            1293
+          ]
         },
         {
           "id": "r008",
           "layer": "dich_sat",
           "crop": "images/dich_sat/page-0047-r008.png",
-          "image_sha256": "e44781c1b0c974deb66c560873e26259e5f8531d114b6de476bc349c38e80f6d"
+          "image_sha256": "e44781c1b0c974deb66c560873e26259e5f8531d114b6de476bc349c38e80f6d",
+          "bbox": [
+            238,
+            1290,
+            1126,
+            1365
+          ]
         },
         {
           "id": "r009",
           "layer": "dich_sat",
           "crop": "images/dich_sat/page-0047-r009.png",
-          "image_sha256": "a0896faae97c2144bc0e963cc76454ede95d67ec4b4635bd25fcb392c2678cf0"
+          "image_sha256": "a0896faae97c2144bc0e963cc76454ede95d67ec4b4635bd25fcb392c2678cf0",
+          "bbox": [
+            238,
+            1354,
+            654,
+            1428
+          ]
         },
         {
           "id": "r010",
           "layer": "dich_sat",
           "crop": "images/dich_sat/page-0047-r010.png",
-          "image_sha256": "c392e486c7f282b5ee1727d19aa6dfb7ef6933d2150349af020eea49af7b6aa2"
+          "image_sha256": "c392e486c7f282b5ee1727d19aa6dfb7ef6933d2150349af020eea49af7b6aa2",
+          "bbox": [
+            237,
+            1420,
+            1067,
+            1495
+          ]
         },
         {
           "id": "r011",
           "layer": "dich_sat",
           "crop": "images/dich_sat/page-0047-r011.png",
-          "image_sha256": "8855098c1da6fe5b4308e4761474fe34e898373e1806b22168311f8b54d41355"
+          "image_sha256": "8855098c1da6fe5b4308e4761474fe34e898373e1806b22168311f8b54d41355",
+          "bbox": [
+            236,
+            1480,
+            952,
+            1561
+          ]
         },
         {
           "id": "r012",
           "layer": "tieu_de",
           "crop": "images/tieu_de/page-0047-r012.png",
-          "image_sha256": "445747845367e3bc904b95af16596a57f5fdbf8f8ead8c53ea426f5718a4d24e"
+          "image_sha256": "445747845367e3bc904b95af16596a57f5fdbf8f8ead8c53ea426f5718a4d24e",
+          "bbox": [
+            714,
+            1579,
+            951,
+            1648
+          ]
         },
         {
           "id": "r013",
           "layer": "dich_tho",
           "crop": "images/dich_tho/page-0047-r013.png",
-          "image_sha256": "be8ac9cb59e126cbc2a2b26886aee6dcfac3bc148fd09f7f8e3d45848ba7d7a2"
+          "image_sha256": "be8ac9cb59e126cbc2a2b26886aee6dcfac3bc148fd09f7f8e3d45848ba7d7a2",
+          "bbox": [
+            235,
+            1664,
+            1122,
+            2076
+          ]
         }
+      ],
+      "image": "../images/page-0047.png",
+      "image_sha256": "56baec99580b1e779643edebd6f353f3f1f61818f693d5d30b4187cd94179159",
+      "image_size": [
+        1500,
+        2246
       ]
     },
     {
@@ -742,69 +1474,146 @@
           "id": "r001",
           "layer": "tieu_de",
           "crop": "images/tieu_de/page-0048-r001.png",
-          "image_sha256": "ea78f05ec3c1d984d96ee221bdb983e28e44b1fff18a9fda5ec3eb247d9b2702"
+          "image_sha256": "ea78f05ec3c1d984d96ee221bdb983e28e44b1fff18a9fda5ec3eb247d9b2702",
+          "bbox": [
+            547,
+            133,
+            1064,
+            205
+          ]
         },
         {
           "id": "r002",
           "layer": "chu_thich",
           "crop": "images/chu_thich/page-0048-r002.png",
-          "image_sha256": "034d463d440c98369114681439dfb2baa02150335f43aae6ac70b39b8852955d"
+          "image_sha256": "034d463d440c98369114681439dfb2baa02150335f43aae6ac70b39b8852955d",
+          "bbox": [
+            120,
+            207,
+            1482,
+            524
+          ]
         },
         {
           "id": "r003",
           "layer": "chu_thich",
           "crop": "images/chu_thich/page-0048-r003.png",
-          "image_sha256": "b84130baebcc4d867258c9640d8d9e8e8f9929b852f7e2ec2d782025520f86db"
+          "image_sha256": "b84130baebcc4d867258c9640d8d9e8e8f9929b852f7e2ec2d782025520f86db",
+          "bbox": [
+            117,
+            518,
+            1484,
+            823
+          ]
         },
         {
           "id": "r004",
           "layer": "chu_thich",
           "crop": "images/chu_thich/page-0048-r004.png",
-          "image_sha256": "0bc32ddfbd00384fcebbefb0cdca85078f3b5ef99882711d61db1ac688b79252"
+          "image_sha256": "0bc32ddfbd00384fcebbefb0cdca85078f3b5ef99882711d61db1ac688b79252",
+          "bbox": [
+            208,
+            815,
+            1278,
+            888
+          ]
         },
         {
           "id": "r005",
           "layer": "chu_thich",
           "crop": "images/chu_thich/page-0048-r005.png",
-          "image_sha256": "c9f49f0a8bbdacc70c36588a808311e5804671f7654637b4c2e989950323d2f7"
+          "image_sha256": "c9f49f0a8bbdacc70c36588a808311e5804671f7654637b4c2e989950323d2f7",
+          "bbox": [
+            116,
+            882,
+            1481,
+            1351
+          ]
         },
         {
           "id": "r006",
           "layer": "tieu_de",
           "crop": "images/tieu_de/page-0048-r006.png",
-          "image_sha256": "98414c9c648babaf041b04672c217ba071cc643145a9e2f3620240458096cc98"
+          "image_sha256": "98414c9c648babaf041b04672c217ba071cc643145a9e2f3620240458096cc98",
+          "bbox": [
+            626,
+            1365,
+            972,
+            1463
+          ]
         },
         {
           "id": "r007",
           "layer": "tieu_de",
           "crop": "images/tieu_de/page-0048-r007.png",
-          "image_sha256": "8822dbaac1c8e6083f6e127629ef53bd9bc2cc9673d48e175def8101e6c25690"
+          "image_sha256": "8822dbaac1c8e6083f6e127629ef53bd9bc2cc9673d48e175def8101e6c25690",
+          "bbox": [
+            656,
+            1519,
+            941,
+            1591
+          ]
         },
         {
           "id": "r008",
           "layer": "tieu_de_han",
           "crop": "images/tieu_de_han/page-0048-r008.png",
-          "image_sha256": "2498b7621aaa2a84db7157c2d43de4f5d42763704079b35928d2569402357237"
+          "image_sha256": "2498b7621aaa2a84db7157c2d43de4f5d42763704079b35928d2569402357237",
+          "bbox": [
+            280,
+            1625,
+            440,
+            1719
+          ]
         },
         {
           "id": "r009",
           "layer": "tieu_de_viet",
           "crop": "images/tieu_de_viet/page-0048-r009.png",
-          "image_sha256": "852c93390cd224c954a7ce813072f41eff645c5f6a853cd17d488e6b80a9bd65"
+          "image_sha256": "852c93390cd224c954a7ce813072f41eff645c5f6a853cd17d488e6b80a9bd65",
+          "bbox": [
+            638,
+            1633,
+            1231,
+            1709
+          ]
         },
         {
           "id": "r010",
           "layer": "han",
           "crop": "images/han/page-0048-r010.png",
-          "image_sha256": "4433966daf2797a966db92a589b202334e06ccd12d6ef5d4c2cbaaab86f43554"
+          "image_sha256": "4433966daf2797a966db92a589b202334e06ccd12d6ef5d4c2cbaaab86f43554",
+          "bbox": [
+            211,
+            1710,
+            508,
+            2049
+          ]
         },
         {
           "id": "r011",
           "layer": "phien_am",
           "crop": "images/phien_am/page-0048-r011.png",
-          "image_sha256": "7830f143a38b540b61c70827cef9941861dbf798b6430e01829d5d08e31e2f3e"
+          "image_sha256": "7830f143a38b540b61c70827cef9941861dbf798b6430e01829d5d08e31e2f3e",
+          "bbox": [
+            633,
+            1723,
+            1386,
+            2067
+          ]
         }
+      ],
+      "image": "../images/page-0048.png",
+      "image_sha256": "49202d175dd811f69fa58d7f719b873a3e7447e57b6d2b7b68d6f615ef9dfa41",
+      "image_size": [
+        1538,
+        2246
       ]
     }
-  ]
+  ],
+  "source": {
+    "pdf_sha256": "70b9f8954acaa582900d4149ed518f1fe9a34674d1da494866584cf7b93a7597",
+    "dpi": 300,
+    "renderer": "pdftoppm 26.10.0"
+  }
 }

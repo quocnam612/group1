@@ -1,0 +1,2431 @@
+{
+  "settings": {
+    "command": "run",
+    "engine": "tesseract",
+    "device": "cpu",
+    "lang": "chinese_cht",
+    "model": null,
+    "revision": null,
+    "seed": 42,
+    "max_new_tokens": 4096,
+    "max_pixels": 401408,
+    "quantization": "none",
+    "allow_cpu": false,
+    "profile": "balanced",
+    "preprocessing": {
+      "han": {
+        "version": 1,
+        "scale": 2,
+        "border": 16,
+        "padding": 6,
+        "dark_threshold": 200,
+        "max_internal_gap": 2,
+        "grayscale": true,
+        "autocontrast": true
+      },
+      "vietnamese": "original block image"
+    },
+    "tesseract": {
+      "version": "tesseract 5.5.4",
+      "packages_sha256": {
+        "tesseract-5.5.4-1-x86_64.pkg.tar.zst": "6c33ced8c8f2b82aaeaf88a7b670b144f3c4501368477db2bb83e03a2c0cc625",
+        "leptonica-1.87.0-2-x86_64.pkg.tar.zst": "f7a239ee5f8492edfd6b2e61b3c7d4371ab27990db8f10de5bbbdadc50fafb71"
+      },
+      "models": {
+        "vie": {
+          "revision": "e12c65a915945e4c28e237a9b52bc4a8f39a0cec",
+          "sha256": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+        },
+        "chi_tra": {
+          "revision": "e12c65a915945e4c28e237a9b52bc4a8f39a0cec",
+          "sha256": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+        }
+      }
+    },
+    "language_policy": "chi_tra for Han, vie+chi_tra for commentary, vie otherwise",
+    "psm": "7 for Han; 6 for Vietnamese",
+    "oem": 1,
+    "decoder_dictionaries": "Vietnamese only",
+    "paddle_language_policy": null
+  },
+  "records": {
+    "page-0038.json:r001": {
+      "image_sha256": "20b7a2d4d951bbd9a90d923201d405bbd93b14fb56cb169d44751e124cdea3af",
+      "text": "BÀI THỨ NHẤT",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.127,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0038.json:r002": {
+      "image_sha256": "d5749ced844de7e47a53afacc84ef80963832eb33d2806d6e6f33dcc721c26b8",
+      "text": "CHƯƠNG !",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.091,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0038.json:r003": {
+      "image_sha256": "02b5120d5e1a78a66bcaf50a27afeb14ea23d2a79e4a9c0256868e3168c081b4",
+      "text": "關 用",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.27,
+      "lines": [
+        {
+          "box": [
+            0,
+            0,
+            143,
+            82
+          ],
+          "image_sha256": "6a33afb2b1075ce2c1d90cef07764f45c9cc49cb3e569f3f5b1ac91b6f9e7927",
+          "text": "關 用",
+          "recognition_language": "chi_tra",
+          "psm": 7,
+          "oem": 1,
+          "model_sha256": {
+            "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+          },
+          "decoder_dictionaries": false
+        }
+      ],
+      "possibly_truncated": false
+    },
+    "page-0038.json:r004": {
+      "image_sha256": "dadf5b3f0d52de2f51b65e3b07a3c09a87443be9ad3faa6210e503adb9aad2f3",
+      "text": "Quan thư. (Chu nam)",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.148,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0038.json:r005": {
+      "image_sha256": "76208875894639bbc7d38758ba417e29684c2dffc073070ac007b728be061033",
+      "text": "閱關趴鳩\n在河之州\n藩罕淑女\n莒子好迷",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 1.004,
+      "lines": [
+        {
+          "box": [
+            15,
+            16,
+            252,
+            70
+          ],
+          "image_sha256": "187a49df7e697a6c9ef0b5f681785ea3f48cd340ef847c9e86b131154ac8ccfc",
+          "text": "閱關趴鳩",
+          "recognition_language": "chi_tra",
+          "psm": 7,
+          "oem": 1,
+          "model_sha256": {
+            "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+          },
+          "decoder_dictionaries": false
+        },
+        {
+          "box": [
+            12,
+            105,
+            249,
+            159
+          ],
+          "image_sha256": "69567342886c4c50cac5b4ff1335cf3371b82b2b0a7088efb35c4ab3970c221c",
+          "text": "在河之州",
+          "recognition_language": "chi_tra",
+          "psm": 7,
+          "oem": 1,
+          "model_sha256": {
+            "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+          },
+          "decoder_dictionaries": false
+        },
+        {
+          "box": [
+            14,
+            194,
+            251,
+            249
+          ],
+          "image_sha256": "85f9fd5c7bd3beabb123924cff55b08fea685c7b9d4ff588a4616f8d7994b5d6",
+          "text": "藩罕淑女",
+          "recognition_language": "chi_tra",
+          "psm": 7,
+          "oem": 1,
+          "model_sha256": {
+            "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+          },
+          "decoder_dictionaries": false
+        },
+        {
+          "box": [
+            13,
+            285,
+            252,
+            338
+          ],
+          "image_sha256": "a0ad80fc316b269817b3b5b53e0e0e69e039aa20a70d9e4afb0aa4ce57f5826b",
+          "text": "莒子好迷",
+          "recognition_language": "chi_tra",
+          "psm": 7,
+          "oem": 1,
+          "model_sha256": {
+            "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+          },
+          "decoder_dictionaries": false
+        }
+      ],
+      "possibly_truncated": false
+    },
+    "page-0038.json:r006": {
+      "image_sha256": "c899c8a9beec82e2ae6d2087a11647280657d7c51dfb837166723c11095e712f",
+      "text": "1. Quan quan thư cưu.\n2. Tại hà chỉ châu.\n\n3. Yếu điệu thục nữ,\n4. Quân tử hảo cầu.",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.239,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0038.json:r007": {
+      "image_sha256": "5c0b4cafb9ae7d571d389b4acbd89106e45ef14fbdbcb889f909a38011a0c5cc",
+      "text": "Dịch nghĩa",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.122,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0038.json:r008": {
+      "image_sha256": "897dc5022b7f8ee18d06536f1c98b08b708b6304eb83a4cd7376c6c0d5ec39c0",
+      "text": "1 . Đôi chim thư cưu hót hoạ nghe quan quan.\n2. Ở trên cồn bên sông.\n\n3. Người thục nữ u nhàn,\n\n4. Phải là lứa tốt của bực quân tử",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.28,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0038.json:r009": {
+      "image_sha256": "9071abec9b57fa3d8ebddf4938c533fdea830a4ad849040b32a602547e24154b",
+      "text": "Dịch thơ",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.139,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0038.json:r010": {
+      "image_sha256": "0c18cda9674a2eea2232b10f59402538e24f9f253398812845356f77904b1d6b",
+      "text": "Quan quan bìa tiếng thư cưu,\n\nBên cồn hót hoạ cùng nhau uang dầy.\nU nhàn thục nữ thế này,\n\nXứng cùng quên tử sánh uây lứa duyên.",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.27,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0038.json:r012": {
+      "image_sha256": "2a8d94ee9421ce3db2a7e8cd3e220fd21735d6ef02096635a5ca067958711a6b",
+      "text": "Chú giải của Chu Hÿ.",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.14,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0038.json:r013": {
+      "image_sha256": "1063c1b8b376804e01be90bac577851711cedc9da96beef8e75540028af9f6fc",
+      "text": "Chương nầy thuộc thể hứng. 關關 quan quan, tiếng chim\ntrống chim mái ứng hoạ nhau, EÉ#}8 thư cựu. loài chim nước,\nlại có một tên nữa là vương thư, hình trạng giống như chim\nphù y, nay trong khoảng Trường giang và sông Hoài thì có\nchim ấy. Chim nầy sống có đôi nhất định mà không hề lẫn",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 1.03,
+      "recognition_language": "vie+chi_tra",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45",
+        "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0039.json:r001": {
+      "image_sha256": "df87b80353bc6b3ec3af26b363e2782b1b9b6c9d1b88165062b9589dc3d757c2",
+      "text": "lộn. Hai con thường lội chung mà không la lơi, cho nên sách\ncủa Mao công nói rằng: Đôi chím thư cưu tình ý chí thiết\nkhăn vó đậm đà, nhưng lức nào cũng giữ gìn cách biệt.",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.48,
+      "recognition_language": "vie+chi_tra",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45",
+        "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0039.json:r002": {
+      "image_sha256": "1f6685921353bd8137d5eb321b91e6eebcbafee567ed31c4055a6ac9cf4f4b28",
+      "text": "Gách Liệt nữ truyện cho là người ta chưa từng thấy chim\nthư cưu sống dư cặp hay sống lẻ loi, là vì tính nó như thế. 河\nhà, tên thông dụng của những dòng nước chảy ở phương bắc.\nỳ châu, cồn đất ở giữa sông có thể ở được %5E yếu điệu, là ý\nu nhàn, u tịch yên lặng và nhàn nhã, 淑 ‡huc, hiền lành 女\nnữ, con gái chưa gả chồng, nói nàng Thái Tự, vợ vua Văn\nvương, lúc còn ở nhà với cha mẹ 君子 quân tử, chỉ vua Văn\nvương ‡ƒ hảo, đẹp, lành š& cgz, đôi lứa. Sách của Mao công\nnói #%# chí là rất, tình ý rất thiết tha đậm đà.",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 1.325,
+      "recognition_language": "vie+chi_tra",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45",
+        "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0039.json:r003": {
+      "image_sha256": "26b50d2bd406940e60ff965a7a0852795a942d71c59211d81d21cb4a6eebbdf8",
+      "text": "#ìị Hứng là trước nói một vật gì để sau dẫn đến lời ca\nvinh.",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.397,
+      "recognition_language": "vie+chi_tra",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45",
+        "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0039.json:r004": {
+      "image_sha256": "2bc18fdc93e660eda58af525a460aa1026f622c3385c73d301007c6c4a7ec8d0",
+      "text": "Vua Văn vương nhà Chu sinh có thánh đức, lại được bậc\nthánh nữ họ Tự để kết hôn. Những người trong cung, lúc\nnàng Thái Tự mới đến, thấy nàng có đức hạnh u tịch nhàn\nnhã và trinh chuyên, bên làm bài thơ này rằng: Kìa đôi chim\nthư cưu nghe hót quan quan, đang ứng hoạ với nhau ở trên\ncồn bên sông. Người thục nữ yếu điệu nầy há không phải là\nbạn lứa tốt của bậc quân tử Văn vương hay sao? Có ý nói\nnàng Thái Tự và vua Văn vương cùng hoà vui mà cung kính\nlần nhau, cũng như tình chí thiết đậm đà mà lúc nào cũng\ngiữ gìn cách biệt của đôi chim thư cưu vậy.",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 1.054,
+      "recognition_language": "vie+chi_tra",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45",
+        "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0039.json:r005": {
+      "image_sha256": "79ef1244381c8639a82c3ac91ef6b0803098a00ae7f1cd049c5a5326249e1c75",
+      "text": "Về sau he nói hưng thì ý văn cũng phỏng theo chương\nnầy.",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.448,
+      "recognition_language": "vie+chi_tra",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45",
+        "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0039.json:r006": {
+      "image_sha256": "7ec9d7b4a3ba74db65a3fd72c65dfb1caa10d35fda8eec074ef40e9cce964e6b",
+      "text": "Ông Khuông Hành nhà Hán nói rằng: Yếu điệu thục nữ,\nQuân tử háo cầu, là nói nàng Thái Tụ rất mực trình thục\nkhông thay tiết tháo. Những rung cảm về tình dục không hề\nlẫn vào nghỉ dung, những ý vui riêng không hề lộ ra cử chỉ,\ncó được như thế rồi mới có thể phối hợp với bậc chí tôn và\nlàm chủ tế tông miếu. Vì đó là đầu mối của Cương thường và",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.93,
+      "recognition_language": "vie+chi_tra",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45",
+        "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0040.json:r001": {
+      "image_sha256": "75c1b6afcfb3a2a468f692186612d4b9522a4a47e379c0f8a14039e27b77d4b5",
+      "text": "của nền vương hoá. Giảng Kinh Thi như thế đáng gọi là\nngười khéo nói vậy.",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.244,
+      "recognition_language": "vie+chi_tra",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45",
+        "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0040.json:r002": {
+      "image_sha256": "3da0945eee5ec81a566bc1938980cb40fb7366a31b24bdf8df7071c7fd250303",
+      "text": "CHƯƠNG II",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.085,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0040.json:r003": {
+      "image_sha256": "5137032993afae542abd163a0b5e339961982712045bb5b6b44ee32707ac965d",
+      "text": "參差芳茶\n左右流之\n窈名淑女\n家打求之\n求之不得\n宕所思服\n悠吉悠哉\n輾轉反側",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 1.724,
+      "lines": [
+        {
+          "box": [
+            17,
+            22,
+            298,
+            76
+          ],
+          "image_sha256": "987fea1b2c23b5bf876dd2f6cf257865a1e9a47e83be22572ce8a9b358fc0361",
+          "text": "參差芳茶",
+          "recognition_language": "chi_tra",
+          "psm": 7,
+          "oem": 1,
+          "model_sha256": {
+            "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+          },
+          "decoder_dictionaries": false
+        },
+        {
+          "box": [
+            17,
+            112,
+            298,
+            165
+          ],
+          "image_sha256": "d6bcb33154e8f7451efad9d92b37f9864b23efe1ee85e3d46192eb4ea9c25505",
+          "text": "左右流之",
+          "recognition_language": "chi_tra",
+          "psm": 7,
+          "oem": 1,
+          "model_sha256": {
+            "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+          },
+          "decoder_dictionaries": false
+        },
+        {
+          "box": [
+            16,
+            201,
+            297,
+            254
+          ],
+          "image_sha256": "aaba0ae37c72b2deeb769d990fd0beb91acb2c1e8dd4e5336354c43bb073f213",
+          "text": "窈名淑女",
+          "recognition_language": "chi_tra",
+          "psm": 7,
+          "oem": 1,
+          "model_sha256": {
+            "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+          },
+          "decoder_dictionaries": false
+        },
+        {
+          "box": [
+            18,
+            291,
+            297,
+            344
+          ],
+          "image_sha256": "c2032f643336677a11529ac7235ae97af6ae7f09f8917298b98d4e8cd6f7a7a6",
+          "text": "家打求之",
+          "recognition_language": "chi_tra",
+          "psm": 7,
+          "oem": 1,
+          "model_sha256": {
+            "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+          },
+          "decoder_dictionaries": false
+        },
+        {
+          "box": [
+            17,
+            381,
+            298,
+            434
+          ],
+          "image_sha256": "bf53e013f57c1703fda391cfe5fe93e10a9a3ede521f597f56c50121b6c9e690",
+          "text": "求之不得",
+          "recognition_language": "chi_tra",
+          "psm": 7,
+          "oem": 1,
+          "model_sha256": {
+            "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+          },
+          "decoder_dictionaries": false
+        },
+        {
+          "box": [
+            17,
+            469,
+            298,
+            523
+          ],
+          "image_sha256": "b74cb51dfa71340f891cb40d555d0ba0bf437c86e7239e3b0486b1090f7ab5b8",
+          "text": "宕所思服",
+          "recognition_language": "chi_tra",
+          "psm": 7,
+          "oem": 1,
+          "model_sha256": {
+            "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+          },
+          "decoder_dictionaries": false
+        },
+        {
+          "box": [
+            16,
+            559,
+            297,
+            613
+          ],
+          "image_sha256": "5eb630eb3edf35d8e1a5545a948c412249a26f22d861d1a54e2ca8beec27ec95",
+          "text": "悠吉悠哉",
+          "recognition_language": "chi_tra",
+          "psm": 7,
+          "oem": 1,
+          "model_sha256": {
+            "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+          },
+          "decoder_dictionaries": false
+        },
+        {
+          "box": [
+            17,
+            647,
+            296,
+            701
+          ],
+          "image_sha256": "2625e8166180bf523c4fccce76c68e6cfab992a1af7c870308de0dd7ab0a5822",
+          "text": "輾轉反側",
+          "recognition_language": "chi_tra",
+          "psm": 7,
+          "oem": 1,
+          "model_sha256": {
+            "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+          },
+          "decoder_dictionaries": false
+        }
+      ],
+      "possibly_truncated": false
+    },
+    "page-0040.json:r004": {
+      "image_sha256": "54903590071f89f2ee48c5f20fb8ffe9f46e71f0e111a49f8d2acbd745485b4d",
+      "text": "ð. Sâm si hạnh thái,\n\n6. Tả hữu lưu chí,\n\n7. Yếu điệu thục nữ,\n\n8. Ngộ my cầu chỉ.\n\n9. Cầu chỉ bất đắc,\n\n10. Ngộ my tư bặc.\n\n11. Du tai! Du tai]\n\n12, Triển chuyển phản trắc.",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.293,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0040.json:r005": {
+      "image_sha256": "62bda860e8093873b6e3463db01e526956f5486f3433733a2ca1757ecc77a1f9",
+      "text": "Dịch nghĩa",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.093,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0040.json:r006": {
+      "image_sha256": "f63975bef3dfee12d96c88956489b2b8780ace5f6ebceca96801dab6dd780f93",
+      "text": "õ. Rau hạnh cộng dài cộng ngắn không đều nhau,",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.226,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0040.json:r007": {
+      "image_sha256": "84f6cd54ac47c13b50515f8dbc664a5b2ac11f5bccabbc0556bbcedb407495e3",
+      "text": "6. Phải thuận theo dòng nước sang bên tả bên hữu mà\nhái.",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.248,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0040.json:r008": {
+      "image_sha256": "c972c0040f4cb11d2edb51ba16589af3184a1f66ef9834fefdd77aea46a76fc1",
+      "text": "7. Người thục nữ u nhàn ấy",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.163,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0040.json:r009": {
+      "image_sha256": "7c1bfea4294133df6f41fae7f2a0a5f8cebb2adf004566db1aa65d9720323ef1",
+      "text": "8. Khi thức khí ngủ đều lo cầu cho được nàng.",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.188,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0040.json:r010": {
+      "image_sha256": "5f73451a6ebf2e4eb7630cd6a9aaa3604006e70e689078cf45c9a9f5498ac714",
+      "text": "9. Nếu cầu mà không được,",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.199,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0040.json:r011": {
+      "image_sha256": "b4b5c9c1196f5a38988d36f406a96476d23ff35f35ec7a799a8583ce3698d127",
+      "text": "10. Thì khi thức khi ngủ đều tưởng nhớ.",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.193,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0040.json:r012": {
+      "image_sha256": "1ffb0217a8e686146ab0b6075e154d9985a070a8c95c402790ad313c0a1a61d7",
+      "text": "11. Tưởng nhớ xa xôi thay! Tưởng nhớ xa xôi thay!",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.126,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0040.json:r013": {
+      "image_sha256": "5551be9840034219494efb8750d2535264d25dffaa730744de1913651da048ed",
+      "text": "12. Vua cứ lăn qua trở lại mãi nằm không yên giấc.",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.123,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0040.json:r014": {
+      "image_sha256": "ca7d7350a7780126720e71298cd80995545f34362e69045e8d3971ba07656728",
+      "text": "Dịch thơ",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.092,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0040.json:r015": {
+      "image_sha256": "94e1596b37dcd40d3ff5a02d01a313cc77d9b91cda17008e7827f40f48a0127e",
+      "text": "So le rau hợnh lơ thơ.\nHóối theo dòng nước uenh bờ đôi bên.",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.178,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0041.json:r001": {
+      "image_sha256": "096c7fe78878b2f1cebf099118bd8799bdd2c8e8bb1904fe4c9d2d025fb49923",
+      "text": "U nhờn thục nữ chính chuyên.",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.167,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0041.json:r002": {
+      "image_sha256": "c67898aeacba08b40e79324eb1bc6527f84e6acc1d2d69a5aacfdc8d5233341b",
+      "text": "Nhớ khi thức ngủ triền. miên chẳng rời.",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.161,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0041.json:r003": {
+      "image_sha256": "2d496beed01d0c8636733a5b224c1b46d6274295af42d513c6838fa8a766ecc1",
+      "text": "Nếu cầu mà chẳng được người.",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.167,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0041.json:r004": {
+      "image_sha256": "a65fdd76e29eb272689d6947286ba069e311312f2b1406b259a2f6f6a8679eed",
+      "text": "Khi mơ khi tỉnh bồi hồi nhớ thương.",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.166,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0041.json:r005": {
+      "image_sha256": "a240d93ba6593e065c4b14c9d11114171a434cdcb2c76c21ee6a1402f8134974",
+      "text": "Xu xôi trông nhớ đêm trường.",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.179,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0041.json:r006": {
+      "image_sha256": "615d04bef25e6f442364a3a8640d11ece8609ca86c815ff71c8c406ba1fa9be8",
+      "text": "Chiếc thân trần trọc trên giường nào yên.",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.116,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0041.json:r007": {
+      "image_sha256": "ab0e8b6aeab95cece558e38674a0aa1e3b1e1c269d910b4e04ebf0002f34b22e",
+      "text": "Chú giải của Chu Hÿ",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.094,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0041.json:r008": {
+      "image_sha256": "df4faba4b9881e3983938ccbe882215af4c6f5fce48f4d635ab9110483ced628",
+      "text": "Chương nầy thuộc thể hứng 參差 sâm si, dáng dài ngắn\nkhông đồng đều nhau ‡7 hạnh, rau tiếp dư, rễ mọc ở đáy\nnước, lá màu đỏ tía hình tròn, bề kính hơn một tấc, nổi trên\nmặt nước. 或左或右 Aaogc tỏ hoặc hữu, vô định không thường,\nkhi bên trái khi bên mặt, ÿt, vz, thuận theo dòng nước mà\nhái lấy, gÈñE#EÈÙHÈ hoặc ngộ hoặc my, không lúc nào là không,\nkhi thức khi ngủ đều nhớ đến nàng, 服 bốc, nhớ, f# du, dài,\nxa xôi #E triển, lăn nửa vòng, 轉 chuyển, lăn trọn vòng, 反\nphản, lăn lại, 側 trắc, lăn nghiêng. Đều là nói nằm không\nyên giấc.",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 1.641,
+      "recognition_language": "vie+chi_tra",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45",
+        "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0041.json:r009": {
+      "image_sha256": "6a0d371726d2b9a08c939fdf1cc4879039481197ac5af45025d872d1f8d4d8a6",
+      "text": "Chương nầy nói vào lúc chưa cầu được nàng Thái Tự:\nRau hạnh cộng ngắn cộng dài không đều kia, phải thuận\ntheo dòng nước sang bên tả sang bên hữu mà hái. Người thục\nnữ yếu điệu ấy, khi thức khi ngủ vua không quên lo cầu cho\nđược nàng, vì nàng ấy với đức hạnh ấy trên đời không thường\ncó vậy. Nếu cầu nàng mà không được thì không có ai phối —\nhợp với vua để thành việc nội trị hoàn mỹ. Cho nên vua lo\nnghĩ sâu xa không xiết đến thế ấy.",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.89,
+      "recognition_language": "vie+chi_tra",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45",
+        "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0041.json:r010": {
+      "image_sha256": "9340926aefa61f048bfef60968b1843fc6ab7312756787d3ea76dd951b6631e2",
+      "text": "CHƯƠNG III",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.137,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0041.json:r011": {
+      "image_sha256": "73b4d78c89bb1b791c358f34c0bc3176d4598980fbaf02db8b41413b54d9eb65",
+      "text": "參差符朵\n左右和打之",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.434,
+      "lines": [
+        {
+          "box": [
+            10,
+            11,
+            288,
+            65
+          ],
+          "image_sha256": "8832344824ac4210675a9dc1b049ee48f8441b908c0ce1ce3eff36550b7ba6e7",
+          "text": "參差符朵",
+          "recognition_language": "chi_tra",
+          "psm": 7,
+          "oem": 1,
+          "model_sha256": {
+            "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+          },
+          "decoder_dictionaries": false
+        },
+        {
+          "box": [
+            11,
+            100,
+            289,
+            153
+          ],
+          "image_sha256": "cd0f86ed6cd59634d782cfc8e6e9219087a5ad64eaff76bf209e6e8f0fc7f2b7",
+          "text": "左右和打之",
+          "recognition_language": "chi_tra",
+          "psm": 7,
+          "oem": 1,
+          "model_sha256": {
+            "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+          },
+          "decoder_dictionaries": false
+        }
+      ],
+      "possibly_truncated": false
+    },
+    "page-0041.json:r012": {
+      "image_sha256": "fbab96c24be4cc6b0e0985fd70773432b53a09ff0dc6545036ce54f1b8aea928",
+      "text": "13. Sâm sĩ hạnh thái,\n14. Tả hữu thể chỉ.",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.174,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0042.json:r001": {
+      "image_sha256": "6de0f972a8d6def88138e3813b1c7e3d5276bdfdbfdfdd07172e7a54ca0a772e",
+      "text": "窈窕淑女\n琴瑟友之\n參差符朵\n左右萎之\n罕 多 淑 女\n狂 鼓 樂 之",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 1.083,
+      "lines": [
+        {
+          "box": [
+            17,
+            16,
+            295,
+            68
+          ],
+          "image_sha256": "7ddf05992088b18c569be32cf52dfaa03d9dcbd3e72f251b80be9d5dea11c3ec",
+          "text": "窈窕淑女",
+          "recognition_language": "chi_tra",
+          "psm": 7,
+          "oem": 1,
+          "model_sha256": {
+            "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+          },
+          "decoder_dictionaries": false
+        },
+        {
+          "box": [
+            31,
+            104,
+            309,
+            156
+          ],
+          "image_sha256": "f0144e95969f12bdfaaf45a83aedc65d927455699c7125415eeb41d9bd454b2b",
+          "text": "琴瑟友之",
+          "recognition_language": "chi_tra",
+          "psm": 7,
+          "oem": 1,
+          "model_sha256": {
+            "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+          },
+          "decoder_dictionaries": false
+        },
+        {
+          "box": [
+            15,
+            192,
+            296,
+            245
+          ],
+          "image_sha256": "be75bca2e32505cb9e2486183aa44e4915cc95e4891c479cb197a511725cc1af",
+          "text": "參差符朵",
+          "recognition_language": "chi_tra",
+          "psm": 7,
+          "oem": 1,
+          "model_sha256": {
+            "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+          },
+          "decoder_dictionaries": false
+        },
+        {
+          "box": [
+            16,
+            280,
+            294,
+            334
+          ],
+          "image_sha256": "eca26aa3ae1db6dcf615dd5d2ec4cc031348972ea616e4071a4df22f2ce1b226",
+          "text": "左右萎之",
+          "recognition_language": "chi_tra",
+          "psm": 7,
+          "oem": 1,
+          "model_sha256": {
+            "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+          },
+          "decoder_dictionaries": false
+        },
+        {
+          "box": [
+            16,
+            370,
+            305,
+            419
+          ],
+          "image_sha256": "231e92f0f80b7def03dc1c1eef5875d5bd3064b1818332d73d61b168f94ebc6a",
+          "text": "罕 多 淑 女",
+          "recognition_language": "chi_tra",
+          "psm": 7,
+          "oem": 1,
+          "model_sha256": {
+            "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+          },
+          "decoder_dictionaries": false
+        },
+        {
+          "box": [
+            15,
+            454,
+            336,
+            508
+          ],
+          "image_sha256": "cdc6ffd3bb5f198b383f1cbf30f7a3b4d3e82ab4a8edd00fd3fab0d37c3b1735",
+          "text": "狂 鼓 樂 之",
+          "recognition_language": "chi_tra",
+          "psm": 7,
+          "oem": 1,
+          "model_sha256": {
+            "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+          },
+          "decoder_dictionaries": false
+        }
+      ],
+      "possibly_truncated": false
+    },
+    "page-0042.json:r002": {
+      "image_sha256": "81f6024a1a8a184f8f2300370faecba3c14ac421b9cd4a82c28b5f25ee3e16e1",
+      "text": "15. Yếu điệu thục nữ,\n16. Cầm sắt hữu chỉ,\n17. Sâm sỉ hạnh thái,\n18. Tả hữu mạo chỉ.\n19. Yếu điệu thục nữ,\n20. Chung cổ lạc chỉ",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.274,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0042.json:r003": {
+      "image_sha256": "4b13051fe200adcb8901dd1498c20f1542375e88c0065e908e674916249bff69",
+      "text": "Dịch nghĩa",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.09,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0042.json:r004": {
+      "image_sha256": "d5ff889525160a2fd31e7c0fb882cfe5e35a26ace9a39eeec4b7089e2fb5d025",
+      "text": "13. Rau hạnh so le không đều nhau,",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.123,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0042.json:r005": {
+      "image_sha256": "b122d1554ddf4d98ed40ce82ee56a4a255208aef41ef9c504e63a9e00bc54e83",
+      "text": "14. Phải thuận theo dòng nước sang bên tả bên hữu chọn\nhái lấy.",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.153,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0042.json:r006": {
+      "image_sha256": "d6c6ccc8b754dd5566f5e802e23a24cfcdfe174c3273a905f6a822da11f1bd2e",
+      "text": "15. Người thục nữ u nhàn ấy,",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.112,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0042.json:r007": {
+      "image_sha256": "4546864c5ffe9defca83f826334891714ff00c3e24f2d9a617eefd24e9fe89c9",
+      "text": "16. Phải đánh đàn cầm đàn sắt mà thân ái nàng.",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.198,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0042.json:r008": {
+      "image_sha256": "10636055b6e683ea4be19da1b5058da104bbdb6ffa83a8e1cb8eccb45e537cfe",
+      "text": "17. Rau hạnh cộng dài cộng ngắn không đều nhau,",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.394,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0042.json:r009": {
+      "image_sha256": "17378e72438697d3ee5d4dd316ed7004b4593965fb1debe3fb914f0ce6d88f66",
+      "text": "18. Phải nấu chín mà dâng lên ở hai bên.",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.258,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0042.json:r010": {
+      "image_sha256": "02ac4f1e61f4e7a5e58ba1cafec52cf44851083c3b378225889d58ab84f02a4b",
+      "text": "19. Người thục nữ u nhàn ấy,",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.145,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0042.json:r011": {
+      "image_sha256": "4fa401b53b5844aab3cf9d94b6621e05c1d95226a5a622bed5a4c79dd004b576",
+      "text": "20. Phải khua chuông đánh trống để nàng mừng vui.",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.14,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0042.json:r012": {
+      "image_sha256": "2ba021c38b7413e7f84910de66d6c0ef8567e1a2cb287203a0d158f6a3b4c7d4",
+      "text": "Dịch thơ",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.09,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0042.json:r013": {
+      "image_sha256": "8872098b3411631e608df2c6710b34f9704ac459f4b25b9b00d068ad97a2ee51",
+      "text": "Văn dài rau hạnh bên sông.\n\nKiếm tìm mà hái theo dòng đôi bên.\n\nĐược người thục nữ chính chuyên.\n\nMến nàng, cầm sắt đánh lên uang dầy.\nBên sông rau hạnh uắn đài,\n\nĐêm uề nấu chín mà bày hai bên.\n\nĐược người thực nữ chính chuyên.\n\nĐể nàng uui thích, uang rên trống chuông.",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.409,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0043.json:r001": {
+      "image_sha256": "62b1cee226038ee3ff0238e21ffb379ffc263db692133d90aeda4dc2b183df77",
+      "text": "Chú giÃi của Chu TH",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.146,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0043.json:r002": {
+      "image_sha256": "6f325c101ef1da80849e45407b237ee2e706c579c2bcefd032dbaf53afcbc088",
+      "text": "Chương nầy thuộc hứng Z thể (thái), chọn mà hái, lấy *\nmạo, nấu chín mà dâng lên, % cầm, cây đàn 5 dây hoặc 7\ndây, XX sốt, đàn 25 dây, đều là loại đàn dây tơ, loại nhạc khí\nnhỏ ZZ uĩ (hữu), ý thân ái #§ cvung, cái chuông, loại nhạc khí\nbằng đồng Šš cổ, cái trống, loại nhạc khí to bằng da ## lọc, ý\nrất thuận hoà vui vẻ.",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 1.003,
+      "recognition_language": "vie+chi_tra",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45",
+        "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0043.json:r003": {
+      "image_sha256": "44cdbd80a885b11d23ca45c2784aa0431568bc72f68af9638dd69f762a54348f",
+      "text": "Chương nầy nói vào lúc tìm được nàng: rau hạnh cộng\nngắn dài không đều kia, phải chọn hái rồi nấu luộc mà dâng\nlên. Người thục nữ yểu điệu ấy đã cầu được rồi, phải thân ái\nđể làm cho nàng vui, vì rằng người ấy với đức hạnh ấy trên\nđời không thường có vậy. Hôm nay mà cầu được nàng, thì đã\nđược người để phối hợp với vua thành việc nội trị. Cho nên tỏ\ný vui mừng tôn kính không xiết như thế vậy.",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.934,
+      "recognition_language": "vie+chi_tra",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45",
+        "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0043.json:r004": {
+      "image_sha256": "208add34a4c689c81397c38caf9e5d6cc3b1ac7b70acb17cf51379032f98dce0",
+      "text": "Thiên Quan thư có 3 chương, 1 chương 4 câu, 2 chương 8\ncứu.",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.437,
+      "recognition_language": "vie+chi_tra",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45",
+        "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0043.json:r005": {
+      "image_sha256": "d6bf05f29c464e4d844d9facf2212fc549c22fef08bd56922201235d037047af",
+      "text": "Khổng tử nói rằng: “Thiên Quan thư vui mà không dâm,\nbuồn mà không thương tâm”. Tôi cho rằng: Lời ấy đối với thơ\nQuan thư nầy đúng với sự đoan chính của tính tình và sự\nđiều hoà của thanh khí. Vì rằng đức hạnh như chim thư cưu,\ntình chí thiết đậm đà mà vẫn giữ gìn cách biệt, thì sự đoan\nchính về tính tình của bà Hậu phi Thái Tự hẳn đã có thể\nnhận thấy được một phần rồi. Đến việc thức ngủ lăn qua trở\nlại, đánh đàn cầm đàn sắt, khua chuông đánh trống, niềm\nvui buồn đã tột bực và đều không quá khuôn khổ phép tắc,\nthì sự đoan chính về tính tình của người làm thơ ấy lại có thể\nnhận thấy được cả toàn thể rồi vậy. Riêng sự điều hoà về\nthanh khí thì không thể nghe được. Tuy là đáng hận, nhưng\nhọc giả hãy thưởng thức nghĩa lý ở trong lời thơ ấy để bồi\ndưỡng tâm tính, thì cũng có thể nắm được căn bản của việc\nhọc Kinh Thì vậy.",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 1.338,
+      "recognition_language": "vie+chi_tra",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45",
+        "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0044.json:r001": {
+      "image_sha256": "b1c5228ffcdc377f6bbb67174260dfb04a50b09b969d484f50a8108d6281e809",
+      "text": "Khuông Hành nói rằng: Phối hợp thành vợ chồng là mối\nđầu của việc phồn sinh của dân chúng, là nguồn cội của vạn\nphúc. Nghi lễ của hôn nhân được chính đáng thì về sau\nphẩm vật thoả thuận và thiên mệnh mới hoàn toàn.",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.491,
+      "recognition_language": "vie+chi_tra",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45",
+        "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0044.json:r002": {
+      "image_sha256": "143d5bc1c3aa1a02775a3b15fb05d5faf8376a88924d08bfa3b53638265cf912",
+      "text": "Mạnh tử đã khảo luận Kinh Thị, lấy thiên Quan thư làm\nđầu, ý nói rằng trên hơn hết là bực cha mẹ dân, đức hạnh\ncủa bà Hậu phí phu nhân nếu chẳng ngang bằng trời đất, thì\nkhông lấy gì mà thờ phụng thần linh để điều hoà sự thích\nnghi của vạn vật. Từ đời trước trở lại, việc hưng phế của ba\nđời Hạ, Thương, Chu chưa có bao giờ không do ở đây vậy. .",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.892,
+      "recognition_language": "vie+chi_tra",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45",
+        "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0044.json:r003": {
+      "image_sha256": "cd43e278acedc6b5f51ea2bb8e2ca17e4fba117d355248d210d1b36b54f8af06",
+      "text": "BÀI THỨ 2",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.139,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0044.json:r004": {
+      "image_sha256": "6f86925c04ed3c88f38c176d9caf0454e7afecfacf760ca36d87a14fb3abc0b6",
+      "text": "CHƯƠNG I",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.161,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0044.json:r010": {
+      "image_sha256": "9c7e4059d08f50a8a79dff553b8701fe5c8b2e77c720ecfd7e7d483da384a222",
+      "text": "Cát đàm. (Chu nam 2)",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.16,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0044.json:r011": {
+      "image_sha256": "44c4d65beb8d99a762f1249637f6f458812f20b9bbf22601123445c002f47de6",
+      "text": "島 踢",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.185,
+      "lines": [
+        {
+          "box": [
+            0,
+            0,
+            139,
+            62
+          ],
+          "image_sha256": "6b02f2bad53a6aa85f348e3c4c9abdc47adbc645cc3ba27622e875b0119b6d5f",
+          "text": "島 踢",
+          "recognition_language": "chi_tra",
+          "psm": 7,
+          "oem": 1,
+          "model_sha256": {
+            "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+          },
+          "decoder_dictionaries": false
+        }
+      ],
+      "possibly_truncated": false
+    },
+    "page-0044.json:r006": {
+      "image_sha256": "64158ebc96c0ced9c56c22399fd30fad924702b8a1c6be1b7e34294cb15c9fdd",
+      "text": "幕之點今\n施村中谷\n纖 葉 開 莖\n黃鳥飛\n集於灌木\n其聲噶中",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 1.062,
+      "lines": [
+        {
+          "box": [
+            19,
+            24,
+            299,
+            78
+          ],
+          "image_sha256": "af612bac5018c51a20e37e5422ec03fd32af772b7d91757d8262094a5d778b69",
+          "text": "幕之點今",
+          "recognition_language": "chi_tra",
+          "psm": 7,
+          "oem": 1,
+          "model_sha256": {
+            "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+          },
+          "decoder_dictionaries": false
+        },
+        {
+          "box": [
+            18,
+            113,
+            298,
+            167
+          ],
+          "image_sha256": "9c1646f5384402a14ec0fb30405bd8a6fc1e98e7e5cac8a6cec94c93845d3572",
+          "text": "施村中谷",
+          "recognition_language": "chi_tra",
+          "psm": 7,
+          "oem": 1,
+          "model_sha256": {
+            "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+          },
+          "decoder_dictionaries": false
+        },
+        {
+          "box": [
+            19,
+            201,
+            298,
+            255
+          ],
+          "image_sha256": "3b8bd3807a08e33175e378733744b7001f673d52aa9351b487c42675c95d9ea9",
+          "text": "纖 葉 開 莖",
+          "recognition_language": "chi_tra",
+          "psm": 7,
+          "oem": 1,
+          "model_sha256": {
+            "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+          },
+          "decoder_dictionaries": false
+        },
+        {
+          "box": [
+            19,
+            290,
+            297,
+            343
+          ],
+          "image_sha256": "ca9fba9c28b3ebefc596b19e696ae82c99207b1ee0e81153f975cc997fcf9a36",
+          "text": "黃鳥飛",
+          "recognition_language": "chi_tra",
+          "psm": 7,
+          "oem": 1,
+          "model_sha256": {
+            "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+          },
+          "decoder_dictionaries": false
+        },
+        {
+          "box": [
+            17,
+            379,
+            297,
+            434
+          ],
+          "image_sha256": "451cd3ad406ad1ef1e60c5f2c6ec4685d377aabf01b801dad83e34890f041ef1",
+          "text": "集於灌木",
+          "recognition_language": "chi_tra",
+          "psm": 7,
+          "oem": 1,
+          "model_sha256": {
+            "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+          },
+          "decoder_dictionaries": false
+        },
+        {
+          "box": [
+            18,
+            470,
+            298,
+            524
+          ],
+          "image_sha256": "1a37eb19d5c1b294812a3e00c1fd7dcaa5c85b83388c2c5708e59b851b6c1d61",
+          "text": "其聲噶中",
+          "recognition_language": "chi_tra",
+          "psm": 7,
+          "oem": 1,
+          "model_sha256": {
+            "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+          },
+          "decoder_dictionaries": false
+        }
+      ],
+      "possibly_truncated": false
+    },
+    "page-0044.json:r012": {
+      "image_sha256": "e4fbe3a16a892d6b7910edef3e69cb806d9aa0c766beb99bc4411b9ef534b670",
+      "text": "1. Cát chỉ đàm hề,\n\n2. Dị vu trung cốc.\n\n3. Duy diệp thê thê,\n\n4. Hoàng điểu vu phi,\n\n5. Tập vu quán mộc,\n\n6. Kỳ thanh giê giê (giai gia1)",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.333,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0044.json:r007": {
+      "image_sha256": "7267a4738262544ed6a70bc0bcf24fe3c20d89f55b11a065028be68d16afc1f8",
+      "text": ".Dịch nghĩa",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.186,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0044.json:r008": {
+      "image_sha256": "9b0c94b1abc1751ae527e2bbc200a0850fa6c69d3831e01002046b6591b25a9c",
+      "text": "1. Cây sắn đã dài,\n\n2. Bò lan vào trong hang,\n3. Lá nhiều um tùm.\n\n4. Chim hoàng ly bay đến.",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.229,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0045.json:r001": {
+      "image_sha256": "881259dae2327d67ef2390674bc9df43ce67290fc29d9148023a6696c417c741",
+      "text": "5. Tụ tập ở trên bụi cây ấy.",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.185,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0045.json:r002": {
+      "image_sha256": "a80f39f971eb420c64643c5107309ffe6c33e0d3f272d2220a4c2df024a2e50f",
+      "text": "6. Tiếng kêu nghe văng vắng xa xa.",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.186,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0045.json:r003": {
+      "image_sha256": "f007e00d94c4431b3e41fb717a3ca6666eea82f7441d022c895d6e991bcc84c6",
+      "text": ".Dịch thơ",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.176,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0045.json:r004": {
+      "image_sha256": "cb45143ed7cca46e7aa00ba783bc7763bb803003c7ba9dc07b213a39712cac9b",
+      "text": "Sắn dài đậm đuột sang hè,",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.147,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0045.json:r005": {
+      "image_sha256": "7c3fe8eb0b39ea48c97bc2227bec9120c71578b403b585c4af531069dbd5acbb",
+      "text": "Mọc bò uào tận trong khe hốc nây.",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.134,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0045.json:r006": {
+      "image_sha256": "5c672e1b83905ba9c8621af1bcbbfd5def9abc6f6cacca2c7fb8cf15f62d1305",
+      "text": "Tối tươi nhánh lá rệm dây.",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.109,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0045.json:r007": {
+      "image_sha256": "e6ed79b1bb38338427b7bd9c5736e4fb3a867db56fd8e8c0579ba4f4c3d45a3e",
+      "text": "Hoàng ly thấp thoáng đa bay bệng uòng,",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.12,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0045.json:r008": {
+      "image_sha256": "06e4a4f6096569feaea63dc78cb67df5fa47d3ea173431992bade7e110efda4f",
+      "text": "Đậu chung bụi sắn thung dung,",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.114,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0045.json:r009": {
+      "image_sha256": "830c0936eb9df28912fd2e222a43a0e358bbeb12a35bd3ab5e4f645720a4afc7",
+      "text": "Véo uon ca hót bhắp uùng uầng nghe.",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.174,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0045.json:r010": {
+      "image_sha256": "15fe1b4260c0e1893eaf48043c2c44c6584b529a13262bb5214ef30658f9650c",
+      "text": "Chú giải của Chu Hÿ",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.16,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0045.json:r011": {
+      "image_sha256": "9fa7be6334182878b9d1da10216a838d310aac1e48474282be1aa6542159742c",
+      "text": "Chương nầy thuộc phú # cát, tên một loài cây, cây sắn,\nmọc bò ra, có thể lấy chỉ dệt vải mịn ,vải thô, 踢 đàm , dài ra,\n施 dị, dời, 中合 trung cốc, tức cốc trung, trong hang trong hốc\n## thê thê dáng nhiều um tùm TẾ hoàng điểu, chìm\nhoàng 1y. 灌木 quán mộc, bụi cây, tPHIES giai giai(đọc giê giê\ncho hợp vận), tiếng hót hoạ nghe văng vắng xa xa.",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 1.375,
+      "recognition_language": "vie+chi_tra",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45",
+        "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0045.json:r012": {
+      "image_sha256": "705086f5de6622ae3c5f169738f7f05ffbdf29536a77c629223d507fd279340c",
+      "text": "Phủ là phô trần sự việc mà nói thẳng ra. Nhân Hậu phi\nThái Tự đã dệt thành vải mịn vải thô mà phú, tức là phô\ntrần sự việc ấy ra.",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.48,
+      "recognition_language": "vie+chi_tra",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45",
+        "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0045.json:r013": {
+      "image_sha256": "6ba9696be6924fabfa7cabab2cfde17f17de1a6abcce64a646e51c38acade9de",
+      "text": "Thuật rằng vào thời đầu mùa hạ, lá cây sắn vừa um\ntùm, thì chỉ có chím hoàng ly kêu ở trên",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.327,
+      "recognition_language": "vie+chi_tra",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45",
+        "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0045.json:r014": {
+      "image_sha256": "5e68d7e5f1be10eb8b2107cd97536771909c6720e1afbaeec1b625d02bea5566",
+      "text": "CHƯƠNG II",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.19,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0045.json:r015": {
+      "image_sha256": "ee3db808aeb3aaf71749791083ae9f8a2fde810593f50f9a8426f77ad9700064",
+      "text": "葛之踢兮\n施說中谷\n維葉莫莫",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.726,
+      "lines": [
+        {
+          "box": [
+            15,
+            17,
+            272,
+            70
+          ],
+          "image_sha256": "7b98d54c4acfbd0fe827d08e6cc4b232c00d09dfc5964471ceccb9607aa76bea",
+          "text": "葛之踢兮",
+          "recognition_language": "chi_tra",
+          "psm": 7,
+          "oem": 1,
+          "model_sha256": {
+            "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+          },
+          "decoder_dictionaries": false
+        },
+        {
+          "box": [
+            16,
+            105,
+            273,
+            160
+          ],
+          "image_sha256": "eba34a5ba6ff0546ca50c90030af2027ebb9fd4392aadc0c4d70233ef1d2b96c",
+          "text": "施說中谷",
+          "recognition_language": "chi_tra",
+          "psm": 7,
+          "oem": 1,
+          "model_sha256": {
+            "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+          },
+          "decoder_dictionaries": false
+        },
+        {
+          "box": [
+            15,
+            194,
+            272,
+            247
+          ],
+          "image_sha256": "8f2191df6ed4b4e1955dc56748c951174ca4983b3bb202ed9a59666a5990fda3",
+          "text": "維葉莫莫",
+          "recognition_language": "chi_tra",
+          "psm": 7,
+          "oem": 1,
+          "model_sha256": {
+            "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+          },
+          "decoder_dictionaries": false
+        }
+      ],
+      "possibly_truncated": false
+    },
+    "page-0045.json:r016": {
+      "image_sha256": "8f015b41cf298ff6d5e5248462acb783a25c4f351beabdfbd0780d1e227a15bb",
+      "text": "7. Cát chỉ đàm hề,\n8. Dị vu trung cốc.\n9. Duy diệp mịch mịch,",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.227,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0046.json:r001": {
+      "image_sha256": "4bb759ed6e2b103dc21b607a7b0639d791ebbefd97f95e9d61aea342ecadfb49",
+      "text": "是劉是護\n維錠為給\n服之無加",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.683,
+      "lines": [
+        {
+          "box": [
+            14,
+            17,
+            273,
+            69
+          ],
+          "image_sha256": "a46c547e34d36029f57623d0395e3c73e21b030297dfac01843b5265b3498f4a",
+          "text": "是劉是護",
+          "recognition_language": "chi_tra",
+          "psm": 7,
+          "oem": 1,
+          "model_sha256": {
+            "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+          },
+          "decoder_dictionaries": false
+        },
+        {
+          "box": [
+            15,
+            103,
+            273,
+            157
+          ],
+          "image_sha256": "25092434b2e3fc19e815042df78e9a4b2c3aec316488b2feb7e8ea9e6946f8cd",
+          "text": "維錠為給",
+          "recognition_language": "chi_tra",
+          "psm": 7,
+          "oem": 1,
+          "model_sha256": {
+            "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+          },
+          "decoder_dictionaries": false
+        },
+        {
+          "box": [
+            15,
+            192,
+            274,
+            244
+          ],
+          "image_sha256": "4e57a66932570940da887a278a2e9d2a4996b01dabb5973ed398ebd3a8309ec0",
+          "text": "服之無加",
+          "recognition_language": "chi_tra",
+          "psm": 7,
+          "oem": 1,
+          "model_sha256": {
+            "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+          },
+          "decoder_dictionaries": false
+        }
+      ],
+      "possibly_truncated": false
+    },
+    "page-0046.json:r002": {
+      "image_sha256": "5b8f5bfc712d47a9c30ab1f026e42303c7a85d80fe6672bd65a1edbcc4a3f87e",
+      "text": "10. Thị ngải thị hoạch.\n11.Vi si vi khích,\n12. Phục chi võ dịch",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.162,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0046.json:r003": {
+      "image_sha256": "7ec7e68645088b97a6cc3e0816acce5245922f2098237630b80ca9b4cec64ca7",
+      "text": ".Djch nghĩa",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.095,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0046.json:r004": {
+      "image_sha256": "d420af0946dcf15da6933abc52ec84771e6ed5a54a852349182e581e67b9c904",
+      "text": "7. Cây sắn đã dài.\n8. Bò lan vào trong hang.\n9. Lá nhiều rườm rà,\n10. Mới cắt về rồi đem nấu.\n11. Dệt vải mịn vải thô,\n12. Mặc vải ấy không chán.",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.21,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0046.json:r005": {
+      "image_sha256": "3303f6f983b0f509e2a9e1a55469d5d79bfa68a210730ff2e53b2408881b85b0",
+      "text": ".Dịch thơ",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.165,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0046.json:r006": {
+      "image_sha256": "aa8d80db79f8d3e1e0810f456812ef7ab900e7c9eb31c7e90536b2e3d121bbcb",
+      "text": "Qua hè dây sắn đỡ dài,\n\nMọc bò uào tận hang nây tốt tươi.\nBườm rờ nhánh ló bhắp nơi.\n\nCốt uề xong xủ, ta thời nấu chung,\nVỏải thô udi mặn dệt xong,\n\nCắt may ta mặc chẳng lòng chán chê.",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.358,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0046.json:r007": {
+      "image_sha256": "33fdd27dfb22a0a116f2265694ff1233e7dadaa6c809fca4f1389831b19cf94a",
+      "text": "Chú giải ơủA Chu Hÿ",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.158,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0046.json:r008": {
+      "image_sha256": "a3e503c140de699e6b3476648ee5c5bcc0a7b26465fc39a58381350fff09acca",
+      "text": "Chương nầy thuộc thể phú 莫莫 mịch mịch. dáng rườnm\nrà chen ram, XÑIJ ngdi, chặt cắt, 護 hoạch, nấu #Ÿ⁄ sí, vải mịn,\n給 khích, vải thô, dịch chán ghét.",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.702,
+      "recognition_language": "vie+chi_tra",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45",
+        "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0046.json:r009": {
+      "image_sha256": "661b1219b876f78a05bfa080c6c29f3879eab148dc0f26a56ed5d1dd36ca9f73",
+      "text": "Chương nầy nói vào thời thịnh hạ, giữa mùa hè, cây sắn\nđã già, nàng mới lo cắt lấy chỉ để dệt vải, rồi mặc vải ấy\nkhông chán, vì mình đã bỏ công lao nhọc mới biết rằng thành\nvải không phải dễ dàng, cho nên lòng hằng thương mến, tuy",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.676,
+      "recognition_language": "vie+chi_tra",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45",
+        "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0047.json:r001": {
+      "image_sha256": "44b73f341a75982dad39f080c0ee18fe92063457e6779d6acfaf0cbb38d81664",
+      "text": "mặc vải ấy dơ rách đến mấy cũng không nhẫn tâm chán ghé:\nmà vứt bỏ.",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.225,
+      "recognition_language": "vie+chi_tra",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45",
+        "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0047.json:r002": {
+      "image_sha256": "de12ab3e99f907451834dcfa675da51227db4037bb0945b2f39e7d95c6835f6d",
+      "text": "CHƯƠNG III",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.091,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0047.json:r003": {
+      "image_sha256": "a722e69cad2420caff87a33b51cd21641c0e8e016ee3726fe9d7d45f663eed4c",
+      "text": "言告師民\n言告言歸\n薄污我私\n薄游我衣\n宕洛害和否\n歸 移偽母",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 1.222,
+      "lines": [
+        {
+          "box": [
+            17,
+            24,
+            296,
+            77
+          ],
+          "image_sha256": "601997d92a0466c7f4e833a0719727d3326352184b86dbd46d09f4ebfedfd0a7",
+          "text": "言告師民",
+          "recognition_language": "chi_tra",
+          "psm": 7,
+          "oem": 1,
+          "model_sha256": {
+            "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+          },
+          "decoder_dictionaries": false
+        },
+        {
+          "box": [
+            17,
+            113,
+            297,
+            167
+          ],
+          "image_sha256": "384a755c78807a49fa4ab3d697af5f9f30b8ca271cde195b8c40db1b0fef53a3",
+          "text": "言告言歸",
+          "recognition_language": "chi_tra",
+          "psm": 7,
+          "oem": 1,
+          "model_sha256": {
+            "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+          },
+          "decoder_dictionaries": false
+        },
+        {
+          "box": [
+            19,
+            202,
+            298,
+            256
+          ],
+          "image_sha256": "c2cd8a342190a1bc9f7aca1a67e7690428aca61c6a18c516825fc33b16e54650",
+          "text": "薄污我私",
+          "recognition_language": "chi_tra",
+          "psm": 7,
+          "oem": 1,
+          "model_sha256": {
+            "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+          },
+          "decoder_dictionaries": false
+        },
+        {
+          "box": [
+            18,
+            292,
+            297,
+            346
+          ],
+          "image_sha256": "ed394373f2013d327166a71ab3843608f8760572cb9755594d14e8f26c3e75c2",
+          "text": "薄游我衣",
+          "recognition_language": "chi_tra",
+          "psm": 7,
+          "oem": 1,
+          "model_sha256": {
+            "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+          },
+          "decoder_dictionaries": false
+        },
+        {
+          "box": [
+            18,
+            381,
+            296,
+            435
+          ],
+          "image_sha256": "ae88264808d8608d16a02dc04b1b9c015d4d27c13d761b2b532db5277d554db2",
+          "text": "宕洛害和否",
+          "recognition_language": "chi_tra",
+          "psm": 7,
+          "oem": 1,
+          "model_sha256": {
+            "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+          },
+          "decoder_dictionaries": false
+        },
+        {
+          "box": [
+            18,
+            470,
+            310,
+            525
+          ],
+          "image_sha256": "481a13a150c6bdcdb088349a98bab2de425864eb5c43a70d3efb9465ee869495",
+          "text": "歸 移偽母",
+          "recognition_language": "chi_tra",
+          "psm": 7,
+          "oem": 1,
+          "model_sha256": {
+            "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+          },
+          "decoder_dictionaries": false
+        }
+      ],
+      "possibly_truncated": false
+    },
+    "page-0047.json:r004": {
+      "image_sha256": "038213e63f21e9a47d916ceff8062179bc57e0c2b54001cd2e7e4487b291d7cc",
+      "text": ".13. Ngôn cáo sư thi,\n14, Ngôn cáo ngôn quy.\n15. Bạc ô ngã tư,\n16. Bạc hoãn ngã y.\n17. Hạt hoãn hạt phủ?\n18. Quy ninh phụ mẫu.",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.313,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0047.json:r005": {
+      "image_sha256": "d3889de598407a09e63ee0fb9d32cafbcfcbb62fd1959d09e699afc479c9d5e0",
+      "text": ".Dịch nghĩa",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.155,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0047.json:r006": {
+      "image_sha256": "c0127b7a4b98a356204998aa840aea6fc717b979b918c6f94117d3815429216f",
+      "text": "13. Nàng nói với bà thầy,",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.125,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0047.json:r007": {
+      "image_sha256": "de85a14191f2c26fece9a1afb4af999081607c398de75324c022c5e1742c73e0",
+      "text": "14. Dặn thưa lại với chồng ý nàng muốn trở về thăm cha\nmẹ.",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.154,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0047.json:r008": {
+      "image_sha256": "e44781c1b0c974deb66c560873e26259e5f8531d114b6de476bc349c38e80f6d",
+      "text": "15. Nàng dặn bà thầy hãy vò áo thường.",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.122,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0047.json:r009": {
+      "image_sha256": "a0896faae97c2144bc0e963cc76454ede95d67ec4b4635bd25fcb392c2678cf0",
+      "text": "16. Hãy giặt áo lễ.",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.111,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0047.json:r010": {
+      "image_sha256": "c392e486c7f282b5ee1727d19aa6dfb7ef6933d2150349af020eea49af7b6aa2",
+      "text": "17. Cái gì nên giặt, cái gì nên không?",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.143,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0047.json:r011": {
+      "image_sha256": "8855098c1da6fe5b4308e4761474fe34e898373e1806b22168311f8b54d41355",
+      "text": "18. Để mặc trở về thăm cha mẹ.",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.179,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0047.json:r012": {
+      "image_sha256": "445747845367e3bc904b95af16596a57f5fdbf8f8ead8c53ea426f5718a4d24e",
+      "text": ".Dịch thơ",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.159,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0047.json:r013": {
+      "image_sha256": "be8ac9cb59e126cbc2a2b26886aee6dcfac3bc148fd09f7f8e3d45848ba7d7a2",
+      "text": "Dặn dò sư thị rõ ròng,\nVề thăm cha mẹ thưa chàng đặng huy.\nVò qua những áo thường nồy.\nGiặt qua những áo mặc ngày lễ công.\nCái thì giặt, cái thì không?\n\nViếng thăm cha mẹ mặc trong ngày uề.",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.358,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0048.json:r001": {
+      "image_sha256": "ea78f05ec3c1d984d96ee221bdb983e28e44b1fff18a9fda5ec3eb247d9b2702",
+      "text": "Chú giải của Chu Hÿ",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.181,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0048.json:r002": {
+      "image_sha256": "034d463d440c98369114681439dfb2baa02150335f43aae6ac70b39b8852955d",
+      "text": "Chương nầy thuộc phu Z& ngôn, nói, báo cho biết, 師 sư,\nnữ sư, bà vú, 薄 bạc, hãy 污 ô, vò cho hết dd (như trị loạn thì\nnói loạn), 3$ hoãn, giặt cho sạch, 私 íư, áo mặc thường # ›,\náo lỗ, # hợt, sao? # ninh, yên, thăm viếng cha mẹ xem có\nbình yên không.                .",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 1.031,
+      "recognition_language": "vie+chi_tra",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45",
+        "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0048.json:r003": {
+      "image_sha256": "b84130baebcc4d867258c9640d8d9e8e8f9929b852f7e2ec2d782025520f86db",
+      "text": "Chương 2 đã nói thành quần áo bằng vải mịn, vải thô. Ở\nchương cuối nầy, nàng bên nói với bà vú già thưa lại với\nchồng ý nàng muốn trở về thăm cha mẹ. Nàng lại dặn: “Hãy\nvò áo thường, hãy giặt áo lễ. Cái gì nên giặt? Cái gì nên\nchưa? Vì tôi sẽ mặc những áo đó để trở về thăm cha mẹ.”",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.678,
+      "recognition_language": "vie+chi_tra",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45",
+        "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0048.json:r004": {
+      "image_sha256": "0bc32ddfbd00384fcebbefb0cdca85078f3b5ef99882711d61db1ac688b79252",
+      "text": "Thiên Cát đàm có 3 chương, mỗi chương 6 câu.",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.488,
+      "recognition_language": "vie+chi_tra",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45",
+        "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0048.json:r005": {
+      "image_sha256": "c9f49f0a8bbdacc70c36588a808311e5804671f7654637b4c2e989950323d2f7",
+      "text": "Bài thơ nầy chính do Hậu phi Thái Tự làm ra, cho nên\nkhông có lời khen tặng. Nhưng ở bài thơ nầy, có thể nhận\nthấy rằng nàng đã sang mà còn siêng năng, đã giàu mà còn\ncần kiệm, đã lớn mà lòng kính mến bà sư phó không giảm,\nđã lấy chồng mà đạo hiếu với cha mẹ không suy kém, đều là\nđức hạnh đôn hậu của nàng mà người đời không đễ gì có\nđược. Bài tiểu tự cho đấy là căn bản của bà Hậu phi, mong\ncũng gần đúng vậy.",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.877,
+      "recognition_language": "vie+chi_tra",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45",
+        "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0048.json:r006": {
+      "image_sha256": "98414c9c648babaf041b04672c217ba071cc643145a9e2f3620240458096cc98",
+      "text": "BÀI THỨ 3",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.162,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0048.json:r007": {
+      "image_sha256": "8822dbaac1c8e6083f6e127629ef53bd9bc2cc9673d48e175def8101e6c25690",
+      "text": "CHƯƠNG !",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.147,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0048.json:r008": {
+      "image_sha256": "2498b7621aaa2a84db7157c2d43de4f5d42763704079b35928d2569402357237",
+      "text": "傘耳",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.175,
+      "lines": [
+        {
+          "box": [
+            0,
+            0,
+            160,
+            94
+          ],
+          "image_sha256": "c6a4eb8127afef524928ed591745f4437b12ad9b52347853503a1c2240e3420c",
+          "text": "傘耳",
+          "recognition_language": "chi_tra",
+          "psm": 7,
+          "oem": 1,
+          "model_sha256": {
+            "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+          },
+          "decoder_dictionaries": false
+        }
+      ],
+      "possibly_truncated": false
+    },
+    "page-0048.json:r009": {
+      "image_sha256": "852c93390cd224c954a7ce813072f41eff645c5f6a853cd17d488e6b80a9bd65",
+      "text": "Quyến nhĩ (Chu nam 3)",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.179,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    },
+    "page-0048.json:r010": {
+      "image_sha256": "4433966daf2797a966db92a589b202334e06ccd12d6ef5d4c2cbaaab86f43554",
+      "text": "打打和伏耳\n不盈項售\n嘶我慣人\n夏彼週行",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.69,
+      "lines": [
+        {
+          "box": [
+            19,
+            20,
+            278,
+            74
+          ],
+          "image_sha256": "899440eab55712ae34314d5b8c8dea2e654c426047d2818cebf08683c02e52a0",
+          "text": "打打和伏耳",
+          "recognition_language": "chi_tra",
+          "psm": 7,
+          "oem": 1,
+          "model_sha256": {
+            "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+          },
+          "decoder_dictionaries": false
+        },
+        {
+          "box": [
+            20,
+            106,
+            278,
+            158
+          ],
+          "image_sha256": "7b42c7afe895df723fb4b7299ac419815b88d18e4a9e4a7bb506bfeea324bef5",
+          "text": "不盈項售",
+          "recognition_language": "chi_tra",
+          "psm": 7,
+          "oem": 1,
+          "model_sha256": {
+            "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+          },
+          "decoder_dictionaries": false
+        },
+        {
+          "box": [
+            20,
+            190,
+            277,
+            243
+          ],
+          "image_sha256": "ea210de1ed5b00e6010d7429f6a533f499732a1d4b8a93502ccb1caabc79bd99",
+          "text": "嘶我慣人",
+          "recognition_language": "chi_tra",
+          "psm": 7,
+          "oem": 1,
+          "model_sha256": {
+            "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+          },
+          "decoder_dictionaries": false
+        },
+        {
+          "box": [
+            19,
+            275,
+            276,
+            328
+          ],
+          "image_sha256": "95df0871cf5b17ab21c05fb71b7b922f275d6e1c48df18437dcb5f62357ca5a2",
+          "text": "夏彼週行",
+          "recognition_language": "chi_tra",
+          "psm": 7,
+          "oem": 1,
+          "model_sha256": {
+            "chi_tra": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+          },
+          "decoder_dictionaries": false
+        }
+      ],
+      "possibly_truncated": false
+    },
+    "page-0048.json:r011": {
+      "image_sha256": "7830f143a38b540b61c70827cef9941861dbf798b6430e01829d5d08e31e2f3e",
+      "text": "1. Thái thái quyển nhĩ,\n\n2. Pất đoanh khuynh khuông.\n3. Ta ngã hoài nhân,\n\n4. Chí bí chu hàng.",
+      "settings_sha256": "feab4a7d8bbf4829fc399dc7734b41bc7f5f00467dbc340154766d973e1e4415",
+      "seconds": 0.281,
+      "recognition_language": "vie",
+      "psm": 6,
+      "oem": 1,
+      "model_sha256": {
+        "vie": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+      },
+      "decoder_dictionaries": true
+    }
+  },
+  "layout_manifest_sha256": "9734d4adf11df9052d75251329a87be37dd57654948b4e7febd31ea68ff35546",
+  "settings_history": {
+    "6adfd20f91543ecf3219bb6f71dde0888461e203fad7d7b036dc0c70f2029004": {
+      "command": "run",
+      "engine": "tesseract",
+      "device": "cpu",
+      "lang": "chinese_cht",
+      "model": null,
+      "revision": null,
+      "seed": 42,
+      "max_new_tokens": 4096,
+      "max_pixels": 401408,
+      "quantization": "none",
+      "allow_cpu": false,
+      "profile": "scan",
+      "preprocessing": {
+        "version": 1,
+        "scale": 2,
+        "border": 16,
+        "padding": 6,
+        "dark_threshold": 200,
+        "max_internal_gap": 2,
+        "grayscale": true,
+        "autocontrast": true
+      },
+      "tesseract": {
+        "version": "tesseract 5.5.4",
+        "packages_sha256": {
+          "tesseract-5.5.4-1-x86_64.pkg.tar.zst": "6c33ced8c8f2b82aaeaf88a7b670b144f3c4501368477db2bb83e03a2c0cc625",
+          "leptonica-1.87.0-2-x86_64.pkg.tar.zst": "f7a239ee5f8492edfd6b2e61b3c7d4371ab27990db8f10de5bbbdadc50fafb71"
+        },
+        "models": {
+          "vie": {
+            "revision": "e12c65a915945e4c28e237a9b52bc4a8f39a0cec",
+            "sha256": "b6b49293d95d0b6dbd8780174627e82c75be957b6f4ed9862155540d6b00bb45"
+          },
+          "chi_tra": {
+            "revision": "e12c65a915945e4c28e237a9b52bc4a8f39a0cec",
+            "sha256": "1aa60488574cafa69486d919284f079ca9b68fcc7f6ad8dc1ff1b318dfd97028"
+          }
+        }
+      },
+      "language_policy": "chi_tra for Han, vie+chi_tra for commentary, vie otherwise",
+      "psm": 7,
+      "oem": 1,
+      "decoder_dictionaries": false,
+      "paddle_language_policy": null
+    }
+  }
+}
