@@ -154,8 +154,14 @@ def run(args):
             if sha256(image) != region["image_sha256"]:
                 raise ValueError(f"Crop changed: {image}; regenerate the layout manifest first")
             jobs.append((page, region, image))
-    if not jobs:
-        raise ValueError("No OCR crops in selected pages")
+    # Blank pages are part of the book's page count too. They have no crops
+    # to recognize and must still produce an explicit empty page document.
+    for page in selected_pages:
+        if not page["regions"]:
+            save_json(output/page["file"], {key: [] for key in FIELDS})
+            metadata.setdefault("empty_pages", {})[page["file"]] = {
+                "image_sha256": page.get("image_sha256"), "reason": "No text regions in the page layout"}
+            print(f"Saved empty page: {output/page['file']}", flush=True)
     runners = {}
     def recognize(region, image):
         mode = "han" if region["layer"] in HAN_LAYERS else "viet"

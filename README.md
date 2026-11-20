@@ -11,7 +11,7 @@ các cặp chữ Hán, phiên âm Hán Việt và bản dịch Việt theo hư�
 ## Dữ liệu và cấu hình
 
 `manifest.json` ghi loại PDF, phần được giao và `page_offset`.
-`config.yaml` khai báo đủ 4 file chính và 3 file mở rộng, cùng các tham số dự kiến.
+`config.yaml` khai báo đủ 4 file chính và 3 file mở rộng, cùng cấu hình OCR và corpus.
 
 | Phần | Sách / file | Trang PDF được giao | Cách xử lý |
 | --- | --- | --- | --- |
@@ -78,10 +78,11 @@ Baseline dùng nguyên mã demo được cấp trong tài liệu CV18:
 - `hvcorpus/align.py`: gom đoạn, nối qua trang, Gale–Church và mốc âm Hán Việt.
 - `build_corpus.py`, `viewer.py`: gắn cờ, thống kê và hiển thị kết quả.
 
-Nhóm đã chạy baseline, kiểm tra mẫu và ghi nhận sai lệch; chưa tuyên bố tự
-triển khai lại thuật toán demo. `src/ocr.py` bổ sung công cụ render, cắt vùng
-và chạy OCR độc lập; chưa có pipeline corpus hoàn chỉnh. Đầu ra demo chưa đủ
-schema cuối cùng; cần bổ sung các trường theo mục 8 của hướng dẫn.
+Baseline được giữ để so sánh và không chạy lại trong pipeline Tuần 3.
+`src/corpus/extract_vertical.py` kế thừa phần đọc tọa độ của demo, có ghi nguồn;
+bổ sung giữ số trong tiêu đề/bản dịch và nhận diện PUA. Thuật toán Gale–Church
+trong `src/corpus/align.py`, bước ghép đoạn, chuẩn hóa và xuất schema chung
+được triển khai trong `src/corpus/`. Pipeline chính là `src/build_corpus.py`.
 
 ## Cài đặt và chạy OCR tuần 2
 
@@ -217,8 +218,68 @@ python src/layout.py
 ```
 
 `src/layout.py` dùng PP-DocLayout cộng luật cho bố cục ngang Kinh Thi, xuất
-crop và `regions.json`. Corpus/căn chỉnh câu cuối kỳ tiếp tục triển khai ở
-Tuần 3–5; `out/corpus.jsonl` giữ schema chung của đề.
+crop và `regions.json`. Corpus và căn chỉnh câu dùng pipeline Tuần 3 dưới đây.
+
+## Corpus v1 — Tuần 3
+
+Phạm vi là **bốn sách phần chính**: Kinh Thi 346 trang, Vi Chánh 330 trang,
+Đạo Đức Kinh 231 trang và Tăng Quảng Hiền Văn 122 trang. Phần mở rộng để Tuần 5.
+
+```sh
+source .venv-ocr/bin/activate
+python src/build_corpus.py
+```
+
+Lệnh trích xuất text → dò bố cục scan → chạy riêng từng công cụ OCR → voting
+→ Gale–Church → xuất corpus. Bốn công cụ và tập phiếu Hán/Việt giữ như Tuần 2;
+thứ tự hòa được cố định bằng bản sao calibration, không tính lại trên sách mới.
+Mỗi model chạy trong tiến trình riêng để giải phóng RAM/VRAM trước model tiếp theo.
+Checkpoint theo trang/crop cho phép chạy lại cùng lệnh để tiếp tục khi bị ngắt.
+
+```sh
+# Xem tiến độ mà không nạp model
+python src/build_corpus.py --stage status
+
+# Xem log của lần chạy toàn pipeline
+tail -f .cache/corpus-v1/run.log
+
+# Xuất lại corpus từ checkpoint, không chạy OCR
+python src/build_corpus.py --stage assemble
+```
+
+Các lựa chọn để xử lý điểm khó:
+
+- Dò bố cục bằng PP-DocLayout và gợi ý tọa độ PaddleOCR; ảnh dò giới hạn
+  1.280 pixel, ảnh crop OCR giữ 300 DPI. Khối Việt dài được chia tối đa
+  8 dòng/crop để giảm đỉnh RAM và tránh chạm giới hạn token.
+- Giữ trạng thái bài/chương qua trang; phần chú giải có chữ Hán vẫn là chú giải.
+  Dịch sát và dịch thơ căn chỉnh riêng, có `viet_type` riêng.
+- Bìa/mục lục/lời giới thiệu được giữ trong dữ liệu tầng; phạm vi phần tác phẩm
+  bắt đầu ở trang PDF 38/4/6/3, khai báo trong `corpus.first_body_page`.
+- Gale–Church dùng độ dài Hán/âm tiết Việt với các bước 1–1, 1–2, 2–1,
+  2–2, 1–3, 3–1 và ghép rỗng. Không bỏ cặp không khớp; giữ cờ `han_only`/`viet_only`.
+  Đoạn Vi Chánh thiếu ranh giới câu được giữ ở cấp đoạn.
+- Với Kinh Thi, số thứ tự đọc được ở phiên âm và dịch sát làm mốc cấu trúc
+  khi hai dãy số duy nhất và tăng dần. Gale–Church giữ các mốc này trong
+  cùng bước ghép, tránh dịch dài làm lệch sang câu khác; dịch thơ dùng độ dài.
+- Chuẩn hóa NFKC cho bộ thủ, NFC cho Việt; giữ chữ phồn thể và lặp có nghĩa.
+  PUA chưa ánh xạ hoặc âm không lấy được ghi `〓` và gắn cờ, giữ âm nguồn
+  trong `phien_am_goc`. Không điền âm đoán hoặc sửa chính tả nguồn.
+
+```text
+out/
+  corpus.jsonl                # schema chung, luôn ghi rõ tiến độ trong report
+  report.md                   # số cặp, độ phủ, tỉ lệ chữ Hán cấp câu, cờ
+  source_errors.tsv           # chỉ lỗi nguồn đã xác nhận
+  layers/<book>.jsonl         # dữ liệu tầng theo từng trang, bốn file cho bốn sách
+  ocr/week2/                  # mẫu đánh giá đã chốt
+.cache/corpus-v1/             # ảnh, crop, OCR thô, metadata, checkpoint và log
+```
+
+`score = exp(-chi phí Gale–Church/số đơn vị)` là điểm theo độ dài, không phải
+precision. Độ phủ trong bản v1 so với nguyên văn đã trích xuất; chưa thay thế
+việc kiểm tra không sót chữ trong PDF. Khi Kinh Thi còn chạy, báo cáo ghi rõ
+corpus chưa đủ phần chính. Không dùng bản tham chiếu OCR để tạo nội dung corpus.
 
 ## Kết quả và tiến độ
 
@@ -230,7 +291,8 @@ Tuần 3–5; `out/corpus.jsonl` giữ schema chung của đề.
 | **Tổng** | **2.126** | **2.017** | **109** |
 
 Có 1.886 cặp không gắn cờ (khoảng 89%); đây không phải precision căn chỉnh.
-Số liệu lấy từ `tutorials/han_viet_corpus_demo/out/report.md`.
+Số liệu trên là **baseline demo**, lấy từ `tutorials/han_viet_corpus_demo/out/report.md`.
+Tiến độ và số liệu corpus v1 hiện tại nằm trong [out/report.md](out/report.md).
 
 - **Tuần 1:** ghi nhận 24 trang của 4 sách chính; chi tiết ở
   `tutorials/reports/week1_page_review.md` và `report.pdf`.
@@ -241,16 +303,22 @@ Số liệu lấy từ `tutorials/han_viet_corpus_demo/out/report.md`.
   Voting đạt **8,61% Hán, 0,80% Việt**, thấp hơn từng công cụ trên mẫu.
   Cấu hình đã chốt trong `config.yaml`; `src/ocr_week2_pipeline.py` đọc và chạy
   toàn bộ bước khôi phục ảnh/crop–OCR–voting–CER. Các số liệu là kết quả trên mẫu hiệu chỉnh.
-- **Tuần 3–5:** hoàn thiện corpus chính, bộ gold, đánh giá và cải tiến căn chỉnh,
-  rồi xử lý phần mở rộng. `out/corpus.jsonl`, `gold/gold.jsonl`,
-  `eval/eval.py`, `out/source_errors.tsv` hiện còn là file khung.
+- **Tuần 3:** đã xuất corpus v1 đủ bốn sách phần chính, hoàn tất lúc 15:01
+  ngày 20/11/2026. Bốn OCR đều xong 346/346 trang Kinh Thi, cùng 683 trang text.
+  Tổng **4.494 cặp**: Kinh Thi 2.505, Vi Chánh 190, Đạo Đức Kinh 1.090,
+  Tăng Quảng Hiền Văn 709; gồm 4.321 cặp cấp câu và 173 cặp cấp đoạn.
+  Schema, NFC, số âm/chữ và hash nguồn đã kiểm tra; 75 kiểm thử đều qua.
+  Còn 626 cặp có `reading_mismatch`, 27 `han_only`, 20 `viet_only` và 99 cờ
+  trùng cần xem xét. Tám crop GOT chạm giới hạn token; ba công cụ còn lại không có.
+- **Tuần 4–5:** bộ gold căn chỉnh, precision/recall, cải tiến và phần mở rộng.
+  `gold/gold.jsonl`, `eval/eval.py` và danh sách lỗi nguồn cần hoàn thiện ở các bước này.
 
 | Chỉ số cuối kỳ | Hiện tại | Yêu cầu |
 | --- | --- | --- |
 | CER OCR theo Hán/Việt | Voting Hán 8,61%, Việt 0,80% trên 11 trang | Đã thấp hơn từng công cụ trên mẫu hiệu chỉnh |
 | Precision / recall căn chỉnh | Chưa đo trên gold | ≥90% / ≥80% |
-| Độ phủ chữ Hán | Chưa đo | ≥85% phần được giao |
-| Tỉ lệ cấp câu | 2.017/2.126 cặp, khoảng 94,9% trong demo | Cần đánh giá thêm theo tỉ lệ chữ Hán từng sách |
+| Độ phủ chữ Hán | Thống kê trên phần trích xuất ở `out/report.md`; chưa kiểm tay toàn PDF | ≥85% phần được giao |
+| Tỉ lệ Hán cấp câu của v1 | Kinh Thi 97,22%; Vi Chánh 23,69%; Đạo Đức Kinh 100%; Tăng Quảng 100% | Thơ ≥95%; Vi Chánh tăng ≥30 điểm phần trăm so với baseline |
 | Gold / độ đồng thuận | Chưa gán | ≥100 cặp/người; 30 cặp chung, Cohen's κ ≥0,8 |
 
 Điều kiện cấp câu theo chữ Hán: sách thơ ≥95%; Vi Chánh tăng ít nhất
@@ -263,7 +331,7 @@ Số liệu lấy từ `tutorials/han_viet_corpus_demo/out/report.md`.
 - `gold/gold.jsonl`: cặp gán tay cùng schema, thêm `annotator`.
 - `eval/eval.py`: đánh giá precision/recall khi triển khai.
 - `out/source_errors.tsv`: lỗi trong sách nguồn; sửa tay lưu riêng vào `patches/*.tsv`.
-- `report.pdf`: báo cáo Tuần 1 và kết quả OCR/voting/CER Tuần 2 đã cập nhật.
+- `report.pdf`: báo cáo các tuần, phân biệt phần đã hoàn thành và đang xử lý.
 
 Giữ chữ Hán phồn thể; chuẩn hóa bộ thủ và xử lý PUA theo hướng dẫn,
 NFC cho tiếng Việt và phiên âm. Giữ riêng dịch nghĩa (`dich_sat`), dịch thơ

@@ -66,11 +66,26 @@ ocr:
       profile: balanced
 
 punctuate:
+  enabled: false  # Thử chấm câu/cải tiến ở Tuần 4; v1 giữ ranh giới có trong nguồn.
   model: raynardj/classical-chinese-punctuation-guwen-biaodian
 
 align:
   method: gale_church
   embedding: BAAI/bge-m3
-  use_reading_anchors: true
+  use_reading_anchors: false
+
+# Tuần 3 chỉ xử lý bốn sách phần chính. Trung gian/ảnh/OCR thô nằm trong cache.
+corpus:
+  cache_dir: .cache/corpus-v1
+  max_crop_lines: 8
+  alignment: gale_church
+  engine_order: [paddleocr, tesseract, got-ocr2, qwen2.5-vl]
+  calibration: out/ocr/week2/vote_settings.json
+  # Bìa/mục lục/lời giới thiệu vẫn được trích xuất; corpus lấy phần tác phẩm.
+  first_body_page:
+    kinh-thi: 38
+    vi-chanh: 4
+    dao-duc-kinh: 6
+    tang-quang-hien-van: 3
 
 out_dir: out/

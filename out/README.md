@@ -21,5 +21,10 @@ Chạy lại bằng `python src/ocr_week2_pipeline.py` trong `.venv-ocr`.
 Lệnh đọc `config.yaml`; thêm `--skip-ocr` để chỉ tính lại voting/CER.
 `viewer.html` cũ thuộc chế độ archive và chưa phản ánh các JSON mới.
 
-`corpus.jsonl` và `source_errors.tsv` vẫn là khung cho các bước tiếp theo.
+Tuần 3: `corpus.jsonl` đã có **4.494 cặp từ đủ bốn sách phần chính**.
+Bốn OCR đều hoàn tất 346 trang Kinh Thi; ba sách text hoàn tất 683 trang.
+Thống kê và các cờ cần kiểm tra ở [report.md](report.md); đánh giá trên gold ở Tuần 4.
+`layers/<book>.jsonl` giữ dữ liệu tầng theo trang, mỗi sách một file.
+Ảnh, OCR thô, metadata và checkpoint mới nằm trong `.cache/corpus-v1/`.
+`source_errors.tsv` dành cho lỗi sách gốc đã xác nhận.
 Ảnh/crop và model cache được gitignore. Hướng dẫn chi tiết ở [README root](../README.md).

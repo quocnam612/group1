@@ -81,6 +81,14 @@ class ReferenceOCRTests(unittest.TestCase):
         metadata = json.loads((self.root / "runs/got-ocr2.json").read_text())
         self.assertEqual(metadata["layout_manifest_sha256"], hashlib.sha256(self.manifest.read_bytes()).hexdigest())
 
+    def test_blank_page_is_exported_without_loading_a_model(self):
+        manifest = json.loads(self.manifest.read_text())
+        manifest["pages"][0]["regions"] = []
+        self.manifest.write_text(json.dumps(manifest))
+        self.command("got-ocr2", factory=lambda args: self.fail("Blank page loaded a model"))
+        data = json.loads((self.output/"got-ocr2/page-0038.json").read_text())
+        self.assertEqual(data, {key: [] for key in FIELDS})
+
     def test_changed_crop_fails_before_loading_any_model(self):
         self.crops[0].write_bytes(b"different image")
         with self.assertRaisesRegex(SystemExit, "1"):
